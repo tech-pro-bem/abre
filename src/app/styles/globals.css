@@ -1,0 +1,8 @@
+.section-title {
+  font-size: var(--font-size-2);
+  font-weight: var(--fw-medium);
+
+  @media (min-width: 40em) {
+    font-weight: var(--fw-semi-bold);
+  }
+}
