@@ -34,11 +34,12 @@ const stylizeWords = (text: string) => {
 export const About = () => {
   return (
     <div className="container__about">
-      <div className="container__about__buttons">
-        <button className="container__about__button">Conheça a ABRE</button>
-      </div>
       <div className="container__about__title__text__video">
         <div className="container__about__title__text">
+          <div className="container__about__buttons">
+            <button className="container__about__button">Conheça a ABRE</button>
+          </div>
+
           <h1 className="container__about__title">{sobreNos.title}</h1>
 
           <div className="container__about__text">
