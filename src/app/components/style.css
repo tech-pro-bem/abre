@@ -6,42 +6,48 @@
 .container__about__buttons {
   display: flex;
   justify-content: space-between;
-  width: 237px;
   height: 34px;
 }
-
 .container__about__button {
   margin: 5px 0px 5px 1px;
   gap: 16px;
-  border-bottom: 4px solid;
   line-height: var(--line-height-2);
   font-weight: var(--fw-bold);
   font-size: var(--font-size-3);
   color: var(--color-primary-darkest);
+  border-bottom: 4px solid;
 }
 .container__about__title {
   padding-top: 48px;
-  padding-bottom: 8px;
-  line-height: var(--line-height-1);
+  padding-bottom: 24px;
   font-weight: var(--fw-medium);
   font-size: var(--font-size-2);
   color: var(--color-secondary-dark);
 }
 .container__about__text {
-  line-height: var(-line-height-2);
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  letter-spacing: -1px;
+  gap: 16px;
+
+  line-height: var(--line-height-2);
   font-size: var(--font-size-3);
   color: var(--color-neutral-darkest);
 }
+
 .container__about__text__paragraph {
-  margin-bottom: 16px;
   font-weight: var(--fw-regular);
 }
-strong {
+
+span {
   font-weight: var(--fw-bold);
 }
+
 .container__about__video {
+  margin-top: 48px;
   width: 100%;
-  height: 186px;
+  height: 100%;
   border-radius: 8px;
   border-width: 8px;
   border-style: solid;
