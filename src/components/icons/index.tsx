@@ -1,6 +1,6 @@
 import { IconSvgProps } from "@/types";
 
-export function PessoasComEsquizofreniaIcon({
+export function AcolhimentoIcon({
   size = 31,
   width = 31,
   height = 27,
