@@ -1,130 +1,93 @@
 "use client";
 
-import { useState } from "react";
-import {
-  ComunidadeDeFalaIcon,
-  FamiliaresIcon,
-  LaccaIcon,
-  PessoasComEsquizofreniaIcon,
-  RecoveryIcon,
-} from "../icons";
 import "./style.css";
+import { useState } from "react";
 import { ProjectsIcon } from "./projects-icon";
 import { ProjectCard } from "./project-card";
+import { mock_projects_data, mock_projects_buttons } from "@/mock-data/projects";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 export function ProjectsSection() {
-  const [isActiveProject, setIsActiveProject] = useState(true);
+  const [activeProjectIndex, setActiveProjectIndex] = useState(0);
+
+  const handlePreviousSlide = () => {
+    if (activeProjectIndex === 0) return setActiveProjectIndex(mock_projects_data.length - 1);
+
+    return setActiveProjectIndex((prev) => prev - 1);
+  };
+
+  const handleNextSlide = () => {
+    if (activeProjectIndex === mock_projects_data.length - 1) return setActiveProjectIndex(0);
+
+    return setActiveProjectIndex((prev) => prev + 1);
+  };
+
   return (
     <section className="projects-section">
       <h2 className="section-title projects-section-title">Projetos</h2>
-      <ul className="projects-list">
-        <li
-          className="project-button"
-          title="Pessoas com Esquizofrenia"
-        >
-          <ProjectsIcon
-            isActive={isActiveProject}
-            text="Pessoas com Esquizofrenia"
+      <ul className="projects-button-list">
+        {mock_projects_buttons.map((button, index) => (
+          <li
+            key={button.title}
+            className="project-button"
+            title={button.title}
+            onClick={() => {
+              setActiveProjectIndex(index);
+            }}
           >
-            <PessoasComEsquizofreniaIcon
-              stroke={
-                isActiveProject ? "var(--color-neutral-lightest)" : "var(--color-primary-dark)"
+            <ProjectsIcon
+              component={
+                <button.icon
+                  stroke={
+                    activeProjectIndex === index
+                      ? "var(--color-neutral-lightest)"
+                      : "var(--color-primary-dark)"
+                  }
+                  size={30}
+                />
               }
-              size={30}
+              isActive={activeProjectIndex === index}
+              text={button.title}
             />
-          </ProjectsIcon>
-        </li>
-        <li
-          className="project-button"
-          title="Familiares"
-        >
-          <ProjectsIcon
-            isActive={isActiveProject}
-            text="Familiares"
-          >
-            <FamiliaresIcon
-              stroke={
-                isActiveProject ? "var(--color-neutral-lightest)" : "var(--color-primary-dark)"
-              }
-              size={30}
-            />
-          </ProjectsIcon>
-        </li>
-        <li
-          className="project-button"
-          title="LACCA"
-        >
-          <ProjectsIcon
-            isActive={isActiveProject}
-            text="LACCA"
-          >
-            <LaccaIcon
-              stroke={
-                isActiveProject ? "var(--color-neutral-lightest)" : "var(--color-primary-dark)"
-              }
-              size={30}
-            />
-          </ProjectsIcon>
-        </li>
-        <li
-          className="project-button"
-          title="Recovery"
-        >
-          <ProjectsIcon
-            isActive={isActiveProject}
-            text="Recovery"
-          >
-            <RecoveryIcon
-              stroke={
-                isActiveProject ? "var(--color-neutral-lightest)" : "var(--color-primary-dark)"
-              }
-              size={30}
-            />
-          </ProjectsIcon>
-        </li>
-        <li
-          className="project-button"
-          title="Comunidade de Fala"
-        >
-          <ProjectsIcon
-            isActive={isActiveProject}
-            text="Comunidade de Fala"
-          >
-            <ComunidadeDeFalaIcon
-              stroke={
-                isActiveProject ? "var(--color-neutral-lightest)" : "var(--color-primary-dark)"
-              }
-              size={30}
-            />
-          </ProjectsIcon>
-        </li>
+          </li>
+        ))}
       </ul>
-      <div className="projects-description">
-        <ProjectCard
-          title="Acolhimento para pessoas com esquizofrenia"
-          icon={
-            <ProjectsIcon isActive={isActiveProject}>
-              <PessoasComEsquizofreniaIcon
-                stroke={
-                  isActiveProject ? "var(--color-neutral-lightest)" : "var(--color-primary-dark)"
+      <div className="projects-carousel">
+        <div
+          className="arrow arrow-left"
+          onClick={handlePreviousSlide}
+        >
+          <FaChevronLeft />
+        </div>
+        {mock_projects_data.map((project, index) => (
+          <ProjectCard
+            className={activeProjectIndex === index ? "project-slide" : "slide slide-hidden"}
+            key={project.title}
+            title={project.title}
+            icon={
+              <ProjectsIcon
+                component={
+                  <project.icon
+                    stroke={
+                      activeProjectIndex === index
+                        ? "var(--color-neutral-lightest)"
+                        : "var(--color-primary-dark)"
+                    }
+                    size={36}
+                  />
                 }
-                size={36}
+                isActive={activeProjectIndex === index}
               />
-            </ProjectsIcon>
-          }
-          content={
-            <span>
-              Nosso grupo de acolhimento foi criado para incluir e apoiar pessoas com esquizofrenia
-              que precisam de ajuda. No grupo, dividimos esperanças e desafios em um ambiente de
-              compreensão, carinho e diálogo. Queremos garantir que todas as pessoas participantes
-              do grupo de acolhimento se sintam bem e à vontade, evitando qualquer situação que
-              possa causar desconforto. Além disso, os encontros estão abertos e receptivos para que
-              qualquer assunto seja discutido. Se você é uma pessoa com esquizofrenia e busca por
-              acolhimento, entre em contato com a gente enviando uma mensagem no Facebook ou
-              Instagram da ABRE.
-            </span>
-          }
-        />
+            }
+            content={project.description}
+          />
+        ))}
+        <div
+          className="arrow arrow-right"
+          onClick={handleNextSlide}
+        >
+          <FaChevronRight />
+        </div>
       </div>
     </section>
   );

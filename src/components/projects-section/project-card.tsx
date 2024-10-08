@@ -1,19 +1,22 @@
+import { CSSProperties } from "react";
+
 export function ProjectCard({
   title,
   content,
   icon,
+  style,
+  className,
 }: {
   title: string;
   content: React.ReactElement;
   icon: React.ReactElement;
+  style?: CSSProperties;
+  className?: string;
 }) {
   return (
     <div
-      style={{
-        padding: "44px 18px 55px 30px",
-        border: "1px solid var(--color-secondary-light)",
-        borderRadius: "1rem",
-      }}
+      style={{ ...style }}
+      className={className ? `project-card ${className}` : "project-card"}
     >
       <div style={{ display: "flex", gap: "0.75rem", alignItems: "center", marginBottom: "2rem" }}>
         {icon}

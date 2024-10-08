@@ -1,9 +1,11 @@
 export function ProjectsIcon({
   children,
+  component: Component,
   isActive,
   text,
 }: {
-  children: React.ReactNode;
+  children?: React.ReactNode;
+  component?: React.ReactNode;
   isActive: boolean;
   text?: string;
 }) {
@@ -15,7 +17,8 @@ export function ProjectsIcon({
           backgroundColor: isActive ? "var(--color-primary-dark)" : "var(--color-primary-lightest)",
         }}
       >
-        {children}
+        {children ? children : null}
+        {Component ? Component : null}
       </div>
       {text && <span className="project-text">{text}</span>}
     </div>
