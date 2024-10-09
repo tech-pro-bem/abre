@@ -1,7 +1,7 @@
 .container__about {
   display: flex;
   flex-direction: column;
-  padding: 112px 24px 43.32px 23px;
+  padding: 0px 24px 43.32px 23px;
 }
 .container__about__buttons {
   display: flex;
@@ -11,50 +11,50 @@
 .container__about__button {
   margin: 5px 0px 5px 1px;
   gap: 16px;
-  line-height: var(--line-height-2);
-  font-weight: var(--fw-bold);
-  font-size: var(--font-size-3);
-  color: var(--color-primary-darkest);
   border-bottom: 4px solid;
+  font-size: var(--font-size-3);
+  font-weight: var(--fw-bold);
+  line-height: var(--line-height-2);
+  color: var(--color-primary-darkest);
 }
 .container__about__title {
   padding-top: 48px;
   padding-bottom: 24px;
-  font-weight: var(--fw-medium);
   font-size: var(--font-size-2);
+  font-weight: var(--fw-medium);
   color: var(--color-secondary-dark);
 }
 .container__about__text {
   display: flex;
   flex-direction: column;
   text-align: justify;
-  letter-spacing: -1px;
   gap: 16px;
-  line-height: var(--line-height-2);
+  letter-spacing: -1px;
   font-size: var(--font-size-3);
-  color: var(--color-neutral-darkest);
-}
-
-.container__about__text__paragraph {
   font-weight: var(--fw-regular);
+  line-height: var(--line-height-2);
+  color: var(--color-neutral-darkest);
 }
 
 span {
   font-weight: var(--fw-bold);
 }
-
+.container__about__title__text__video {
+  display: flex;
+  flex-direction: column;
+}
 .container__about__video {
   margin-top: 48px;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1.7;
   border-radius: 8px;
   border-width: 8px;
   border-style: solid;
   border-color: var(--color-primary-medium);
 }
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   .container__about {
-    padding: 251px 352px 80px 352px;
+    padding: 0px 352px 80px 352px;
   }
   .container__about__button {
     height: 35px;
@@ -65,14 +65,13 @@ span {
     padding-top: 56px;
     padding-right: 76px;
     padding-bottom: 32px;
-
     font-weight: var(--fw-semi-bold);
     font-size: var(--font-size-2);
   }
   .container__about__text {
-    font-size: var(--font-size-5);
-    letter-spacing: 0px;
     padding-right: 31px;
+    letter-spacing: 1.2px;
+    font-size: var(--font-size-5);
   }
   .container__about__title__text {
     display: flex;
@@ -81,11 +80,9 @@ span {
   }
   .container__about__title__text__video {
     display: flex;
-    align-items: center;
+    flex-direction: row;
   }
-
   .container__about__video {
     width: 50%;
-    height: 405.39px;
   }
 }
