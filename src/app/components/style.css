@@ -62,14 +62,14 @@ span {
   }
 
   .container__about__title {
-    padding-top: 56px;
-    padding-right: 76px;
-    padding-bottom: 32px;
+    padding: 56px 76px 32px 0px;
+
     font-weight: var(--fw-semi-bold);
     font-size: var(--font-size-2);
   }
   .container__about__text {
     padding-right: 31px;
+    padding-bottom: 16.43px;
     letter-spacing: 1.2px;
     font-size: var(--font-size-5);
   }
