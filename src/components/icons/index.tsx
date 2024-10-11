@@ -18,7 +18,7 @@ export function AcolhimentoIcon({
   return (
     <svg
       width={size || width}
-      height={size || width}
+      height={size || height}
       viewBox="0 0 31 27"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +62,7 @@ export function FamiliaresIcon({
   return (
     <svg
       width={size || width}
-      height={size || width}
+      height={size || height}
       viewBox="0 0 31 28"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +106,7 @@ export function LaccaIcon({
   return (
     <svg
       width={size || width}
-      height={size || width}
+      height={size || height}
       viewBox="0 0 31 31"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -162,7 +162,7 @@ export function RecoveryIcon({
   return (
     <svg
       width={size || width}
-      height={size || width}
+      height={size || height}
       viewBox="0 0 31 29"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -195,7 +195,7 @@ export function ComunidadeDeFalaIcon({
   return (
     <svg
       width={size || width}
-      height={size || width}
+      height={size || height}
       viewBox="0 0 31 21"
       stroke="#177873"
       fill="#177873"
