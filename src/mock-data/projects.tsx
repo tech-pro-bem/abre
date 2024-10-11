@@ -50,7 +50,12 @@ export const mock_projects_data = [
         no Facebook ou Instagram da ABRE.
       </p>
     ),
-    icon: AcolhimentoIcon,
+    icon: (
+      <AcolhimentoIcon
+        stroke="white"
+        size={46}
+      />
+    ),
   },
   {
     title: "Acolhimento para familiares e amigos",
@@ -88,7 +93,12 @@ export const mock_projects_data = [
         da ABRE.
       </p>
     ),
-    icon: FamiliaresIcon,
+    icon: (
+      <FamiliaresIcon
+        stroke="white"
+        size={46}
+      />
+    ),
   },
   {
     title: "LACCA",
@@ -128,7 +138,12 @@ export const mock_projects_data = [
         da ABRE.
       </p>
     ),
-    icon: LaccaIcon,
+    icon: (
+      <LaccaIcon
+        stroke="white"
+        size={46}
+      />
+    ),
   },
   {
     title: "Recovery College",
@@ -168,7 +183,12 @@ export const mock_projects_data = [
         da ABRE.
       </p>
     ),
-    icon: RecoveryIcon,
+    icon: (
+      <RecoveryIcon
+        stroke="white"
+        size={46}
+      />
+    ),
   },
   {
     title: "Comunidade de Fala",
@@ -205,6 +225,11 @@ export const mock_projects_data = [
         da ABRE.
       </p>
     ),
-    icon: ComunidadeDeFalaIcon,
+    icon: (
+      <ComunidadeDeFalaIcon
+        stroke="white"
+        size={46}
+      />
+    ),
   },
 ];
