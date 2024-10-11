@@ -6,7 +6,6 @@
 .container__about__buttons {
   display: flex;
   justify-content: space-between;
-  height: 34px;
 }
 .container__about__button {
   margin: 5px 0px 5px 1px;
@@ -29,8 +28,7 @@
   flex-direction: column;
   text-align: justify;
   gap: 16px;
-  letter-spacing: -1px;
-  font-size: var(--font-size-3);
+  font-size: var(--font-size-5);
   font-weight: var(--fw-regular);
   line-height: var(--line-height-2);
   color: var(--color-neutral-darkest);
@@ -57,7 +55,6 @@ span {
     padding: 0px 352px 80px 352px;
   }
   .container__about__button {
-    height: 35px;
     font-size: var(--font-size-4);
   }
 
@@ -70,7 +67,6 @@ span {
   .container__about__text {
     padding-right: 31px;
     padding-bottom: 16.43px;
-    letter-spacing: 1.2px;
     font-size: var(--font-size-5);
   }
   .container__about__title__text {
