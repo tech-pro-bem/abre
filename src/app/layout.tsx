@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 import "./styles/reset.css";
 import "./styles/globals.css";
+import "./styles/theme.css";
 import { Header } from "./header/header";
 
 const jost = Jost({
