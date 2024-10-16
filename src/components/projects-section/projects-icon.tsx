@@ -1,23 +1,18 @@
-export function ProjectsIcon({
-  component: Component,
-  isActive,
-  text,
-}: {
-  component?: React.ReactNode;
+import styles from "./styles.module.css";
+
+type ProjectsIconProps = {
+  component: React.ReactNode;
   isActive: boolean;
   text?: string;
-}) {
+};
+
+export function ProjectsIcon({ component: Component, isActive, text }: ProjectsIconProps) {
+  const bgClassName = isActive ? "active" : "inactive";
+
   return (
-    <div className="project-icon-container">
-      <div
-        className="project-icon-circle"
-        style={{
-          backgroundColor: isActive ? "var(--color-primary-dark)" : "var(--color-primary-lightest)",
-        }}
-      >
-        {Component ? Component : null}
-      </div>
-      {text && <span className="project-title">{text}</span>}
+    <div className={styles.project_icon_container}>
+      <div className={`${styles.project_icon_circle} ${styles[bgClassName]}`}>{Component}</div>
+      {text && <span className={styles.project_title}>{text}</span>}
     </div>
   );
 }
