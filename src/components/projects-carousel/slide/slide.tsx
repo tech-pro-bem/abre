@@ -1,21 +1,21 @@
-export function Slide({
-  title,
-  content,
-  icon,
-}: {
+import styles from "../styles.module.css";
+
+type SlideProps = {
   title: string;
   content: React.ReactElement;
   icon?: React.ReactNode;
-}) {
+};
+
+export function Slide({ title, content, icon }: SlideProps) {
   return (
-    <div className="slide">
-      <div style={{ display: "flex", gap: "0.75rem", alignItems: "center", marginBottom: "2rem" }}>
-        <div className="icon-circle">{icon}</div>
-        <h3 style={{ fontSize: "var(--heading-3)", color: "var(--color-primary-darkest)" }}>
-          {title}
-        </h3>
-      </div>
-      {content}
-    </div>
+    <li>
+      <article className={styles.slide}>
+        <div className={styles.card_header}>
+          <div className={styles.icon_circle}>{icon}</div>
+          <h3 className={styles.card_header_title}>{title}</h3>
+        </div>
+        <div className={styles.card_content}>{content}</div>
+      </article>
+    </li>
   );
 }
