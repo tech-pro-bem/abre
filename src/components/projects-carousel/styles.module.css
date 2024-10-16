@@ -4,74 +4,92 @@
   container-type: inline-size;
 }
 
-.carousel-images {
+.carousel_images {
   overflow: hidden;
-  gap: 2rem;
+}
+
+.carousel_images_container {
+  padding: 0.25rem;
 }
 
 .slide {
-  width: 99%;
-  height: 99%;
-  margin-inline: auto;
-  padding: 2.75rem 1.125rem 3.375rem 1.875rem;
+  padding: 2.5rem 2rem;
   outline: 2px solid var(--color-secondary-light);
   border-radius: 1rem;
   @container projects-carousel (min-width: 40em) {
     padding: 3.5rem 6.5rem 4rem;
   }
-  .icon-circle {
+
+  .card_header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .icon_circle {
     flex-shrink: 0;
     background-color: var(--color-primary-dark);
-    border-radius: 50%;
+    border-radius: 100vh;
     padding: 0.5rem;
     @container projects-carousel (min-width: 40em) {
       padding: 0.875rem;
     }
   }
+
+  .card_header_title {
+    font-size: var(--heading-3);
+    color: var(--color-primary-darkest);
+  }
+
+  .card_content > p:not(:last-child) {
+    margin-bottom: 1rem;
+  }
 }
 
-.slide_direction {
+.carousel_nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  @container projects-carousel (min-width: 40em) {
+    display: contents;
+  }
 }
 
 .left,
 .right {
+  --size: 2.5rem;
+  display: grid;
+  place-items: center;
   background-color: var(--color-secondary-light);
   color: var(--color-secondary-dark);
   border-radius: 50%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  text-align: -webkit-center;
-  align-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  margin-block: auto;
+  width: var(--size);
+  height: var(--size);
   &:hover {
     background-color: var(--color-secondary-medium);
     color: var(--color-secondary-darkest);
   }
   @container projects-carousel (min-width: 40em) {
+    position: absolute;
     top: 0;
     bottom: 0;
-    left: initial;
-    right: initial;
   }
 }
 
 .left {
-  left: 0;
-  transform: translateX(-90%) translateY(60%);
   @container projects-carousel (min-width: 40em) {
-    transform: translateX(-30%);
+    left: 0;
+    transform: translateX(-50%);
   }
 }
 
 .right {
-  right: 0;
-  transform: translateX(90%) translateY(60%);
   @container projects-carousel (min-width: 40em) {
-    transform: translateX(30%);
+    right: 0;
+    transform: translateX(50%);
   }
 }
