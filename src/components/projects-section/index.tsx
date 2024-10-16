@@ -1,6 +1,6 @@
 "use client";
 
-import "./style.css";
+import styles from "./styles.module.css";
 import { useState } from "react";
 import { ProjectsIcon } from "./projects-icon";
 import { mock_projects_data, mock_projects_buttons } from "@/mock-data/projects";
@@ -27,28 +27,31 @@ export function ProjectsSection() {
   };
 
   return (
-    <section className="projects-section">
-      <h2 className="section-title projects-section-title">Projetos</h2>
-      <ul className="projects-list-button">
+    <section className={styles.section}>
+      <h2 className={`${styles.projects_section_title} section-title`}>Projetos</h2>
+      <ul className={styles.projects_list_button}>
         {mock_projects_buttons.map((button, index) => (
           <li
             key={button.title}
-            className="project-button"
+            className={styles.project_button}
             title={button.title}
-            onClick={() => {
-              setActiveProjectIndex(index);
-            }}
           >
-            <ProjectsIcon
-              component={
-                <button.icon
-                  isActive={activeProjectIndex === index}
-                  size={30}
-                />
-              }
-              isActive={activeProjectIndex === index}
-              text={button.title}
-            />
+            <button
+              onClick={() => {
+                setActiveProjectIndex(index);
+              }}
+            >
+              <ProjectsIcon
+                component={
+                  <button.icon
+                    isActive={activeProjectIndex === index}
+                    size={30}
+                  />
+                }
+                isActive={activeProjectIndex === index}
+                text={button.title}
+              />
+            </button>
           </li>
         ))}
       </ul>
