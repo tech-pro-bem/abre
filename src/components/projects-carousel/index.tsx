@@ -46,7 +46,8 @@ export const ProjectsCarousel = ({
   return (
     <div
       role="region"
-      aria-label="Carousel"
+      aria-roledescription="carousel"
+      aria-label="Carrossel de projetos da Abre"
       className={styles.carousel}
     >
       <div className={styles.carousel_images}>
@@ -61,6 +62,9 @@ export const ProjectsCarousel = ({
               className={styles.carousel_images_container}
             >
               <Slide
+                aria-roledescription={`Slide ${activeProjectIndex + 1} de ${
+                  mock_projects_data.length
+                } de projeto da abre`}
                 title={mock_projects_data[activeProjectIndex].title}
                 content={mock_projects_data[activeProjectIndex].description}
                 icon={mock_projects_data[activeProjectIndex].icon}
@@ -68,20 +72,31 @@ export const ProjectsCarousel = ({
             </motion.ul>
           </AnimatePresence>
         </MotionConfig>
-        <nav className={styles.carousel_nav}>
-          <button
-            className={styles.left}
-            onClick={handlePreviousSlide}
-          >
-            <FaChevronLeft size={26} />
-          </button>
-          <button
-            className={styles.right}
-            onClick={handleNextSlide}
-          >
-            <FaChevronRight size={26} />
-          </button>
-        </nav>
+      </div>
+      <div
+        aria-label="Controles do Carrossel"
+        className={styles.carousel_nav}
+      >
+        <button
+          aria-label="Slide anterior"
+          className={styles.left}
+          onClick={handlePreviousSlide}
+        >
+          <FaChevronLeft
+            aria-hidden="true"
+            size={26}
+          />
+        </button>
+        <button
+          aria-label="Próximo slide"
+          className={styles.right}
+          onClick={handleNextSlide}
+        >
+          <FaChevronRight
+            aria-hidden="true"
+            size={26}
+          />
+        </button>
       </div>
     </div>
   );
