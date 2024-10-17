@@ -3,7 +3,7 @@ import styles from "../styles.module.css";
 type SlideProps = {
   title: string;
   content: React.ReactElement;
-  icon?: React.ReactNode;
+  icon: React.ReactNode;
 };
 
 export function Slide({ title, content, icon }: SlideProps) {

@@ -1,8 +1,8 @@
 .section {
   margin-inline: auto;
   max-width: 65.5rem;
+  /* temporary paddings before layout adjustments */
   padding-inline: 1.5rem;
-  /* temporary padding-block before layout adjustments */
   padding-block: 2rem;
 }
 

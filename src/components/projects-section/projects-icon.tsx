@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 type ProjectsIconProps = {
   component: React.ReactNode;
   isActive: boolean;
-  text?: string;
+  text: string;
 };
 
 export function ProjectsIcon({ component: Component, isActive, text }: ProjectsIconProps) {
@@ -12,7 +12,7 @@ export function ProjectsIcon({ component: Component, isActive, text }: ProjectsI
   return (
     <div className={styles.project_icon_container}>
       <div className={`${styles.project_icon_circle} ${styles[bgClassName]}`}>{Component}</div>
-      {text && <span className={styles.project_title}>{text}</span>}
+      <span className={styles.project_title}>{text}</span>
     </div>
   );
 }
