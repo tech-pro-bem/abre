@@ -33,8 +33,8 @@ const stylizeWords = (text: string) => {
 
 export const About = () => {
   return (
-    <div className="container__about">
-      <div className="container__about__title__text__video">
+    <section className="container">
+      <div className="about__content">
         <div className="container__about__title__text">
           <div className="container__about__buttons">
             <button className="container__about__button">Conheça a ABRE</button>
@@ -61,6 +61,6 @@ export const About = () => {
           allowFullScreen
         ></iframe>
       </div>
-    </div>
+    </section>
   );
 };

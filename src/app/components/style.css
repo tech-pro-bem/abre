@@ -1,6 +1,4 @@
-.container__about {
-  display: flex;
-  flex-direction: column;
+.container {
   padding: 0rem 1.5rem 2.7rem 1.4rem;
 }
 .container__about__buttons {
@@ -13,6 +11,7 @@
   border-bottom: 4px solid;
   font-size: var(--font-size-3);
   font-weight: var(--fw-bold);
+
   line-height: var(--line-height-2);
   color: var(--color-primary-darkest);
 }
@@ -37,21 +36,21 @@
 span {
   font-weight: var(--fw-bold);
 }
-.container__about__title__text__video {
+.about__content {
   display: flex;
   flex-direction: column;
 }
 .container__about__video {
   margin-top: 3rem;
   width: 100%;
-  aspect-ratio: 1.7;
+  aspect-ratio: 16/9;
   border-radius: 8px;
   border-width: 8px;
   border-style: solid;
   border-color: var(--color-primary-medium);
 }
-@media (min-width: 1200px) {
-  .container__about {
+@media (min-width: 75em) {
+  .container {
     padding: 0rem 22rem 5rem 22rem;
   }
   .container__about__button {
@@ -74,7 +73,7 @@ span {
     flex-direction: column;
     width: 50%;
   }
-  .container__about__title__text__video {
+  .about__content {
     display: flex;
     flex-direction: row;
   }
