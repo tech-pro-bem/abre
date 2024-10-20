@@ -34,18 +34,18 @@ const stylizeWords = (text: string) => {
 export const About = () => {
   return (
     <section className="container">
-      <div className="about__content">
-        <div className="container__about__title__text">
-          <div className="container__about__buttons">
-            <button className="container__about__button">Conheça a ABRE</button>
+      <div className="about-content">
+        <div className="about-title__text">
+          <div className="about-buttons">
+            <button className="about-button__know">Conheça a ABRE</button>
           </div>
 
-          <h1 className="container__about__title">{sobreNos.title}</h1>
+          <h1 className="about-title">{sobreNos.title}</h1>
 
-          <div className="container__about__text">
+          <div className="about-text">
             {sobreNos.text.split("\n").map((paragraph, index) => (
               <p
-                className="container__about__text__paragraph"
+                className="about-text__paragraph"
                 key={index}
               >
                 {stylizeWords(paragraph)}
@@ -54,7 +54,7 @@ export const About = () => {
           </div>
         </div>
         <iframe
-          className="container__about__video"
+          className="about-video"
           src={sobreNos.video}
           title="Escutem a Nossa Voz"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
