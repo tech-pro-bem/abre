@@ -64,7 +64,29 @@
   }
 }
 
-.left,
+.left {
+  --size: 2.5rem;
+  display: grid;
+  place-items: center;
+  background-color: var(--color-secondary-light);
+  color: var(--color-secondary-dark);
+  border-radius: 50%;
+  margin-block: auto;
+  width: var(--size);
+  height: var(--size);
+  &:hover {
+    background-color: var(--color-secondary-medium);
+    color: var(--color-secondary-darkest);
+  }
+  @container projects-carousel (min-width: 40em) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-50%);
+  }
+}
+
 .right {
   --size: 2.5rem;
   display: grid;
@@ -83,18 +105,6 @@
     position: absolute;
     top: 0;
     bottom: 0;
-  }
-}
-
-.left {
-  @container projects-carousel (min-width: 40em) {
-    left: 0;
-    transform: translateX(-50%);
-  }
-}
-
-.right {
-  @container projects-carousel (min-width: 40em) {
     right: 0;
     transform: translateX(50%);
   }
