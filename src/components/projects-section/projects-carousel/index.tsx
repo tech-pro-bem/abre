@@ -55,10 +55,10 @@ export const ProjectsCarousel = () => {
   return (
     <>
       <ul className={styles.projects_list_button}>
-        {mock_projects_buttons.map((button, index) => (
+        {mock_projects_buttons.map(({ title, icon }, index) => (
           <li
-            key={button.title}
-            title={button.title}
+            key={title}
+            title={title}
           >
             <button
               className={styles.project_button}
@@ -67,14 +67,9 @@ export const ProjectsCarousel = () => {
               }}
             >
               <ProjectsIcon
-                component={
-                  <button.icon
-                    isActive={activeProjectIndex === index}
-                    size={30}
-                  />
-                }
+                component={icon}
                 isActive={activeProjectIndex === index}
-                text={button.title}
+                text={title}
               />
             </button>
           </li>
