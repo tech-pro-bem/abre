@@ -22,6 +22,11 @@
 
 .project_button {
   flex-shrink: 0;
+  &:focus-visible {
+    outline: 3px solid var(--color-primary-dark);
+    outline-offset: 10px;
+    border-radius: 6px;
+  }
 }
 
 .project_icon_container {
@@ -38,7 +43,7 @@
   align-items: center;
   justify-content: center;
   width: fit-content;
-  border-radius: 50%;
+  border-radius: 100vh;
   padding: 0.5rem;
   @media (min-width: 40em) {
     padding: 0.875rem;

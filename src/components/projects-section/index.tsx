@@ -33,10 +33,10 @@ export function ProjectsSection() {
         {mock_projects_buttons.map((button, index) => (
           <li
             key={button.title}
-            className={styles.project_button}
             title={button.title}
           >
             <button
+              className={styles.project_button}
               onClick={() => {
                 setActiveProjectIndex(index);
               }}

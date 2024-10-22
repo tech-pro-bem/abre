@@ -38,7 +38,7 @@ export const ProjectsCarousel = ({
       opacity: 0,
       x: direction === "right" ? "-100%" : "100%",
       transition: {
-        duration: 0.5,
+        duration: 0.4,
       },
     },
   };
