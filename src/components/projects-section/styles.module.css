@@ -12,23 +12,6 @@
   margin-block-end: 2rem;
 }
 
-.projects_list_button {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: space-between;
-  margin-bottom: 2.5rem;
-}
-
-.project_button {
-  flex-shrink: 0;
-  &:focus-visible {
-    outline: 3px solid var(--color-primary-dark);
-    outline-offset: 10px;
-    border-radius: 6px;
-  }
-}
-
 .project_icon_container {
   display: flex;
   flex-shrink: 0;
@@ -54,18 +37,18 @@
   }
 }
 
-.active {
-  background-color: var(--color-primary-dark);
-}
-
-.inactive {
-  background-color: var(--color-primary-lightest);
-}
-
 .project_title {
   display: none;
 
   @media (min-width: 40em) {
     display: block;
   }
+}
+
+.active {
+  background-color: var(--color-primary-dark);
+}
+
+.inactive {
+  background-color: var(--color-primary-lightest);
 }

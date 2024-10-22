@@ -1,3 +1,20 @@
+.projects_list_button {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.project_button {
+  flex-shrink: 0;
+  &:focus-visible {
+    outline: 3px solid var(--color-primary-dark);
+    outline-offset: 10px;
+    border-radius: 6px;
+  }
+}
+
 .carousel {
   position: relative;
   container-name: projects-carousel;
