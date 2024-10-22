@@ -1,4 +1,4 @@
-import { IconSvgProps } from "@/types";
+import type { IconSvgProps } from "@/types";
 
 export function AcolhimentoIcon({
   size = 31,
