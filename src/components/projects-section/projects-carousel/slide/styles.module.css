@@ -1,3 +1,8 @@
+.carousel_item {
+  container-name: projects-slide;
+  container-type: inline-size;
+}
+
 .slide {
   padding: 2.5rem 2rem;
   outline: 2px solid var(--color-secondary-light);
@@ -32,5 +37,15 @@
   .card_content > p:not(:last-child) {
     font-size: var(--font-size-5);
     margin-bottom: 1rem;
+  }
+}
+
+@container projects-slide (min-width: 40em) {
+  .slide {
+    padding: 56px 104px 64px;
+  }
+
+  .icon_circle {
+    padding: 0.875rem !important;
   }
 }

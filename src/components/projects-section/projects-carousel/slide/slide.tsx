@@ -8,7 +8,7 @@ type SlideProps = {
 
 export function Slide({ title, content, icon }: SlideProps) {
   return (
-    <li>
+    <li className={styles.carousel_item}>
       <article className={styles.slide}>
         <div className={styles.card_header}>
           <div className={styles.icon_circle}>{icon}</div>

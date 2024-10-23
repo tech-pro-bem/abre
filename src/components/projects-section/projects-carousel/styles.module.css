@@ -21,11 +21,11 @@
   container-type: inline-size;
 }
 
-.carousel_images {
+.carousel_projects {
   overflow: hidden;
 }
 
-.carousel_images_container {
+.carousel_projects_container {
   padding: 0.25rem;
 }
 
@@ -59,14 +59,6 @@
 }
 
 @container projects-carousel (min-width: 40em) {
-  .slide {
-    padding: 56px 104px 64px;
-  }
-
-  .icon_circle {
-    padding: 0.875rem;
-  }
-
   .carousel_nav {
     display: contents;
   }
