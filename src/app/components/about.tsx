@@ -1,5 +1,5 @@
 "use client";
-import "./style.css";
+import styles from "./styles.module.css";
 import "../styles/theme.css";
 interface SobreNos {
   title: string;
@@ -28,7 +28,7 @@ const stylizeWords = (text: string) => {
     wordsInBold.includes(words) ? (
       <span
         key={index}
-        className="about-inBold"
+        className={styles.about_inBold}
       >
         {words}
       </span>
@@ -40,19 +40,19 @@ const stylizeWords = (text: string) => {
 
 export const About = () => {
   return (
-    <section className="container">
-      <div className="about-content">
-        <div className="about-buttons">
-          <button className="about-button__know">Conheça a ABRE</button>
+    <section className={styles.container}>
+      <div className={styles.about_content}>
+        <div className={styles.about_buttons}>
+          <button className={styles.about_button_know}>Conheça a ABRE</button>
         </div>
-        <div className="about-title-text-video">
-          <div className="about-title__text">
-            <h1 className="about-title">{sobreNos.title}</h1>
+        <div className={styles.about_title_text_video}>
+          <div className={styles.about_title_text}>
+            <h1 className={styles.about_title}>{sobreNos.title}</h1>
 
-            <div className="about-text">
+            <div className={styles.about_text}>
               {sobreNos.text.split("\n").map((paragraph, index) => (
                 <p
-                  className="about-text__paragraph"
+                  className={styles.about_text_paragraph}
                   key={index}
                 >
                   {stylizeWords(paragraph)}
@@ -61,7 +61,7 @@ export const About = () => {
             </div>
           </div>
           <iframe
-            className="about-video"
+            className={styles.about_video}
             src={sobreNos.video}
             title="Escutem a Nossa Voz"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
