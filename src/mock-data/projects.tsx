@@ -57,7 +57,7 @@ export const mock_projects_data = [
         </p>
       </>
     ),
-    icon: <AcolhimentoIcon stroke="white" />,
+    icon: <AcolhimentoIcon />,
   },
   {
     title: "Acolhimento para familiares e amigos",
@@ -102,7 +102,7 @@ export const mock_projects_data = [
         </p>
       </>
     ),
-    icon: <FamiliaresIcon stroke="white" />,
+    icon: <FamiliaresIcon />,
   },
   {
     title: "LACCA",
@@ -149,7 +149,7 @@ export const mock_projects_data = [
         </p>
       </>
     ),
-    icon: <LaccaIcon stroke="white" />,
+    icon: <LaccaIcon />,
   },
   {
     title: "Recovery College",
@@ -198,7 +198,7 @@ export const mock_projects_data = [
         </p>
       </>
     ),
-    icon: <RecoveryIcon stroke="white" />,
+    icon: <RecoveryIcon />,
   },
   {
     title: "Comunidade de Fala",
@@ -243,6 +243,6 @@ export const mock_projects_data = [
         </p>
       </>
     ),
-    icon: <ComunidadeDeFalaIcon stroke="white" />,
+    icon: <ComunidadeDeFalaIcon />,
   },
 ];

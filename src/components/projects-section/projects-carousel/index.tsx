@@ -81,7 +81,7 @@ export const ProjectsCarousel = () => {
         aria-label="Carrossel de projetos da Abre"
         className={styles.carousel}
       >
-        <div className={styles.carousel_images}>
+        <div className={styles.carousel_projects}>
           <MotionConfig reducedMotion="user">
             <AnimatePresence mode="wait">
               <motion.ul
@@ -90,7 +90,7 @@ export const ProjectsCarousel = () => {
                 animate="visible"
                 exit="exit"
                 variants={slideVariants}
-                className={styles.carousel_images_container}
+                className={styles.carousel_projects_container}
               >
                 <Slide
                   aria-roledescription={`Slide ${activeProjectIndex + 1} de ${
