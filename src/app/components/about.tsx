@@ -24,42 +24,50 @@ const wordsInBold = [
 ];
 const stylizeWords = (text: string) => {
   const regex = new RegExp(`(${wordsInBold.join("|")})`, "gi");
-  return text
-    .split(regex)
-    .map((words, index) =>
-      wordsInBold.includes(words) ? <span key={index}>{words}</span> : words
-    );
+  return text.split(regex).map((words, index) =>
+    wordsInBold.includes(words) ? (
+      <span
+        key={index}
+        className="about-inBold"
+      >
+        {words}
+      </span>
+    ) : (
+      words
+    )
+  );
 };
 
 export const About = () => {
   return (
     <section className="container">
       <div className="about-content">
-        <div className="about-title__text">
-          <div className="about-buttons">
-            <button className="about-button__know">Conheça a ABRE</button>
-          </div>
-
-          <h1 className="about-title">{sobreNos.title}</h1>
-
-          <div className="about-text">
-            {sobreNos.text.split("\n").map((paragraph, index) => (
-              <p
-                className="about-text__paragraph"
-                key={index}
-              >
-                {stylizeWords(paragraph)}
-              </p>
-            ))}
-          </div>
+        <div className="about-buttons">
+          <button className="about-button__know">Conheça a ABRE</button>
         </div>
-        <iframe
-          className="about-video"
-          src={sobreNos.video}
-          title="Escutem a Nossa Voz"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
+        <div className="about-title-text-video">
+          <div className="about-title__text">
+            <h1 className="about-title">{sobreNos.title}</h1>
+
+            <div className="about-text">
+              {sobreNos.text.split("\n").map((paragraph, index) => (
+                <p
+                  className="about-text__paragraph"
+                  key={index}
+                >
+                  {stylizeWords(paragraph)}
+                </p>
+              ))}
+            </div>
+          </div>
+          <iframe
+            className="about-video"
+            src={sobreNos.video}
+            title="Escutem a Nossa Voz"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
       </div>
     </section>
   );

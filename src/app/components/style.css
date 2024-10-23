@@ -1,23 +1,21 @@
-.container {
-  padding: 0rem 1.5rem 2.7rem 1.4rem;
+.about-content {
+  width: 87%;
+  margin-inline: auto;
+  max-width: 76rem;
 }
 .about-buttons {
-  display: flex;
-  justify-content: space-between;
+  margin-bottom: 3em;
 }
 .about-button__know {
-  margin: 0.3rem 0rem 0.3rem 0.06rem;
-  gap: 1rem;
   border-bottom: 4px solid;
   font-size: var(--font-size-3);
   font-weight: var(--fw-bold);
-
   line-height: var(--line-height-2);
   color: var(--color-primary-darkest);
 }
+
 .about-title {
-  padding-top: 3rem;
-  padding-bottom: 1.5rem;
+  margin-bottom: 0.67em;
   font-size: var(--font-size-2);
   font-weight: var(--fw-medium);
   color: var(--color-secondary-dark);
@@ -25,57 +23,47 @@
 .about-text {
   display: flex;
   flex-direction: column;
-  text-align: justify;
   gap: 1rem;
   font-size: var(--font-size-5);
   font-weight: var(--fw-regular);
   line-height: var(--line-height-2);
   color: var(--color-neutral-darkest);
 }
-
-span {
+p:last-child {
+  margin-bottom: 3rem;
+}
+.about-inBold {
   font-weight: var(--fw-bold);
 }
-.about-content {
-  display: flex;
-  flex-direction: column;
-}
 .about-video {
-  margin-top: 3rem;
-  width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16 / 9;
   border-radius: 8px;
   border-width: 8px;
   border-style: solid;
   border-color: var(--color-primary-medium);
 }
+
 @media (min-width: 75em) {
-  .container {
-    padding: 0rem 22rem 5rem 22rem;
-  }
   .about-button__know {
     font-size: var(--font-size-4);
   }
-
+  .about-title-text-video {
+    display: flex;
+    flex-direction: row;
+  }
+  .about-title__text {
+    margin-right: 31px;
+    width: 50%;
+  }
   .about-title {
-    padding: 3.5rem 4.75rem 2rem 0rem;
-
     font-weight: var(--fw-semi-bold);
     font-size: var(--font-size-2);
   }
   .about-text {
-    padding-right: 31px;
-    padding-bottom: 1.9rem;
     font-size: var(--font-size-5);
   }
-  .about-title__text {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-  }
-  .about-content {
-    display: flex;
-    flex-direction: row;
+  p:last-child {
+    margin-bottom: 1rem;
   }
   .about-video {
     width: 50%;
