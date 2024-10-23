@@ -20,9 +20,19 @@
   }
 }
 
+.projects_section_title {
+  color: var(--color-neutral-lightest);
+}
+
+.projects_paragraph {
+  color: var(--color-neutral-lightest);
+  font-size: var(--font-size-5);
+}
+
 .buttons_container {
   display: grid;
   row-gap: 1rem;
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 
   @container contact-section (min-width: 40em) {
     column-gap: 2.5rem;
