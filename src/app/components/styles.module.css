@@ -13,7 +13,10 @@
   line-height: var(--line-height-2);
   color: var(--color-primary-darkest);
 }
-
+.about_title_text_video {
+  display: flex;
+  flex-direction: column;
+}
 .about_title {
   margin-bottom: 0.67em;
   font-size: var(--font-size-2);
