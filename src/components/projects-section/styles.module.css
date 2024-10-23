@@ -47,7 +47,6 @@
 
 .project_title {
   display: none;
-
   @media (min-width: 40em) {
     display: block;
   }
