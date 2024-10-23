@@ -18,11 +18,11 @@
   }
 }
 
-.projects_section_title {
+.section_title {
   color: var(--color-neutral-lightest);
 }
 
-.projects_paragraph {
+.section_paragraph {
   color: var(--color-neutral-lightest);
   font-size: var(--font-size-5);
 }
