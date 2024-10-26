@@ -1,5 +1,4 @@
 "use client";
-import { section } from "framer-motion/client";
 import styles from "./styles.module.css";
 import Image from "next/image";
 import mandala from "../../../public/mandala.png";
