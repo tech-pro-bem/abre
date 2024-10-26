@@ -37,7 +37,7 @@ export const Materials = () => {
           <Image
             className={styles.image_mandala}
             src={mandala}
-            alt="Picture of the author"
+            alt="Foto mandala"
             sizes="100vw"
             style={{
               width: "100%",
