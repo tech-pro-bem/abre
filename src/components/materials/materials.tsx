@@ -16,7 +16,7 @@ const material: Material = {
 
 export const Materials = () => {
   return (
-    <section>
+    <section className={styles.container}>
       <div className={styles.content}>
         <div className={styles.title_text}>
           <h1 className={styles.title}>{material.title}</h1>
