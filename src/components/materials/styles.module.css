@@ -43,13 +43,13 @@
     flex-direction: row-reverse;
     padding-top: 5rem;
     padding-bottom: 1rem;
+    gap: 8.4rem;
   }
   .title_text {
     width: 37.1%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-left: 8.4rem;
   }
   .text {
     margin-right: 4.3rem;
