@@ -1,7 +1,7 @@
 "use client";
 import styles from "./styles.module.css";
 import Image from "next/image";
-import mandala from "../../../public/mandala.webp";
+import mandala from "@/mandala.webp";
 
 interface Material {
   title: string;
