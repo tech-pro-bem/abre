@@ -3,7 +3,7 @@ import { Jost } from "next/font/google";
 import "./styles/reset.css";
 import "./styles/globals.css";
 import "./styles/theme.css";
-import { Hero } from "./hero";
+import { Hero } from "./components/hero";
 
 const jost = Jost({
   weight: ["400", "500", "600", "700"],

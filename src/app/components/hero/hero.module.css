@@ -21,8 +21,8 @@
   height: 20%;
   z-index: 1;
   @media (min-width: 700px) {
-    width: 30%;
-    height: 30%;
+    width: 25%;
+    height: 25%;
     top: 6%;
     right: 10%;
   }
@@ -39,8 +39,8 @@
   @media (min-width: 700px) {
     bottom: 20%;
     left: 10%;
-    width: 30%;
-    height: 30%;
+    width: 25%;
+    height: 25%;
     transform: none;
   }
 }
