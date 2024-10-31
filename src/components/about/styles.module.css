@@ -1,3 +1,6 @@
+.container {
+  padding-bottom: 43.32px;
+}
 .about_content {
   width: 87%;
   margin-inline: auto;
@@ -47,6 +50,9 @@
 }
 
 @media (min-width: 75em) {
+  .container {
+    padding-bottom: 48px;
+  }
   .about_button_know {
     font-size: var(--font-size-4);
   }
