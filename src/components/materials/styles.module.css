@@ -33,6 +33,9 @@
   background-color: var(--color-primary-dark);
   border: 1px solid var(--color-primary-darkest);
   border-radius: 100px;
+  filter: drop-shadow(0px 43px 17px rgba(0, 0, 0, 0.01))
+    drop-shadow(0px 24px 14px rgba(0, 0, 0, 0.05)) drop-shadow(0px 11px 11px rgba(0, 0, 0, 0.09))
+    drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1));
 }
 .button_materials:hover {
   background-color: var(--color-primary-darkest);
