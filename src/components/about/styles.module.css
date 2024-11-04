@@ -1,5 +1,5 @@
 .container {
-  padding-bottom: 43.32px;
+  padding-bottom: 48px;
 }
 .about_content {
   width: 87%;
@@ -7,13 +7,13 @@
   max-width: 76rem;
 }
 .about_buttons {
-  margin-bottom: 3em;
-}
-.about_button_know {
-  border-bottom: 4px solid;
+  margin-bottom: 3rem;
   font-size: var(--font-size-3);
   font-weight: var(--fw-bold);
   line-height: var(--line-height-2);
+}
+.about_button_know {
+  border-bottom: 4px solid;
   color: var(--color-primary-darkest);
 }
 .about_title_text_video {
@@ -35,8 +35,8 @@
   line-height: var(--line-height-2);
   color: var(--color-neutral-darkest);
 }
-.about_text:last-child {
-  margin-bottom: 3rem;
+.about_title_text_video {
+  gap: 3rem;
 }
 .about_inBold {
   font-weight: var(--fw-bold);
@@ -50,19 +50,12 @@
 }
 
 @media (min-width: 75em) {
-  .container {
-    padding-bottom: 48px;
-  }
   .about_button_know {
     font-size: var(--font-size-4);
   }
   .about_title_text_video {
-    display: flex;
     flex-direction: row;
-  }
-  .about_title_text {
-    margin-right: 31px;
-    width: 50%;
+    gap: 2rem;
   }
   .about_title {
     font-weight: var(--fw-semi-bold);
@@ -74,6 +67,7 @@
   .about_text:last-child {
     margin-bottom: 1rem;
   }
+  .about_title_text,
   .about_video {
     width: 50%;
   }
