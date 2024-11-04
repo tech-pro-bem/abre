@@ -24,6 +24,7 @@
   margin-bottom: 0.67em;
   font-size: var(--font-size-2);
   font-weight: var(--fw-medium);
+  line-height: var(--line-height-1);
   color: var(--color-secondary-dark);
 }
 .about_text {
@@ -42,7 +43,7 @@
   font-weight: var(--fw-bold);
 }
 .about_video {
-  aspect-ratio: 695 / 405;
+  aspect-ratio: 696/405;
   border-radius: 8px;
   border-width: 8px;
   border-style: solid;
@@ -69,6 +70,6 @@
     font-size: var(--font-size-5);
   }
   .about_video {
-    width: 75%;
+    width: 71%;
   }
 }
