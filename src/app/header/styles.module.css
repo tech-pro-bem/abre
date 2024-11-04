@@ -77,7 +77,7 @@
 .icons__header_desktop {
   @media (min-width: 1260px) {
     display: flex;
-    justify-content: center;
+    align-items: center;
     gap: 0.5rem;
   }
 }
