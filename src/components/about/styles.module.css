@@ -7,7 +7,7 @@
   max-width: 76rem;
 }
 .about_buttons {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   font-size: var(--font-size-3);
   font-weight: var(--fw-bold);
   line-height: var(--line-height-2);
@@ -42,7 +42,7 @@
   font-weight: var(--fw-bold);
 }
 .about_video {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 695 / 405;
   border-radius: 8px;
   border-width: 8px;
   border-style: solid;
@@ -57,6 +57,10 @@
     flex-direction: row;
     gap: 2rem;
   }
+  .about_title_text {
+    width: 50%;
+    padding-block: 24px 16px;
+  }
   .about_title {
     font-weight: var(--fw-semi-bold);
     font-size: var(--font-size-2);
@@ -64,11 +68,7 @@
   .about_text {
     font-size: var(--font-size-5);
   }
-  .about_text:last-child {
-    margin-bottom: 1rem;
-  }
-  .about_title_text,
   .about_video {
-    width: 50%;
+    width: 75%;
   }
 }

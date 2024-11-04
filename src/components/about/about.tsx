@@ -47,7 +47,7 @@ export const About = () => {
         </div>
         <div className={styles.about_title_text_video}>
           <div className={styles.about_title_text}>
-            <h1 className={styles.about_title}>{sobreNos.title}</h1>
+            <h2 className={styles.about_title}>{sobreNos.title}</h2>
 
             <div className={styles.about_text}>
               {sobreNos.text.split("\n").map((paragraph, index) => (
