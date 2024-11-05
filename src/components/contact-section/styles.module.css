@@ -13,17 +13,13 @@
   max-width: 50rem;
   padding-inline: 1rem;
   padding-block: 4.5rem;
+  color: var(--color-neutral-lightest);
   @container contact-section (min-width: 40em) {
     padding-block: 5rem;
   }
 }
 
-.section_title {
-  color: var(--color-neutral-lightest);
-}
-
 .section_paragraph {
-  color: var(--color-neutral-lightest);
   font-size: var(--font-size-5);
 }
 
@@ -54,6 +50,7 @@
   color: var(--color-primary-darkest);
   border-radius: 100vh;
   border: 1px solid transparent;
+  transition: all 150ms;
   &:hover {
     background-color: var(--color-primary-medium);
     color: var(--color-neutral-lightest);
