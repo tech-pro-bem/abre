@@ -1,0 +1,21 @@
+.options_content_title {
+  font-size: var(--heading-2);
+  font-weight: 600;
+}
+
+.options_content_subtitle {
+  max-width: 50em;
+  line-height: var(--line-height-2);
+  margin-bottom: 2rem;
+  @media (min-width: 40em) {
+    margin-bottom: initial;
+  }
+}
+
+.button {
+  width: 100%;
+  @media (min-width: 40em) {
+    width: fit-content;
+    padding-inline: 5rem !important;
+  }
+}
