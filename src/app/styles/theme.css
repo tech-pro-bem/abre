@@ -31,7 +31,7 @@
 
   --spacing-1: 1.5rem; /* 24px */
 
-  @media (min-width: 25em) {
+  @media (min-width: 40em) {
     --heading-1: 4rem; /* 64px */
     --heading-2: 3rem; /* 48px */
     --heading-3: 1.5rem; /* 24px */
@@ -53,6 +53,6 @@
   --fw-medium: 500;
   --fw-regular: 400;
 
-  /* --line-height-1: 1.2;
-  --line-height-2: 1.5; */
+  /* --line-height-1: 1.2; */
+  --line-height-2: 1.5;
 }
