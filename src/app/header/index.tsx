@@ -39,38 +39,44 @@ export const Header = () => {
         <div className={styles.button__container_desktop}>
           <button className={styles.button__header_desktop}>Materiais complementares</button>
         </div>
-        <div className={styles.icons__header_desktop}>
-          <a
-            href="https://www.facebook.com/abre.esquizofrenia/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <IconFacebook
-              width={24}
-              height={24}
-            />
-          </a>
-          <a
-            href="https://www.instagram.com/abreesquizofrenia/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <IconInstagram
-              width={24}
-              height={24}
-            />
-          </a>
-          <a
-            href="https://www.youtube.com/@abrebrasil2014"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <IconYoutube
-              width={26}
-              height={26}
-            />
-          </a>
-        </div>
+        <ul className={styles.icons__header_desktop}>
+          <li>
+            <a
+              href="https://www.facebook.com/abre.esquizofrenia/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconFacebook
+                width={24}
+                height={24}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/abreesquizofrenia/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconInstagram
+                width={24}
+                height={24}
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/@abrebrasil2014"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconYoutube
+                width={26}
+                height={26}
+              />
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
   );
