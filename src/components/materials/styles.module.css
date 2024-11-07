@@ -3,6 +3,9 @@
   margin-inline: auto;
   max-width: 76rem;
   padding-block: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 .title {
   margin-bottom: 0.67em;
@@ -24,8 +27,7 @@
 
 .button_materials {
   width: 100%;
-  padding: 9.5px;
-  margin-bottom: 2.5rem;
+  padding: 9px;
   font-weight: var(--fw-medium);
   font-size: var(--font-size-5);
   color: var(--color-neutral-lightest);
