@@ -15,35 +15,33 @@ const material: Material = {
 
 export const Materials = () => {
   return (
-    <section className={styles.container}>
-      <div className={styles.content}>
-        <div className={styles.title_text}>
-          <h1 className={styles.title}>{material.title}</h1>
-          <div className={styles.text}>
-            {material.text.split("\n").map((paragraph, index) => (
-              <p
-                className={styles.paragraph}
-                key={index}
-              >
-                {" "}
-                {paragraph}
-              </p>
-            ))}
-          </div>
-          <button className={styles.button_materials}>Acessar materiais</button>
+    <section className={styles.content}>
+      <div className={styles.title_text}>
+        <h1 className={styles.title}>{material.title}</h1>
+        <div className={styles.text}>
+          {material.text.split("\n").map((paragraph, index) => (
+            <p
+              className={styles.paragraph}
+              key={index}
+            >
+              {" "}
+              {paragraph}
+            </p>
+          ))}
         </div>
-        <div className={styles.container_image}>
-          <Image
-            className={styles.image_mandala}
-            src={mandala}
-            alt="Foto mandala"
-            sizes="100vw"
-            style={{
-              width: "100%",
-              height: "auto",
-            }}
-          />
-        </div>
+        <button className={styles.button_materials}>Acessar materiais</button>
+      </div>
+      <div className={styles.container_image}>
+        <Image
+          className={styles.image_mandala}
+          src={mandala}
+          alt="Foto mandala"
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
+        />
       </div>
     </section>
   );
