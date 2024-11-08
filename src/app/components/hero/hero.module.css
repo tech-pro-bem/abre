@@ -9,7 +9,7 @@
   gap: 1rem;
   z-index: 0;
   @media (min-width: 768px) {
-    height: 70dvh;
+    padding-block: 30dvh;
   }
 }
 
