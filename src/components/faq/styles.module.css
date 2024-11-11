@@ -94,6 +94,9 @@
   padding: 8px 24px 32px;
   font-weight: var(--fw-regular);
 }
+.faq_hiperLink_materials {
+  font-weight: var(--fw-bold);
+}
 
 @media (min-width: 48em) {
   .questions_section {

@@ -73,10 +73,26 @@ export const perguntas = [
     Você pode usar a declaração de dependência econômica feita no Imposto de Renda ou uma escritura pública declaratória de dependência. Além disso, é preciso apresentar pelo menos três documentos que comprovem essa dependência.
     Os documentos podem incluir prova de domicílio comum, contas bancárias conjuntas ou procurações mútua. Outros documentos legais, como registros de empregados ou anotações em associações, também são aceitos.
     Se precisar, procure um tabelião para emitir a escritura pública de dependência econômica. Ela é importante para formalizar a relação de dependência, facilitando a transferência da aposentadoria.
-    Na nossa página Materiais <hiperlink levando para a página>, você encontra uma declaração de dependência econômica.`,
+    Na nossa página Materiais, você encontra uma declaração de dependência econômica.`,
   },
 ];
-
+const hiperLink = ["Materiais"];
+const stylizeHiperLink = (text: string) => {
+  const regex = new RegExp(`(${hiperLink.join("|")})`, "gi");
+  return text.split(regex).map((words, index) =>
+    hiperLink.includes(words) ? (
+      <a
+        href="/"
+        key={index}
+        className={styles.faq_hiperLink_materials}
+      >
+        {words}
+      </a>
+    ) : (
+      words
+    )
+  );
+};
 export const Faq = () => {
   return (
     <section className={styles.questions_section}>
@@ -99,7 +115,7 @@ export const Faq = () => {
               </summary>
               <div className={styles.faq_text}>
                 {question.text.split("\n").map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
+                  <p key={index}> {stylizeHiperLink(paragraph)}</p>
                 ))}
               </div>
             </details>
