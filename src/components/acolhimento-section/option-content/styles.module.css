@@ -5,6 +5,7 @@
 
 .options_content_subtitle {
   max-width: 50em;
+  font-size: var(--font-size-5);
   line-height: var(--line-height-2);
   margin-bottom: 2rem;
   @media (min-width: 40em) {
