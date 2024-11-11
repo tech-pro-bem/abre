@@ -25,12 +25,13 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ) => {
+    const isDisabled = disabled || isLoading;
     const buttonClasses = [
       styles.button,
       styles[size],
       styles[variant],
       className,
-      disabled || isLoading ? styles.disabled : "",
+      isDisabled ? styles.disabled : "",
     ]
       .filter(Boolean)
       .join(" ");
@@ -39,7 +40,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         className={buttonClasses}
-        disabled={disabled || isLoading}
+        disabled={isDisabled}
         {...props}
       >
         {isLoading && (
