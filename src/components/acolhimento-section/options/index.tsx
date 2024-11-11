@@ -10,12 +10,13 @@ export function Options() {
     <>
       <ul className={styles.options_list}>
         {mock_acolhimento_data.map(({ title }, index) => (
-          <li
-            key={title}
-            className={styles.option}
-            onClick={() => setActiveOption(index)}
-          >
-            {title}
+          <li key={title}>
+            <button
+              className={styles.option}
+              onClick={() => setActiveOption(index)}
+            >
+              {title}
+            </button>
           </li>
         ))}
       </ul>
