@@ -26,7 +26,7 @@
       outline-offset: 10px;
     }
     @media (min-width: 40em) {
-      margin-bottom: 2.25rem;
+      border-bottom-width: 4px;
     }
   }
 }
