@@ -16,7 +16,7 @@
   .option {
     padding-bottom: 0.5rem;
     border-bottom: 2px solid transparent;
-    transition: all 0.15s ease-in-out;
+    transition: font-weight 150ms ease-in-out, border-color 150ms ease-in-out;
     cursor: pointer;
     &:hover {
       font-weight: 500;
