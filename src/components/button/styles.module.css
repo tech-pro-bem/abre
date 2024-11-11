@@ -7,6 +7,10 @@
   font-weight: 500;
   transition: background-color 150ms, color 150ms;
   outline: 2px solid transparent;
+  &:focus-visible {
+    outline: 3px solid var(--color-primary-dark);
+    outline-offset: 2px;
+  }
 }
 
 .sm {
