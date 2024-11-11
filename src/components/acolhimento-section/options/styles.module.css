@@ -17,10 +17,13 @@
     padding-bottom: 0.5rem;
     border-bottom: 2px solid transparent;
     transition: font-weight 150ms ease-in-out, border-color 150ms ease-in-out;
-    cursor: pointer;
     &:hover {
       font-weight: 500;
       border-color: var(--color-primary-darkest);
+    }
+    &:focus-visible {
+      border-radius: 4px;
+      outline-offset: 10px;
     }
     @media (min-width: 40em) {
       margin-bottom: 2.25rem;
