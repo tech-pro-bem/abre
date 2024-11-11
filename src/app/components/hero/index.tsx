@@ -1,5 +1,6 @@
 import styles from "./hero.module.css";
-import { LeftIcon, RightIcon } from "./assets/Icons";
+import { LeftIcon } from "./icons/icon-left";
+import { RightIcon } from "./icons/icon-right";
 
 interface ContentHero {
   title: string;
