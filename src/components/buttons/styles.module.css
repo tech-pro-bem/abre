@@ -1,7 +1,11 @@
 .button {
   display: inline-flex;
+  gap: 0.5rem;
   align-items: center;
   justify-content: center;
+  align-self: center;
+  text-decoration: none;
+  text-align: center;
   border-radius: 100vh;
   font-size: 0.875rem;
   font-weight: 500;
@@ -70,17 +74,16 @@
 }
 
 .iconLeft {
-  margin-right: 0.5rem;
+  flex-direction: row;
 }
 
 .iconRight {
-  margin-left: 0.5rem;
+  flex-direction: row-reverse;
 }
 
 .spinner {
   --size: 1rem;
   animation: spin 1s linear infinite;
-  margin-right: 0.5rem;
   width: var(--size);
   height: var(--size);
 }
