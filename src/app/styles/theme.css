@@ -28,6 +28,7 @@
   Questionar se o h3 realmente deve ser tao pequeno. A fonte de 16 vira 14, e a de 24 vira 12? */
   --font-size-5: 0.875rem; /* 14px */
   /* --font-size-6: .875rem; */ /* 14px */
+  --font-size-button: 0.875rem;
 
   --spacing-1: 1.5rem; /* 24px */
 

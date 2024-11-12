@@ -7,7 +7,7 @@
   text-decoration: none;
   text-align: center;
   border-radius: 100vh;
-  font-size: 0.875rem;
+  font-size: var(--font-size-button);
   font-weight: 500;
   transition: background-color 150ms, color 150ms;
   outline: 2px solid transparent;
