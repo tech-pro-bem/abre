@@ -19,6 +19,7 @@
 .about_title_text_video {
   display: flex;
   flex-direction: column;
+  gap: 3rem;
 }
 .about_title {
   margin-bottom: 0.67em;
@@ -35,9 +36,6 @@
   font-weight: var(--fw-regular);
   line-height: var(--line-height-2);
   color: var(--color-neutral-darkest);
-}
-.about_title_text_video {
-  gap: 3rem;
 }
 .about_inBold {
   font-weight: var(--fw-bold);
