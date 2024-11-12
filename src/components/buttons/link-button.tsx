@@ -65,8 +65,8 @@ export const LinkButton = forwardRef<HTMLAnchorElement, LinkButtonProps>(
             />
           </svg>
         )}
-        {Icon && !isLoading && <Icon className={styles.icon} />}
         {children}
+        {Icon && !isLoading && <Icon className={styles.icon} />}
       </a>
     );
   }
