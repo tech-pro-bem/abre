@@ -6,3 +6,13 @@
     font-weight: var(--fw-semi-bold);
   }
 }
+
+button:focus-visible {
+  outline: 3px solid var(--color-primary-dark);
+  outline-offset: 2px;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--color-primary-dark);
+  outline-offset: 2px;
+}
