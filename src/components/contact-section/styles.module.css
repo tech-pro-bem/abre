@@ -1,6 +1,7 @@
 .section {
   background-color: var(--color-primary-dark);
   color: var(--color-neutral-lightest);
+  font-size: var(--font-size-5);
   text-align: center;
 }
 
@@ -17,10 +18,6 @@
   @container contact-section (min-width: 40em) {
     padding-block: 5rem;
   }
-}
-
-.section_paragraph {
-  font-size: var(--font-size-5);
 }
 
 .buttons_container {
