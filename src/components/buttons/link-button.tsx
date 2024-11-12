@@ -2,7 +2,7 @@ import { forwardRef, PropsWithChildren } from "react";
 import { IconType } from "react-icons";
 import styles from "./styles.module.css";
 
-type ButtonProps = PropsWithChildren<React.ButtonHTMLAttributes<HTMLButtonElement>> & {
+type LinkButtonProps = PropsWithChildren<React.AnchorHTMLAttributes<HTMLAnchorElement>> & {
   icon?: IconType;
   iconPosition?: "left" | "right";
   size?: "sm" | "md" | "lg";
@@ -10,7 +10,7 @@ type ButtonProps = PropsWithChildren<React.ButtonHTMLAttributes<HTMLButtonElemen
   isLoading?: boolean;
 };
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+export const LinkButton = forwardRef<HTMLAnchorElement, LinkButtonProps>(
   (
     {
       children,
@@ -20,27 +20,27 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       variant = "primary",
       className,
       isLoading = false,
-      disabled,
+      href,
       ...props
     },
     ref
   ) => {
-    const isDisabled = disabled || isLoading;
-    const buttonClasses = [
+    const linkButtonClasses = [
       styles.button,
       styles[size],
       styles[variant],
       className,
-      isDisabled ? styles.disabled : "",
+      isLoading ? styles.disabled : "",
+      iconPosition === "right" ? styles.iconRight : styles.iconLeft,
     ]
       .filter(Boolean)
       .join(" ");
 
     return (
-      <button
+      <a
+        href={href}
         ref={ref}
-        className={buttonClasses}
-        disabled={isDisabled}
+        className={linkButtonClasses}
         {...props}
       >
         {isLoading && (
@@ -65,19 +65,11 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             />
           </svg>
         )}
-
-        {Icon && iconPosition === "left" && !isLoading && (
-          <Icon className={`${styles.icon} ${styles.iconLeft}`} />
-        )}
-
+        {Icon && !isLoading && <Icon className={styles.icon} />}
         {children}
-
-        {Icon && iconPosition === "right" && !isLoading && (
-          <Icon className={`${styles.icon} ${styles.iconRight}`} />
-        )}
-      </button>
+      </a>
     );
   }
 );
 
-Button.displayName = "Button";
+LinkButton.displayName = "LinkButton";
