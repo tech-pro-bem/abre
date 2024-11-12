@@ -13,12 +13,12 @@
   }
 }
 
-.button {
+.button.button {
   width: 100%;
   margin-inline: auto;
   max-width: 25em;
   @media (min-width: 40em) {
     width: fit-content;
-    padding-inline: 5rem !important;
+    padding-inline: 5rem;
   }
 }
