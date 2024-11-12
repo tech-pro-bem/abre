@@ -11,25 +11,23 @@
 .wrapper {
   margin-inline: auto;
   max-width: 63rem;
-}
-
-.title {
-  color: var(--color-secondary-dark);
   text-align: left;
-  margin-bottom: var(--spacing-1);
 
   @media (min-width: 40em) {
     text-align: center;
   }
 }
 
+.title {
+  color: var(--color-secondary-dark);
+  margin-bottom: var(--spacing-1);
+}
+
 .subtitle {
-  text-align: left;
   margin-bottom: 4rem;
   line-height: var(--line-height-2);
 
   @media (min-width: 40em) {
-    text-align: center;
     margin-bottom: 2.25rem;
   }
 }
