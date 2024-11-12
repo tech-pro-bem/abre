@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from "react";
+import { forwardRef, PropsWithChildren } from "react";
 import { IconType } from "react-icons";
 import styles from "./styles.module.css";
 
@@ -10,7 +10,7 @@ type ButtonProps = PropsWithChildren<React.ButtonHTMLAttributes<HTMLButtonElemen
   isLoading?: boolean;
 };
 
-export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       children,
