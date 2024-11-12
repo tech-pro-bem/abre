@@ -21,6 +21,7 @@
 .title {
   color: var(--color-secondary-dark);
   margin-bottom: var(--spacing-1);
+  line-height: var(--line-height-1);
 }
 
 .subtitle {
