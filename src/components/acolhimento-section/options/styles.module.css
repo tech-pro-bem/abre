@@ -36,7 +36,8 @@
   flex-direction: column;
   gap: 1rem;
   background-color: var(--color-primary-darkest);
-  padding: 1.5rem 1rem 2.5rem 1rem;
+  padding-inline: 1rem;
+  padding-block: 1.5rem 2.5rem;
   text-align: left;
   color: var(--color-primary-lightest);
   border-radius: 1rem;
