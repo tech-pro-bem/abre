@@ -1,5 +1,6 @@
 .section {
   background-color: var(--color-primary-dark);
+  color: var(--color-neutral-lightest);
   text-align: center;
 }
 
@@ -13,7 +14,6 @@
   max-width: 50rem;
   padding-inline: 1rem;
   padding-block: 4.5rem;
-  color: var(--color-neutral-lightest);
   @container contact-section (min-width: 40em) {
     padding-block: 5rem;
   }
