@@ -66,8 +66,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             />
           </svg>
         )}
-        {Icon && !isLoading && <Icon className={styles.icon} />}
         {children}
+        {Icon && !isLoading && <Icon className={styles.icon} />}
       </button>
     );
   }

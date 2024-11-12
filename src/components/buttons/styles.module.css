@@ -73,11 +73,11 @@
   }
 }
 
-.iconLeft {
+.iconRight {
   flex-direction: row;
 }
 
-.iconRight {
+.iconLeft {
   flex-direction: row-reverse;
 }
 
