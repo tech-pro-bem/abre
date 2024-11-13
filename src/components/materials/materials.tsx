@@ -17,7 +17,7 @@ export const Materials = () => {
   return (
     <section className={styles.content}>
       <div className={styles.title_text}>
-        <h1 className={styles.title}>{material.title}</h1>
+        <h2 className={styles.title}>{material.title}</h2>
         <div className={styles.text}>
           {material.text.split("\n").map((paragraph, index) => (
             <p
