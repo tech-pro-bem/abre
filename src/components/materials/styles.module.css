@@ -78,6 +78,5 @@
     display: grid;
     grid-column: 1/2;
     grid-row: 1;
-    aspect-ratio: 592/444;
   }
 }
