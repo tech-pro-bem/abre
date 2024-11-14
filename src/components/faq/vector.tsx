@@ -1,5 +1,3 @@
-import * as React from "react";
-
 function Vector(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg

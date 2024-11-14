@@ -1,5 +1,3 @@
-import * as React from "react";
-
 function Arrow_icon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
