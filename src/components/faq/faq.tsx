@@ -101,7 +101,7 @@ export const Faq = () => {
         <Vector className={styles.vector_bottom} />
       </div>
       <div className={styles.questions_content}>
-        <h1 className={styles.questions_title}>Perguntas sobre esquizofrenia</h1>
+        <h2 className={styles.questions_title}>Perguntas sobre esquizofrenia</h2>
         <div className={styles.faq_list}>
           {perguntas.map((question, index) => (
             <details
