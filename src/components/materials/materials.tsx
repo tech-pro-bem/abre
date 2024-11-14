@@ -31,17 +31,14 @@ export const Materials = () => {
         </div>
         <button className={styles.button_materials}>Acessar materiais</button>
       </div>
-
-      <Image
-        className={styles.image_mandala}
-        src={mandala}
-        alt="Foto mandala"
-        sizes="100vw"
-        style={{
-          width: "100%",
-          height: "auto",
-        }}
-      />
+      <div className={styles.container_image_mandala}>
+        <Image
+          className={styles.image_mandala}
+          src={mandala}
+          alt="Foto mandala"
+          fill
+        />
+      </div>
     </section>
   );
 };
