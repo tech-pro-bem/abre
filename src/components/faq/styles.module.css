@@ -84,7 +84,7 @@
 }
 
 .arrow_icon {
-  transition: 0.2s;
+  transition: transform 0.2s;
 }
 
 .faq_text {
@@ -100,10 +100,6 @@
 }
 
 @media (min-width: 48em) {
-  .questions_section {
-    margin-block: 80px;
-  }
-
   .faq_item {
     font-size: var(--font-size-5);
   }
