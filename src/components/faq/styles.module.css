@@ -68,6 +68,7 @@
 }
 
 .faq_summary {
+  min-height: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -105,6 +106,5 @@
 
   .faq_item {
     font-size: var(--font-size-5);
-    padding-block: 1rem;
   }
 }
