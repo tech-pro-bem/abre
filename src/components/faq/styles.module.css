@@ -45,7 +45,7 @@
 }
 .faq_list {
   padding-block: 0.5rem;
-  background-color: #ffffff;
+  background-color: var(--color-neutral-lightest);
   border-radius: 0.5rem;
 }
 
