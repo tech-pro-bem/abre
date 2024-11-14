@@ -1,4 +1,3 @@
-"use client";
 import styles from "./styles.module.css";
 import Image from "next/image";
 import mandala from "@/mandala.webp";
