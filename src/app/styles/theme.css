@@ -1,28 +1,48 @@
 :root {
   --color-primary-darkest: #0d4542;
   --color-primary-dark: #177873;
-  --color-primary-medium: #22b5ad;
-  --color-primary-light: #76e5df;
+  /* --color-primary-medium: #22b5ad;
+  --color-primary-light: #76e5df; */
   --color-primary-lightest: #ddf8f7;
   --color-secondary-darkest: #cc5105;
   --color-secondary-dark: #d67b0b;
   --color-secondary-medium: #e89a38;
   --color-secondary-light: #f2c791;
-  --color-secondary-lightest: #f9e3c8;
-  --color-neutral-darkest: #030302;
+  /* --color-secondary-lightest: #ddf8f7; hexa errado */
+  /*   --color-neutral-darkest: #030302;
   --color-neutral-dark: #575452;
   --color-neutral-medium: #bdbab9;
-  --color-neutral-light: #f5f3f2;
+  --color-neutral-light: #f5f3f2; */
   --color-neutral-lightest: #fdfcfc;
-  --color-gradient: linear-gradient(var(--color-primary-lightest, var(--color-neutral-lightest)));
+  /* --color-gradient: linear-gradient(var(--color-primary-lightest, var(--color-neutral-lightest))); */
 
-  /* Usar números ou small, medium, large etc? */
+  /* usar numeros ou small, medium, large etc? */
+  --heading-1: 2.5rem; /* 40px */
+  --heading-2: 2.25rem; /* 36px */
+  --heading-3: 1rem; /* 16px */
+
   --font-size-1: 2.5rem; /* 40px */
   --font-size-2: 2.25rem; /* 36px */
-  --font-size-3: 1rem; /* 16px */
-  --font-size-4: 0.75rem; /* 12px - Questionar se o h3 realmente deve ser tão pequeno. A fonte de 16 vira 14, e a de 24 vira 12? */
+  /* --font-size-3: 1rem; */ /* 16px */
+  /* --font-size-4: .75rem; */ /* 12px  
+  Questionar se o h3 realmente deve ser tao pequeno. A fonte de 16 vira 14, e a de 24 vira 12? */
   --font-size-5: 0.875rem; /* 14px */
   --font-size-6: 0.875rem; /* 14px */
+
+  @media (min-width: 25em) {
+    --heading-1: 4rem; /* 64px */
+    --heading-2: 3rem; /* 48px */
+    --heading-3: 1.5rem; /* 24px */
+
+    --font-size-1: 4rem; /* 64px */
+    --font-size-2: 3rem; /* 48px */
+    /* --font-size-3: 2.5rem; */ /* 40px */
+    /* --font-size-4: 1.5rem; */ /* 24px */
+    --font-size-5: 1rem; /* 16px */
+    --font-size-6: 0.875rem; /* 14px */
+  }
+
+  /* Mudanca do button vai precisar ser feita direto no componente. Vai mudar de font-size 3 4 ou 5 no mobile, para4 ou 6 desktop */
 
   --fw-bold: 700;
   --fw-semi-bold: 600;

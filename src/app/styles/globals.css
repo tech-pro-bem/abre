@@ -1,0 +1,18 @@
+.section-title {
+  font-size: var(--font-size-2);
+  font-weight: var(--fw-medium);
+
+  @media (min-width: 40em) {
+    font-weight: var(--fw-semi-bold);
+  }
+}
+
+button:focus-visible {
+  outline: 3px solid var(--color-primary-dark);
+  outline-offset: 2px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-primary-dark);
+  outline-offset: 2px;
+}
