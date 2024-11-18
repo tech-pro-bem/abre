@@ -57,10 +57,10 @@
   .content {
     display: grid;
     grid-template-columns: 1fr 40ch;
-    padding-right: 104px;
+    padding-right: 5.45vw;
     padding-top: 5rem;
     padding-bottom: 1rem;
-    gap: 134px;
+    gap: 7vw;
   }
   .title_text {
     padding-top: 70px;
