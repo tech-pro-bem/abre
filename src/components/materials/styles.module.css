@@ -3,7 +3,7 @@
   margin-inline: auto;
   max-width: 76rem;
   display: grid;
-  grid-template-columns: 1;
+  grid-template-columns: 1fr;
   gap: 2.5rem;
   padding-block: 3.5rem;
 }
@@ -53,7 +53,7 @@
   border-radius: 15px;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 75em) {
   .content {
     display: grid;
     grid-template-columns: 1fr 40ch;
@@ -63,7 +63,8 @@
     gap: 134px;
   }
   .title_text {
-    grid-column: 2/3;
+    padding-top: 70px;
+    order: 2;
     max-width: 67.5ch;
     gap: 2rem;
   }
@@ -76,7 +77,6 @@
 
   .container_image_mandala {
     display: grid;
-    grid-column: 1/2;
-    grid-row: 1;
+    order: 1;
   }
 }
