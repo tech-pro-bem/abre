@@ -1,13 +1,12 @@
 .hero {
   position: relative;
-  background-color: #ddf8f7;
+  background-color: #ddf8f7; /* background provisório apenas para visualizar o icon */
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  padding: 3.5rem 1.5rem 5rem;
+  padding: 56px 24px 80px;
   gap: 1rem;
-  z-index: 0;
   @media (min-width: 768px) {
     padding-block: 30dvh;
   }
