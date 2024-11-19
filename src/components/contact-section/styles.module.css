@@ -1,0 +1,52 @@
+.section {
+  background-color: var(--color-primary-dark);
+  color: var(--color-neutral-lightest);
+  font-size: var(--font-size-5);
+  text-align: center;
+}
+
+.content_wrapper {
+  container-name: contact-section;
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  margin-inline: auto;
+  max-width: 50rem;
+  padding-inline: 1rem;
+  padding-block: 4.5rem;
+  @container contact-section (min-width: 40em) {
+    padding-block: 5rem;
+  }
+}
+
+.projects_section_title {
+  color: var(--color-neutral-lightest);
+}
+
+.projects_paragraph {
+  color: var(--color-neutral-lightest);
+  font-size: var(--font-size-5);
+}
+
+.buttons_container {
+  display: grid;
+  row-gap: 1rem;
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+
+  @container contact-section (min-width: 40em) {
+    column-gap: 2.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.button {
+  &:focus-visible {
+    outline-color: var(--color-primary-medium);
+  }
+  & svg {
+    --size: 1.5rem;
+    width: var(--size);
+    height: var(--size);
+  }
+}
