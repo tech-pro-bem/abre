@@ -1,4 +1,5 @@
-import { FacebookIcon, InstagramIcon } from "../icons";
+import { FiFacebook, FiInstagram } from "react-icons/fi";
+import { LinkButton } from "../buttons/link-button";
 import styles from "./styles.module.css";
 
 export async function ContactSection() {
@@ -12,26 +13,30 @@ export async function ContactSection() {
           esquizofrenia ou familiares e amigos.
         </p>
         <div className={styles.buttons_container}>
-          <a
+          <LinkButton
             href="https://www.facebook.com/abre.esquizofrenia/"
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.anchor}
+            variant="secondary"
+            size="lg"
+            icon={FiFacebook}
+            iconPosition="left"
+            className={styles.button}
           >
-            <button className={styles.button}>
-              <FacebookIcon /> Conversar via Facebook
-            </button>
-          </a>
-          <a
+            Conversar via Facebook
+          </LinkButton>
+          <LinkButton
             href="https://www.instagram.com/abreesquizofrenia/"
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.anchor}
+            variant="secondary"
+            size="lg"
+            icon={FiInstagram}
+            iconPosition="left"
+            className={styles.button}
           >
-            <button className={styles.button}>
-              <InstagramIcon /> Conversar via Instagram
-            </button>
-          </a>
+            Conversar via Instagram
+          </LinkButton>
         </div>
       </div>
     </section>

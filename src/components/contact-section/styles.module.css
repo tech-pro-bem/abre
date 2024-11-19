@@ -40,30 +40,13 @@
   }
 }
 
-.anchor {
-  display: contents;
-}
-
 .button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  padding-block: 0.625rem;
-  background-color: var(--color-primary-lightest);
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--color-primary-darkest);
-  border-radius: 100vh;
-  border: 1px solid transparent;
-  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
-  transition: background-color 150ms, color 150ms;
-  &:hover {
-    background-color: var(--color-primary-medium);
-    color: var(--color-neutral-lightest);
-  }
   &:focus-visible {
-    outline: 2px solid var(--color-primary-lightest);
-    outline-offset: 4px;
+    outline-color: var(--color-primary-medium);
+  }
+  & svg {
+    --size: 1.5rem;
+    width: var(--size);
+    height: var(--size);
   }
 }
