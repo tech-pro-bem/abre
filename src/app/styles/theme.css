@@ -26,10 +26,10 @@
   /* --font-size-3: 1rem; */ /* 16px */
   /* --font-size-4: .75rem; */ /* 12px  
   Questionar se o h3 realmente deve ser tao pequeno. A fonte de 16 vira 14, e a de 24 vira 12? */
-  --font-size-5: .875rem; /* 14px */
+  --font-size-5: 0.875rem; /* 14px */
   /* --font-size-6: .875rem; */ /* 14px */
 
-  @media (min-width: 25em) {
+  @media (min-width: 40em) {
     --heading-1: 4rem; /* 64px */
     --heading-2: 3rem; /* 48px */
     --heading-3: 1.5rem; /* 24px */
