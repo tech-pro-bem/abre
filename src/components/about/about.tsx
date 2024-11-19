@@ -66,7 +66,7 @@ export const About = () => {
             title="Escutem a Nossa Voz"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
-          ></iframe>
+          />
         </div>
       </div>
     </section>
