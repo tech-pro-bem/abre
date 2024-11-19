@@ -1,6 +1,7 @@
 import styles from "./styles.module.css";
 import Image from "next/image";
 import mandala from "@/mandala.webp";
+import { LinkButton } from "../buttons/link-button";
 
 interface Material {
   title: string;
@@ -23,12 +24,20 @@ export const Materials = () => {
               className={styles.paragraph}
               key={index}
             >
-              {" "}
               {paragraph}
             </p>
           ))}
         </div>
-        <button className={styles.button_materials}>Acessar materiais</button>
+        <LinkButton
+          href="/"
+          target="_blank"
+          rel="noopener noreferrer"
+          variant="tertiary"
+          size="xl"
+          className={styles.button}
+        >
+          Acessar materiais
+        </LinkButton>
       </div>
       <div className={styles.container_image_mandala}>
         <Image
