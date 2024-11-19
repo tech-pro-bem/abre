@@ -22,6 +22,10 @@
       font-weight: 500;
       border-bottom-color: var(--color-primary-darkest);
     }
+    &[data-active="true"] {
+      font-weight: 500;
+      border-bottom-color: var(--color-primary-darkest);
+    }
     &:focus-visible {
       border-radius: 4px;
       outline-offset: 10px;

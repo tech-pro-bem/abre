@@ -6,6 +6,8 @@ import { useState } from "react";
 
 export function Options() {
   const [activeOption, setActiveOption] = useState(0);
+  const isActiveOption = (index: number) => index === activeOption;
+
   return (
     <>
       <ul className={styles.options_list}>
@@ -14,6 +16,7 @@ export function Options() {
             <button
               className={styles.option}
               onClick={() => setActiveOption(index)}
+              data-active={isActiveOption(index)}
             >
               {title}
             </button>
