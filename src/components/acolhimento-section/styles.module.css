@@ -1,0 +1,34 @@
+.section {
+  background: linear-gradient(
+    360deg,
+    var(--color-primary-lightest) 0%,
+    rgba(221, 248, 247, 0) 100%
+  );
+  padding-inline: 1.5rem;
+  padding-block: 5rem;
+}
+
+.wrapper {
+  margin-inline: auto;
+  max-width: 63rem;
+  text-align: left;
+
+  @media (min-width: 40em) {
+    text-align: center;
+  }
+}
+
+.title {
+  color: var(--color-secondary-dark);
+  margin-bottom: var(--spacing-1);
+  line-height: var(--line-height-1);
+}
+
+.subtitle {
+  margin-bottom: 4rem;
+  line-height: var(--line-height-2);
+
+  @media (min-width: 40em) {
+    margin-bottom: 2.25rem;
+  }
+}
