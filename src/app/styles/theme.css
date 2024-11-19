@@ -2,17 +2,25 @@
   --color-primary-darkest: #0d4542;
   --color-primary-dark: #177873;
   --color-primary-medium: #22b5ad;
+
   /* --color-primary-light: #76e5df; */
+
   --color-primary-lightest: #ddf8f7;
   --color-secondary-darkest: #cc5105;
   --color-secondary-dark: #d67b0b;
   --color-secondary-medium: #e89a38;
   --color-secondary-light: #f2c791;
-  /* --color-secondary-lightest: #f9e3c8;*/
+
+  --color-secondary-lightest: #f9e3c8;
+  --color-neutral-darkest: #030302;
+  /* --color-neutral-dark: #575452;*/
+
+
   --color-neutral-darkest: #030302;
   /* --color-neutral-dark: #575452;
+
   --color-neutral-medium: #bdbab9;
-  --color-neutral-light: #f5f3f2; */
+  /*--color-neutral-light: #f5f3f2; */
   --color-neutral-lightest: #fdfcfc;
   /* --color-gradient: linear-gradient(var(--color-primary-lightest, var(--color-neutral-lightest))); */
 
@@ -25,6 +33,7 @@
   --font-size-1: 2.5rem; /* 40px */
 
   --font-size-2: 2.25rem; /* 36px */
+
   --font-size-3: 1rem; /* 16px */
   --font-size-4: 0.75rem; /* 12px  
   Questionar se o h3 realmente deve ser tao pequeno. A fonte de 16 vira 14, e a de 24 vira 12? */
