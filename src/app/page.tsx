@@ -1,8 +1,8 @@
-import { Faq } from "@/components/faq/faq";
-import { AcolhimentoSection } from "@/components/acolhimento-section";
 import { Materials } from "@/components/materials/materials";
+import { AcolhimentoSection } from "@/components/acolhimento-section";
 import { ProjectsSection } from "@/components/projects-section";
 import { About } from "../components/about/about";
+import { Faq } from "@/components/faq/faq";
 
 export default function Home() {
   return (
