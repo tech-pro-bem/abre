@@ -39,13 +39,14 @@
 }
 
 .primary {
-  background-color: var(--color-primary-darkest);
+  outline-color: var(--color-primary-darkest);
+  background-color: var(--color-primary-dark);
   color: var(--color-primary-lightest);
 }
 
 .primary:hover:not(:disabled) {
-  background-color: var(--color-primary-lightest);
-  color: var(--color-primary-darkest);
+  background-color: var(--color-primary-darkest);
+  color: var(--color-neutral-lightest);
   outline-color: var(--color-primary-darkest);
 }
 
@@ -57,16 +58,6 @@
 .secondary:hover:not(:disabled) {
   background-color: var(--color-primary-medium);
   color: var(--color-primary-lightest);
-}
-
-.tertiary {
-  background-color: var(--color-primary-dark);
-  color: var(--color-neutral-lightest);
-}
-
-.tertiary:hover:not(:disabled) {
-  background-color: var(--color-primary-darkest);
-  color: var(--color-neutral-lightest);
 }
 
 .outline {

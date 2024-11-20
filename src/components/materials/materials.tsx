@@ -32,7 +32,7 @@ export const Materials = () => {
           href="/"
           target="_blank"
           rel="noopener noreferrer"
-          variant="tertiary"
+          variant="primary"
           size="xl"
           className={styles.button}
         >
