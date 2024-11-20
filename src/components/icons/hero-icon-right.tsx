@@ -1,6 +1,6 @@
-import { SVGProps } from "react";
+import { IconSvgProps } from "@/types";
 
-export const RightIcon = (props: SVGProps<SVGSVGElement>) => {
+export const HeroRightIcon = (props: IconSvgProps) => {
   return (
     <svg
       width={228}

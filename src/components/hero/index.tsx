@@ -1,6 +1,5 @@
 import styles from "./hero.module.css";
-import { LeftIcon } from "./icons/icon-left";
-import { RightIcon } from "./icons/icon-right";
+import { HeroLeftIcon, HeroRightIcon } from "@/components/icons";
 
 interface ContentHero {
   title: string;
@@ -16,8 +15,8 @@ const contentHero: ContentHero = {
 export const Hero = () => {
   return (
     <section className={styles.hero}>
-      <RightIcon className={styles.icons__right} />
-      <LeftIcon className={styles.icons__left} />
+      <HeroRightIcon className={styles.icons__right} />
+      <HeroLeftIcon className={styles.icons__left} />
       <h1 className={styles.hero__title}>{contentHero.title}</h1>
       <h2 className={styles.hero__subtitle}>{contentHero.subtitle}</h2>
     </section>
