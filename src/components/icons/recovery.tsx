@@ -1,6 +1,6 @@
 import { IconSvgProps } from "@/types";
 
-export function RecoveryIcon({ size = 31, width = 31, height = 29, ...props }: IconSvgProps) {
+export const RecoveryIcon = ({ size = 31, width = 31, height = 29, ...props }: IconSvgProps) => {
   return (
     <svg
       width={size || width}
@@ -16,4 +16,4 @@ export function RecoveryIcon({ size = 31, width = 31, height = 29, ...props }: I
       />
     </svg>
   );
-}
+};
