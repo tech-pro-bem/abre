@@ -5,6 +5,8 @@ import { FamiliaresIcon } from "./familiares";
 import { InstagramIcon } from "./instagram";
 import { LaccaIcon } from "./lacca";
 import { RecoveryIcon } from "./recovery";
+import { HeroLeftIcon } from "./hero-icon-left";
+import { HeroRightIcon } from "./hero-icon-right";
 
 export {
   AcolhimentoIcon,
@@ -14,4 +16,6 @@ export {
   InstagramIcon,
   LaccaIcon,
   RecoveryIcon,
+  HeroLeftIcon,
+  HeroRightIcon,
 };
