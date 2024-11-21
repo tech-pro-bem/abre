@@ -7,6 +7,7 @@ import { LaccaIcon } from "./lacca";
 import { RecoveryIcon } from "./recovery";
 import { HeroLeftIcon } from "./hero-icon-left";
 import { HeroRightIcon } from "./hero-icon-right";
+import { YoutubeIcon } from "./youtube";
 
 export {
   AcolhimentoIcon,
@@ -18,4 +19,5 @@ export {
   RecoveryIcon,
   HeroLeftIcon,
   HeroRightIcon,
+  YoutubeIcon,
 };

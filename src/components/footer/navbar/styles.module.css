@@ -1,0 +1,26 @@
+.navbar_content {
+  display: flex;
+  justify-content: flex-start;
+  gap: 4.5rem;
+  line-height: var(--line-height-2);
+  font-size: var(--font-size-5);
+  font-weight: var(--fw-medium);
+}
+.container_1 {
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.container_2 {
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 48em) {
+  .navbar_content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
