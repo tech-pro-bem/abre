@@ -6,23 +6,23 @@ type NavBarProps = {
   className?: string;
 };
 
-export const NavBar: React.FC<NavBarProps> = ({ className }) => {
+export const NavBar: React.FC<NavBarProps> = ({}) => {
   return (
-    <nav className={styles.container}>
+    <nav>
       <ul className={styles.navbar_content}>
         <div className={styles.container_1}>
-          <li className={styles.navbar_link}>
+          <li>
             <Link href="#conheca_a_abre">Conheça</Link>
           </li>
-          <li className={styles.navbar_link}>
+          <li>
             <Link href="#projetos">Projetos</Link>
           </li>
         </div>
         <div className={styles.container_2}>
-          <li className={styles.navbar_link}>
+          <li>
             <Link href="/">Contato</Link>
           </li>
-          <li className={styles.navbar_link}>
+          <li>
             <Link href="#perguntas_sobre_esquizofrenia">Esquizofrenia</Link>
           </li>
         </div>
