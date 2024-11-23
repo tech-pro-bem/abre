@@ -2,6 +2,7 @@ import { Faq } from "@/components/faq/faq";
 import { AcolhimentoSection } from "@/components/acolhimento-section";
 import { ProjectsSection } from "@/components/projects-section";
 import { About } from "../components/about/about";
+import { Testimonials } from "@/components/depoimentos-section";
 
 export default function Home() {
   return (
@@ -9,8 +10,8 @@ export default function Home() {
       <About />
       <ProjectsSection />
       <Faq />
+      <Testimonials />
       <AcolhimentoSection />
-
     </>
   );
 }
