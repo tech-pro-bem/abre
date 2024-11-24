@@ -51,6 +51,17 @@ export const ProjectsCarousel = () => {
     },
   };
 
+  const Pagination = () => {
+    return mock_depoimentos_datas.map((_, index) => (
+      <button
+        key={index}
+        className={`${styles.dot} ${index === activeProjectIndex ? styles.activeDot : ""}`}
+        onClick={() => setActiveProjectIndex(index)}
+        aria-label={`Ir para o slide ${index + 1}`}
+      />
+    ));
+  };
+
   return (
     <>
       <div
@@ -73,7 +84,7 @@ export const ProjectsCarousel = () => {
                 <Slide
                   aria-roledescription={`Slide ${activeProjectIndex + 1} de ${
                     mock_depoimentos_datas.length
-                  } de projeto da abre`}
+                  } de depoimentos da abre`}
                   quote={mock_depoimentos_datas[activeProjectIndex].quote}
                   content={mock_depoimentos_datas[activeProjectIndex].description}
                   author={mock_depoimentos_datas[activeProjectIndex].author}
@@ -81,7 +92,6 @@ export const ProjectsCarousel = () => {
               </motion.ul>
             </AnimatePresence>
           </MotionConfig>
-          <div className={styles.pagination}></div>
         </div>
         <div
           aria-label="Controles do Carrossel"
@@ -107,6 +117,7 @@ export const ProjectsCarousel = () => {
               size={26}
             />
           </button>
+          <div className={styles.pagination}>{Pagination()}</div>
         </div>
       </div>
     </>

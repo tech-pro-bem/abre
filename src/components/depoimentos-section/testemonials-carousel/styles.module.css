@@ -24,7 +24,7 @@
     align-items: center;
     margin-bottom: 2rem;
     border-radius: 8px;
-    padding: 35px 40px;
+    padding: 30px 40px;
     background-color: var(--color-primary-lightest);
   }
 
@@ -54,7 +54,6 @@
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  margin-top: 1.5rem;
 }
 
 .left,
@@ -69,8 +68,7 @@
   width: var(--size);
   height: var(--size);
   position: absolute;
-  top: 7rem;
-  transform: translateY(-50%);
+  top: 20%;
   &:hover {
     background-color: var(--color-secondary-medium);
     color: var(--color-secondary-darkest);
@@ -85,4 +83,28 @@
 .right {
   right: 10%;
   transform: translate(50%);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 100vh;
+  background-color: var(--color-secondary-lightest);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot:hover {
+  background-color: var(--color-secondary-darkest);
+}
+
+.activeDot {
+  background-color: var(--color-secondary-darkest);
 }
