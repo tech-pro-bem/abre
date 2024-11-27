@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 import Image from "next/image";
-import mandala from "@/mandala.webp";
+import mandala from "/public/mandala.webp";
 import { LinkButton } from "../buttons/link-button";
 
 interface Material {
