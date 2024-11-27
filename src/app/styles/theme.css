@@ -14,7 +14,7 @@
   /* --color-neutral-dark: #575452;*/
 
   --color-neutral-darkest: #030302;
-  /* --color-neutral-dark: #575452;
+  /* --color-neutral-dark: #575452;  */
 
   --color-neutral-medium: #bdbab9;
   /*--color-neutral-light: #f5f3f2; */
@@ -43,8 +43,7 @@
 
   --font-size-button: 0.875rem;
 
-  --spacing-1: 1.5rem;
-  /* 24px */
+  --spacing-1: 1.5rem; /* 24px */
 
   @media (min-width: 40em) {
     --heading-1: 4rem;
