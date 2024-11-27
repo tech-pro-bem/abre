@@ -5,8 +5,8 @@ import styles from "./styles.module.css";
 type LinkButtonProps = PropsWithChildren<React.AnchorHTMLAttributes<HTMLAnchorElement>> & {
   icon?: IconType;
   iconPosition?: "left" | "right";
-  size?: "sm" | "md" | "lg";
-  variant?: "primary" | "secondary" | "outline";
+  size?: "sm" | "md" | "lg" | "xl";
+  variant?: "primary" | "secondary" | "tertiary" | "outline";
   isLoading?: boolean;
 };
 
