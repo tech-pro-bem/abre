@@ -1,4 +1,4 @@
-import styles from "./hero.module.css";
+import styles from "./styles.module.css";
 import { HeroLeftIcon, HeroRightIcon } from "@/components/icons";
 
 interface ContentHero {
