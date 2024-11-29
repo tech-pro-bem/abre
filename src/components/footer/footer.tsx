@@ -8,9 +8,8 @@ export const footer_text = {
   Banco Itaú
   Ag: 0845-1. CC: 21860-1
   Pix: 05.469.302/0001-27`,
-  text_lgpd: ` A ABRE valoriza sua privacidade e segue as diretrizes da Lei Geral de Proteção de
-  Dados Pessoais (LGPD) para proteger suas informações. Também utilizamos cookies para
-  melhorar sua navegação em nosso site.`,
+  text_lgpd:
+    "A ABRE valoriza sua privacidade e segue as diretrizes da Lei Geral de Proteção de Dados Pessoais (LGPD) para proteger suas informações. Também utilizamos cookies para melhorar sua navegação em nosso site.",
 };
 const wordsInBold = [" Banco Itaú", "Ag:", "CC:", "Pix:"];
 const stylizeWords = (text: string) => {
@@ -30,8 +29,8 @@ const stylizeWords = (text: string) => {
 };
 export const Footer = () => {
   return (
-    <section className={styles.footer}>
-      <footer className={styles.footer_container}>
+    <footer className={styles.footer_container_background}>
+      <div className={styles.footer_container}>
         <div className={styles.footer_logo_icons_desktop}>
           <Image
             className={styles.logo_abre}
@@ -40,7 +39,7 @@ export const Footer = () => {
             height={500}
             alt="Logo - Abre"
           />
-          <ul className={styles.footer_icons_desktop}>
+          <ul className={styles.icons_desktop}>
             <li>
               <a
                 href="https://www.facebook.com/abre.esquizofrenia/"
@@ -82,37 +81,41 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-
-        <div className={styles.footer_donation_content}>
-          <div className={styles.footer_donation_container}>
-            <div className={styles.donation_qr_code_container}>
-              <Image
-                className={styles.donation_qr_code}
-                src="/img_qr_code.svg"
-                alt="qrcode - Abre"
-                fill
-              />
-            </div>
-            <div className={styles.donation_title_text}>
-              <h2 className={styles.donation_title}>{footer_text.title_donation}</h2>
-              <div className={styles.donation_text}>
-                {footer_text.text_donation.split("\n").map((paragraph, index) => (
-                  <p
-                    className={styles.donation_text}
-                    key={index}
-                  >
-                    {stylizeWords(paragraph)}
-                  </p>
-                ))}
-              </div>
-            </div>
+        <Image
+          className={styles.logo_abre_mobile}
+          src="/logo/logo.svg"
+          width={500}
+          height={500}
+          alt="Logo - Abre"
+        />
+        <div className={styles.footer_donation_container}>
+          <div className={styles.donation_qr_code_container}>
+            <Image
+              className={styles.donation_qr_code}
+              src="/img_qr_code.svg"
+              alt="qrcode - Abre"
+              fill
+            />
           </div>
-          <div className={styles.footer_content_container}>
-            <NavBar className={styles.content_navbar} />
-            <p className={styles.content_text}>{footer_text.text_lgpd}</p>
+          <div className={styles.donation_title_text}>
+            <h2 className={styles.donation_title}>{footer_text.title_donation}</h2>
+            <div className={styles.donation_text}>
+              {footer_text.text_donation.split("\n").map((paragraph, index) => (
+                <p
+                  className={styles.donation_paragraph}
+                  key={index}
+                >
+                  {stylizeWords(paragraph)}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
-        <ul className={styles.footer_icons_mobile}>
+        <div className={styles.content_navbar}>
+          <NavBar />
+        </div>
+        <p className={styles.content_text}>{footer_text.text_lgpd}</p>
+        <ul className={styles.icons_mobile}>
           <li>
             <a
               href="https://www.facebook.com/abre.esquizofrenia/"
@@ -153,7 +156,7 @@ export const Footer = () => {
             </a>
           </li>
         </ul>
-      </footer>
-    </section>
+      </div>
+    </footer>
   );
 };
