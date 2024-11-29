@@ -82,6 +82,7 @@
     margin-inline: auto;
   }
   .footer_logo_icons_desktop {
+    min-width: 12rem;
     grid-area: logo_icon;
     display: flex;
     flex-direction: column;
