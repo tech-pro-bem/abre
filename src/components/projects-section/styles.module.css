@@ -1,9 +1,12 @@
 .section {
   margin-inline: auto;
   max-width: 65.5rem;
-  /* temporary paddings before layout adjustments */
   padding-inline: 1.5rem;
-  padding-block: 2rem;
+  padding-block-start: 2rem;
+  padding-block-end: 5rem;
+  @media (min-width: 40em) {
+    padding-block-end: 6rem;
+  }
 }
 
 .projects_section_title {
@@ -28,18 +31,22 @@
   width: fit-content;
   border-radius: 100vh;
   padding: 0.5rem;
+  & svg {
+    color: var(--color-neutral-lightest);
+  }
   @media (min-width: 40em) {
     padding: 0.875rem;
   }
   &:hover {
-    filter: brightness(120%);
-    outline: 1px solid var(--color-primary-darkest);
+    background-color: var(--color-primary-medium);
+    & svg {
+      color: var(--color-neutral-lightest);
+    }
   }
 }
 
 .project_title {
   display: none;
-
   @media (min-width: 40em) {
     display: block;
   }
@@ -47,8 +54,14 @@
 
 .active {
   background-color: var(--color-primary-dark);
+  & svg {
+    color: var(--color-neutral-lightest);
+  }
 }
 
 .inactive {
   background-color: var(--color-primary-lightest);
+  & svg {
+    color: var(--color-primary-dark);
+  }
 }
