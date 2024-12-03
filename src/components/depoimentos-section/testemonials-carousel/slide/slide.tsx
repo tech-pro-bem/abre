@@ -19,9 +19,7 @@ export function Slide({ quote, content, author }: SlideProps) {
               <p key={index}>{paragrafo.trim()}</p>
             </>
           ))}
-        </div>
-        <div>
-          <p className={styles.card_content_author}>{author}</p>
+          <div className={styles.card_content_author}>{author}</div>
         </div>
       </article>
     </li>
