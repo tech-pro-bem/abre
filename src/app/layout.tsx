@@ -3,6 +3,7 @@ import { Jost } from "next/font/google";
 import "./styles/reset.css";
 import "./styles/globals.css";
 import "./styles/theme.css";
+import { Header } from "@/components/header";
 
 const jost = Jost({
   weight: ["400", "500", "600", "700"],
@@ -23,7 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={jost.className}>{children}</body>
+      <body className={jost.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

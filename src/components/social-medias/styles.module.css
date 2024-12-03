@@ -1,0 +1,6 @@
+.social_medias__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
