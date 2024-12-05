@@ -5,6 +5,8 @@ import { Materials } from "@/components/materials/materials";
 import { ContactSection } from "@/components/contact-section";
 import { Faq } from "@/components/faq/faq";
 import { AcolhimentoSection } from "@/components/acolhimento-section";
+import { Testimonials } from "@/components/depoimentos-section";
+
 
 export default function Home() {
   return (
@@ -15,6 +17,7 @@ export default function Home() {
       <Materials />
       <ContactSection />
       <Faq />
+      <Testimonials />
       <AcolhimentoSection />
     </>
   );
