@@ -9,8 +9,8 @@ type NavBarProps = {
 export const NavBar: React.FC<NavBarProps> = ({}) => {
   return (
     <nav>
-      <ul className={styles.navbar_content}>
-        <div className={styles.container_1}>
+      <ul className={styles.nav}>
+        <div className={styles.content_container}>
           <li>
             <Link href="#conheca_a_abre">Conheça</Link>
           </li>
@@ -18,7 +18,7 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
             <Link href="#projetos">Projetos</Link>
           </li>
         </div>
-        <div className={styles.container_2}>
+        <div className={styles.content_container}>
           <li>
             <Link href="/">Contato</Link>
           </li>
