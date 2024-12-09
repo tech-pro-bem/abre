@@ -14,6 +14,7 @@
   display: none;
 }
 .logo_abre_mobile {
+  max-width: 11rem;
   place-self: center;
   width: 50%;
   height: auto;
@@ -82,7 +83,7 @@
     margin-inline: auto;
   }
   .footer_logo_icons_desktop {
-    min-width: 12rem;
+    min-width: 11rem;
     grid-area: logo_icon;
     display: flex;
     flex-direction: column;
