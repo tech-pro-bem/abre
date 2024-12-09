@@ -1,6 +1,5 @@
 .navbar_content {
   display: flex;
-  justify-content: flex-start;
   gap: 4.5rem;
   line-height: var(--line-height-2);
   font-size: var(--font-size-5);
