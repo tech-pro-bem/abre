@@ -4,7 +4,11 @@
   padding-top: 48px;
   padding-bottom: 56px;
 }
-
+.footer_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+}
 .footer_logo_icons_desktop {
   display: none;
 }
