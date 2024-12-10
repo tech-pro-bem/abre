@@ -27,7 +27,7 @@
 }
 .donation_qr_code_container {
   position: relative;
-  aspect-ratio: 123/123;
+  aspect-ratio: 1/1;
 }
 .donation_title_text {
   display: flex;
@@ -111,7 +111,6 @@
     grid-area: navbar;
   }
   .content_text {
-    width: 53%;
     font-size: var(--font-size-6);
     grid-area: text_content;
     margin-bottom: 0px;
