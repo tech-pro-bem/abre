@@ -29,7 +29,7 @@ const stylizeWords = (text: string) => {
 };
 export const Footer = () => {
   return (
-    <footer className={styles.footer_container_background}>
+    <footer className={styles.footer}>
       <div className={styles.footer_container}>
         <div className={styles.footer_logo_icons_desktop}>
           <Image
