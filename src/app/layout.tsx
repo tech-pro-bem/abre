@@ -3,6 +3,7 @@ import { Jost } from "next/font/google";
 import "./styles/reset.css";
 import "./styles/globals.css";
 import "./styles/theme.css";
+import { Header } from "@/components/header";
 import { Footer } from "@/components/footer/footer";
 
 const jost = Jost({
@@ -25,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={jost.className}>
+        <Header />
         {children}
         <Footer />
       </body>

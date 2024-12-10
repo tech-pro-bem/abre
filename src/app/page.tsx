@@ -1,16 +1,21 @@
-import { ProjectsSection } from "@/components/projects-section";
 import { Hero } from "@/components/hero";
+import { About } from "@/components/about/about";
+import { ProjectsSection } from "@/components/projects-section";
+import { Materials } from "@/components/materials/materials";
 import { ContactSection } from "@/components/contact-section";
-import { AcolhimentoSection } from "@/components/acolhimento-section";
 import { Faq } from "@/components/faq/faq";
-import { About } from "../components/about/about";
+import { AcolhimentoSection } from "@/components/acolhimento-section";
+import styles from "./styles.module.css";
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <About />
+      <div className={styles.gradient_background}>
+        <Hero />
+        <About />
+      </div>
       <ProjectsSection />
+      <Materials />
       <ContactSection />
       <Faq />
       <AcolhimentoSection />
