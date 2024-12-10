@@ -1,6 +1,5 @@
 .hero {
   position: relative;
-  background-color: #ddf8f7; /* background provisório apenas para visualizar o icon */
   display: flex;
   justify-content: center;
   flex-direction: column;
