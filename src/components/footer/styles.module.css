@@ -4,11 +4,7 @@
   padding-top: 48px;
   padding-bottom: 56px;
 }
-.footer_container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-}
+
 .footer_logo_icons_desktop {
   display: none;
 }
@@ -77,6 +73,7 @@
     padding-left: 0px;
   }
   .footer_container {
+    display: grid;
     grid-template: "logo_icon navbar text_content donation";
     width: 60.7%;
     margin-inline: auto;
