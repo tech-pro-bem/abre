@@ -3,7 +3,6 @@
   z-index: 1;
   background-color: var(--color-secondary-lightest);
   padding-block: 2.5rem;
-  margin-block: 80px;
 }
 .vectors {
   display: none;
