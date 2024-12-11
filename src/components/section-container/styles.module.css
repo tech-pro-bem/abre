@@ -1,0 +1,32 @@
+.alignment_container {
+  padding-block: 5rem;
+}
+
+.sm {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.md {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.lg {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 40em) {
+  .sm {
+    max-width: 800px;
+  }
+
+  .md {
+    max-width: 1008px;
+  }
+
+  .lg {
+    max-width: 1216px;
+  }
+}
