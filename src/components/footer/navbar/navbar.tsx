@@ -13,20 +13,40 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
         <li>
           <ul className={styles.content_container}>
             <li>
-              <Link href="#conheca_a_abre">Conheça</Link>
+              <Link
+                className={styles.item}
+                href="#conheca_a_abre"
+              >
+                Conheça
+              </Link>
             </li>
             <li>
-              <Link href="#projetos">Projetos</Link>
+              <Link
+                className={styles.item}
+                href="#projetos"
+              >
+                Projetos
+              </Link>
             </li>
           </ul>
         </li>
         <li>
           <ul className={styles.content_container}>
             <li>
-              <Link href="/">Contato</Link>
+              <Link
+                className={styles.item}
+                href="/"
+              >
+                Contato
+              </Link>
             </li>
             <li>
-              <Link href="#perguntas_sobre_esquizofrenia">Esquizofrenia</Link>
+              <Link
+                className={styles.item}
+                href="#perguntas_sobre_esquizofrenia"
+              >
+                Esquizofrenia
+              </Link>
             </li>
           </ul>
         </li>

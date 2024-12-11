@@ -10,6 +10,12 @@
   display: flex;
   flex-direction: column;
 }
+.item {
+  color: var(--color-neutral-lightest);
+}
+.item:hover {
+  color: var(--color-primary-lightest);
+}
 
 @media (min-width: 1440px) {
   .nav {

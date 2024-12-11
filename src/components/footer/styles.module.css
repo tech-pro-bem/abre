@@ -63,6 +63,9 @@
 .icon {
   color: var(--color-neutral-lightest);
 }
+.icon:hover {
+  color: var(--color-primary-lightest);
+}
 .icons_mobile {
   place-self: center;
   display: flex;
