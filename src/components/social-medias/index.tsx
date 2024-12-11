@@ -6,21 +6,27 @@ const socialMedias = [
   {
     icon: FacebookIcon,
     href: "https://www.facebook.com/abre.esquizofrenia/",
+    width: 24,
+    height: 24,
   },
   {
     icon: InstagramIcon,
     href: "https://www.instagram.com/abreesquizofrenia/",
+    width: 24,
+    height: 24,
   },
   {
     icon: YoutubeIcon,
     href: "https://www.youtube.com/@abrebrasil2014",
+    width: 26,
+    height: 26,
   },
 ];
 
 export const SocialMedias = () => {
   return (
     <ul className={styles.social_medias__list}>
-      {socialMedias.map(({ icon: Icon, href }) => (
+      {socialMedias.map(({ icon: Icon, href, width, height }) => (
         <li key={href}>
           <a
             className={styles.icon}
@@ -29,8 +35,8 @@ export const SocialMedias = () => {
             rel="noopener noreferrer"
           >
             <Icon
-              width={24}
-              height={24}
+              width={width}
+              height={height}
             />
           </a>
         </li>

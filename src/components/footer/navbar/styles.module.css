@@ -17,9 +17,12 @@
   color: var(--color-primary-lightest);
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 40em) {
   .nav {
     flex-direction: column;
     gap: 1.5rem;
+    grid-row: 1;
+    grid-column-start: 2;
+    grid-column-end: 3;
   }
 }
