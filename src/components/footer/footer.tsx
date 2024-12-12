@@ -1,7 +1,6 @@
 import Image from "next/image";
 import styles from "./styles.module.css";
 import { NavBar } from "./navbar/navbar";
-import { FacebookIcon, InstagramIcon, YoutubeIcon } from "../icons";
 import { FooterSocials } from "./socials";
 export const footer_text = {
   title_donation: "Faça uma doação",
