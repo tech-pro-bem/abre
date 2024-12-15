@@ -1,5 +1,6 @@
 export { AcolhimentoIcon } from "./acolhimento";
 export { ComunidadeDeFalaIcon } from "./comunidade-de-fala";
+export { ChevronRightIcon } from "./chevron-right";
 export { DownloadIcon } from "./download";
 export { FacebookIcon } from "./facebook";
 export { FamiliaresIcon } from "./familiares";
