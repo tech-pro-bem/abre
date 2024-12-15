@@ -15,7 +15,10 @@ export function MateriaisTabs() {
   return (
     <ul className={styles.tabs_container}>
       {TABS.map(({ title, slug }) => (
-        <li className={`${styles.tab} ${isActiveTab(slug) ? styles.active : ""}`}>
+        <li
+          key={slug}
+          className={`${styles.tab} ${isActiveTab(slug) ? styles.active : ""}`}
+        >
           <Link href={`${slug}`}>{title}</Link>
         </li>
       ))}

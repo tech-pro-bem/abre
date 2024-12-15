@@ -3,8 +3,8 @@ import { IconSvgProps } from "@/types";
 export function HouseIcon({ size, width = 20, height = 21, ...props }: IconSvgProps) {
   return (
     <svg
-      width="20"
-      height="21"
+      width={size || width}
+      height={size || height}
       viewBox="0 0 20 21"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -15,13 +15,13 @@ export function HouseIcon({ size, width = 20, height = 21, ...props }: IconSvgPr
         maskUnits="userSpaceOnUse"
         x="0"
         y="0"
-        width="20"
-        height="21"
+        width={size || width}
+        height={size || height}
       >
         <rect
           y="0.5"
-          width="20"
-          height="20"
+          width={size || width}
+          height={size || height}
           fill="#D9D9D9"
         />
       </mask>

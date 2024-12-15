@@ -39,7 +39,7 @@ export default function RelatoriosPage() {
     <section className={styles.reports_section}>
       <ol className={styles.reports_list}>
         {MOCK_REPORTS_DATA.map(({ title, url }) => (
-          <li className={styles.report}>
+          <li key={title} className={styles.report}>
             <span>{title}</span>{" "}
             <div className={styles.buttons}>
               <a
