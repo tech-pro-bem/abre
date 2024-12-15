@@ -1,28 +1,14 @@
-import { AcolhimentoIcon } from "./acolhimento";
-import { ChevronRightIcon } from "./chevron-right";
-import { ComunidadeDeFalaIcon } from "./comunidade-de-fala";
-import { FacebookIcon } from "./facebook";
-import { FamiliaresIcon } from "./familiares";
-import { HeroLeftIcon } from "./hero-icon-left";
-import { HeroRightIcon } from "./hero-icon-right";
-import { HouseIcon } from "./house";
-import { InstagramIcon } from "./instagram";
-import { LaccaIcon } from "./lacca";
-import { RecoveryIcon } from "./recovery";
+export { AcolhimentoIcon } from "./acolhimento";
+export { ComunidadeDeFalaIcon } from "./comunidade-de-fala";
 export { DownloadIcon } from "./download";
+export { FacebookIcon } from "./facebook";
+export { FamiliaresIcon } from "./familiares";
+export { HeroLeftIcon } from "./hero-icon-left";
+export { HeroRightIcon } from "./hero-icon-right";
+export { HouseIcon } from "./house";
+export { InstagramIcon } from "./instagram";
+export { LaccaIcon } from "./lacca";
 export { OpenNewArrowIcon } from "./open-new-arrow";
+export { RecoveryIcon } from "./recovery";
 export { ReportsGraphism } from "./relatorios-grafismo";
-
-export {
-  AcolhimentoIcon,
-  ChevronRightIcon,
-  ComunidadeDeFalaIcon,
-  FacebookIcon,
-  FamiliaresIcon,
-  HeroLeftIcon,
-  HeroRightIcon,
-  HouseIcon,
-  InstagramIcon,
-  LaccaIcon,
-  RecoveryIcon,
-};
+export { YoutubeIcon } from "./youtube";
