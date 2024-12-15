@@ -42,6 +42,17 @@
     }
   }
 
+  .show_more_reports {
+    color: var(--color-primary-medium);
+    font-size: var(--heading-3);
+    width: fit-content;
+    &:hover {
+      color: var(--color-primary-dark);
+      transition: color 150ms;
+      
+    }
+  }
+
   @media (min-width: 40em) {
     grid-template-columns: 1fr 1fr;
   }

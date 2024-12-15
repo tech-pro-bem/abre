@@ -2,6 +2,7 @@
 import { DownloadIcon, OpenNewArrowIcon, ReportsGraphism } from "@/components/icons";
 import styles from "./styles.module.css";
 import { formatFileName } from "@/utils/format-file-name";
+import { useState } from "react";
 
 const MOCK_REPORTS_DATA = [
   {
@@ -35,11 +36,17 @@ const MOCK_REPORTS_DATA = [
 ];
 
 export default function RelatoriosPage() {
+  const [shouldShowAllReports, setShouldShowAllReports] = useState(false);
+  const reportsToShow = shouldShowAllReports ? MOCK_REPORTS_DATA : MOCK_REPORTS_DATA.slice(0, 5);
+
   return (
     <section className={styles.reports_section}>
       <ol className={styles.reports_list}>
-        {MOCK_REPORTS_DATA.map(({ title, url }) => (
-          <li key={title} className={styles.report}>
+        {reportsToShow.map(({ title, url }) => (
+          <li
+            key={title}
+            className={styles.report}
+          >
             <span>{title}</span>{" "}
             <div className={styles.buttons}>
               <a
@@ -58,6 +65,12 @@ export default function RelatoriosPage() {
             </div>
           </li>
         ))}
+        <button
+          onClick={() => setShouldShowAllReports((prev) => !prev)}
+          className={styles.show_more_reports}
+        >
+          {shouldShowAllReports ? "Mostrar menos..." : "Carregar todos os relatórios..."}
+        </button>
       </ol>
       <div className={styles.graphism_container}>
         <ReportsGraphism className={styles.graphism} />
