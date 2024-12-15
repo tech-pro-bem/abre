@@ -9,6 +9,9 @@ import { HouseIcon } from "./house";
 import { InstagramIcon } from "./instagram";
 import { LaccaIcon } from "./lacca";
 import { RecoveryIcon } from "./recovery";
+export { DownloadIcon } from "./download";
+export { OpenNewArrowIcon } from "./open-new-arrow";
+export { ReportsGraphism } from "./relatorios-grafismo";
 
 export {
   AcolhimentoIcon,
