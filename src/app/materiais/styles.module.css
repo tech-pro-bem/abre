@@ -7,10 +7,6 @@
   margin-inline: auto;
 }
 
-.breadcrumbs {
-  display: none;
-}
-
 .hero_container {
   text-align: center;
   margin-inline: auto;
@@ -31,24 +27,6 @@
 }
 
 @media (min-width: 40em) {
-  .breadcrumbs {
-    display: inline-flex;
-    gap: 0.5rem;
-    align-items: center;
-    font-size: var(--font-size-6);
-    font-weight: 500;
-    color: var(--color-primary-dark);
-    .chevron {
-      color: var(--color-primary-medium);
-    }
-    & > *:hover {
-      color: var(--color-primary-medium);
-    }
-    & :first-child {
-      display: inline-flex;
-      gap: 0.5rem;
-    }
-  }
   .hero_container {
     padding-top: 107px;
     padding-bottom: 160px;

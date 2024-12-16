@@ -2,9 +2,6 @@
   display: grid;
   gap: 4rem;
 
-  .reports_container {
-  }
-
   .reports_list {
     list-style-type: none;
     display: grid;
@@ -49,7 +46,6 @@
     &:hover {
       color: var(--color-primary-dark);
       transition: color 150ms;
-      
     }
   }
 

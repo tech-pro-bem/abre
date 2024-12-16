@@ -1,6 +1,5 @@
-import { ChevronRightIcon, HouseIcon } from "@/components/icons";
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Breadcrumbs } from "./components/breadcrumbs";
 import { MateriaisTabs } from "./components/materiais-tabs.tsx";
 import styles from "./styles.module.css";
 
@@ -18,12 +17,7 @@ export default function MateriaisLayout({
   return (
     <section className={styles.section}>
       <div className={styles.content_bg}>
-        <div className={styles.breadcrumbs}>
-          <Link href={"/"}>
-            <HouseIcon /> Página inicial
-          </Link>{" "}
-          <ChevronRightIcon className={styles.chevron} /> <Link href={"/materiais"}>Materiais</Link>
-        </div>
+        <Breadcrumbs />
         <div className={styles.hero_container}>
           <h2 className={styles.hero_title}>Materiais</h2>
           <p className={styles.hero_subtitle}>

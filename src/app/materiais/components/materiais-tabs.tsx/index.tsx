@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./styles.module.css";
 
-const TABS = [
+export const TABS = [
   { title: "Livros", slug: "livros" },
   { title: "Relatórios", slug: "relatorios" },
   { title: "Galeria", slug: "galeria" },
