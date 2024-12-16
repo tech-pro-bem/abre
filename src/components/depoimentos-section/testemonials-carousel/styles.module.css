@@ -31,7 +31,7 @@
   font-style: italic;
   color: var(--color-primary-darkest);
   text-align: center;
-  line-height: 1.2;
+  line-height: var(--line-height-1);
 }
 
 .card_header::after {
@@ -60,7 +60,7 @@
 
 .card_content > p {
   font-size: var(--font-size-5);
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-regular);
   color: var(--color-neutral-darkest);
   font-style: italic;
   margin-bottom: 1rem;
@@ -68,7 +68,7 @@
 
 .card_content_author {
   font-size: var(--font-size-5);
-  font-weight: var(--fw-regular);
+  font-weight: var(--fw-light);
   color: var(--color-neutral-darkest);
 }
 
@@ -117,7 +117,6 @@
   border-radius: 100vh;
   background-color: var(--color-secondary-lightest);
   border: none;
-  cursor: pointer;
   transition: background-color 0.3s;
 }
 
@@ -130,18 +129,6 @@
 }
 
 @container projects-carousel (min-width: 40em) {
-  .left {
-    left: 3%;
-    transform: translate(-50%);
-  }
-
-  .right {
-    right: 3%;
-    transform: translate(50%);
-  }
-}
-
-@container projects-carousel (min-width: 54em) {
   .slide {
     display: flex;
     gap: 2.5rem;
@@ -149,19 +136,21 @@
   }
 
   .card_header {
-    line-height: 1.2;
+    line-height: var(--line-height-1);
     max-width: 24rem;
     padding: 2.5rem 2.2rem;
     margin-bottom: 0;
   }
 
   .card_header::after {
+    font-size: 8rem;
     top: 0;
     left: 0.5rem;
     transform: rotate(180deg) translateY(65%);
   }
 
   .card_header::before {
+    font-size: 8rem;
     bottom: 0;
     right: 0.5rem;
     transform: translateY(65%);
