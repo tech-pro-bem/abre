@@ -4,6 +4,10 @@
   container-type: inline-size;
 }
 
+.carousel_images {
+  overflow: hidden;
+}
+
 .carousel_images_container {
   padding: 24px;
 }
