@@ -63,63 +63,61 @@ export const ProjectsCarousel = () => {
   };
 
   return (
-    <>
-      <div
-        role="region"
-        aria-roledescription="carousel"
-        aria-label="Carrossel de depoimentos da Abre"
-        className={styles.carousel}
-      >
-        <div className={styles.carousel_images}>
-          <MotionConfig reducedMotion="user">
-            <AnimatePresence mode="wait">
-              <motion.ul
-                key={activeProjectIndex}
-                initial={motionInitial}
-                animate="visible"
-                exit="exit"
-                variants={slideVariants}
-                className={styles.carousel_images_container}
-              >
-                <Slide
-                  aria-roledescription={`Slide ${activeProjectIndex + 1} de ${
-                    mock_depoimentos_datas.length
-                  } de depoimentos da abre`}
-                  quote={mock_depoimentos_datas[activeProjectIndex].quote}
-                  content={mock_depoimentos_datas[activeProjectIndex].description}
-                  author={mock_depoimentos_datas[activeProjectIndex].author}
-                />
-              </motion.ul>
-            </AnimatePresence>
-          </MotionConfig>
-        </div>
-        <div
-          aria-label="Controles do Carrossel"
-          className={styles.carousel_nav}
-        >
-          <button
-            aria-label="Slide anterior"
-            className={styles.left}
-            onClick={handlePreviousSlide}
-          >
-            <FaChevronLeft
-              aria-hidden="true"
-              size={26}
-            />
-          </button>
-          <button
-            aria-label="Próximo slide"
-            className={styles.right}
-            onClick={handleNextSlide}
-          >
-            <FaChevronRight
-              aria-hidden="true"
-              size={26}
-            />
-          </button>
-          <div className={styles.pagination}>{Pagination()}</div>
-        </div>
+    <div
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Carrossel de depoimentos da Abre"
+      className={styles.carousel}
+    >
+      <div className={styles.carousel_images}>
+        <MotionConfig reducedMotion="user">
+          <AnimatePresence mode="wait">
+            <motion.ul
+              key={activeProjectIndex}
+              initial={motionInitial}
+              animate="visible"
+              exit="exit"
+              variants={slideVariants}
+              className={styles.carousel_images_container}
+            >
+              <Slide
+                aria-roledescription={`Slide ${activeProjectIndex + 1} de ${
+                  mock_depoimentos_datas.length
+                } de depoimentos da abre`}
+                quote={mock_depoimentos_datas[activeProjectIndex].quote}
+                content={mock_depoimentos_datas[activeProjectIndex].description}
+                author={mock_depoimentos_datas[activeProjectIndex].author}
+              />
+            </motion.ul>
+          </AnimatePresence>
+        </MotionConfig>
       </div>
-    </>
+      <div
+        aria-label="Controles do Carrossel"
+        className={styles.carousel_nav}
+      >
+        <button
+          aria-label="Slide anterior"
+          className={styles.left}
+          onClick={handlePreviousSlide}
+        >
+          <FaChevronLeft
+            aria-hidden="true"
+            size={26}
+          />
+        </button>
+        <button
+          aria-label="Próximo slide"
+          className={styles.right}
+          onClick={handleNextSlide}
+        >
+          <FaChevronRight
+            aria-hidden="true"
+            size={26}
+          />
+        </button>
+        <div className={styles.pagination}>{Pagination()}</div>
+      </div>
+    </div>
   );
 };

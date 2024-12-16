@@ -15,9 +15,7 @@ export function Slide({ quote, content, author }: SlideProps) {
         </div>
         <div className={styles.card_content}>
           {content.split("\n\n").map((paragrafo, index) => (
-            <>
-              <p key={index}>{paragrafo.trim()}</p>
-            </>
+            <p key={index}>{paragrafo.trim()}</p>
           ))}
           <div className={styles.card_content_author}>{author}</div>
         </div>
