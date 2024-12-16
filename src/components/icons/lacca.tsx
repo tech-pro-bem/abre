@@ -1,6 +1,6 @@
 import { IconSvgProps } from "@/types";
 
-export function LaccaIcon({ size = 31, width = 31, height = 31, ...props }: IconSvgProps) {
+export const LaccaIcon = ({ size = 31, width = 31, height = 31, ...props }: IconSvgProps) => {
   return (
     <svg
       width={size || width}
@@ -40,4 +40,4 @@ export function LaccaIcon({ size = 31, width = 31, height = 31, ...props }: Icon
       />
     </svg>
   );
-}
+};
