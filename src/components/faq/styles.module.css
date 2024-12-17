@@ -51,7 +51,7 @@
 .faq_item {
   padding-inline: 24px;
   padding-block: 0.25rem;
-  font-size: var(--font-size-3);
+  font-size: 1rem;
   line-height: var(--line-height-2);
   color: var(--color-neutral-darkest);
   border-bottom: 1px solid var(--color-neutral-medium);
@@ -97,10 +97,4 @@
 }
 .faq_hiperLink_materials {
   font-weight: var(--fw-bold);
-}
-
-@media (min-width: 48em) {
-  .faq_item {
-    font-size: var(--font-size-5);
-  }
 }
