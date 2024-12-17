@@ -1,0 +1,23 @@
+.button_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: var(--fw-regular);
+  font-size: var(--font-size-5);
+  line-height: var(--line-height-2);
+  color: var(--color-primary-darkest);
+}
+
+@media (min-width: 40em) {
+  .button {
+    padding-right: 39px;
+  }
+}

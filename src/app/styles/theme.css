@@ -16,7 +16,7 @@
   --color-secondary-lightest: #f9e3c8;
 
   --color-neutral-darkest: #030302;
-  /* --color-neutral-dark: #575452;*/
+  --color-neutral-dark: #575452;
   --color-neutral-medium: #bdbab9;
   /*--color-neutral-light: #f5f3f2; */
   --color-neutral-lightest: #fdfcfc;
@@ -35,7 +35,7 @@
   --font-size-4: 0.75rem; /* 12px  
   Questionar se o h3 realmente deve ser tao pequeno. A fonte de 16 vira 14, e a de 24 vira 12? */
   --font-size-5: 0.875rem; /* 14px */
-  --font-size-6: .875rem; /* 14px */
+  --font-size-6: 0.875rem; /* 14px */
 
   --font-size-button: 0.875rem;
 
