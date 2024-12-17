@@ -23,6 +23,7 @@ export const SocialMedias = () => {
       {socialMedias.map(({ icon: Icon, href }) => (
         <li key={href}>
           <a
+            className={styles.icon}
             href={href}
             target="_blank"
             rel="noopener noreferrer"
