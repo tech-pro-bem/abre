@@ -1,3 +1,6 @@
+import { getContentByContentType } from "@/lib/contentful";
+import { FAQ } from "@/types/contentful.types";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Arrow_icon from "./arrow_icon";
 import styles from "./styles.module.css";
 import Vector from "./vector";
@@ -76,24 +79,11 @@ export const perguntas = [
     Na nossa página Materiais, você encontra uma declaração de dependência econômica.`,
   },
 ];
-const hiperLink = ["Materiais"];
-const stylizeHiperLink = (text: string) => {
-  const regex = new RegExp(`(${hiperLink.join("|")})`, "gi");
-  return text.split(regex).map((words, index) =>
-    hiperLink.includes(words) ? (
-      <a
-        href="/"
-        key={index}
-        className={styles.faq_hiperLink_materials}
-      >
-        {words}
-      </a>
-    ) : (
-      words
-    )
-  );
-};
-export const Faq = () => {
+
+export const Faq = async () => {
+  const data = await getContentByContentType<FAQ>("mockFaq");
+  const questions = data?.items || [];
+
   return (
     <section className={styles.questions_section}>
       <div className={styles.vectors}>
@@ -103,20 +93,18 @@ export const Faq = () => {
       <div className={styles.questions_content}>
         <h2 className={styles.questions_title}>Perguntas sobre esquizofrenia</h2>
         <div className={styles.faq_list}>
-          {perguntas.map((question, index) => (
+          {questions.map((question, index) => (
             <details
               key={index}
               className={styles.faq_item}
               name="reqs"
             >
               <summary className={styles.faq_summary}>
-                <div className={styles.faq_title}>{question.title}</div>
+                <div className={styles.faq_title}>{question.fields.title}</div>
                 <Arrow_icon className={styles.arrow_icon} />
               </summary>
               <div className={styles.faq_text}>
-                {question.text.split("\n").map((paragraph, index) => (
-                  <p key={index}> {stylizeHiperLink(paragraph)}</p>
-                ))}
+                {documentToReactComponents(question.fields.text)}
               </div>
             </details>
           ))}
