@@ -17,7 +17,8 @@
   gap: 1rem;
 }
 .album_items:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  transition: transform 150ms;
 }
 
 .image_quantity {
