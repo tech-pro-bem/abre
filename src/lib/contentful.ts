@@ -21,7 +21,7 @@ export async function getContentByContentType<T>(
   );
 
   if (!response.ok) {
-    throw new Error(`Erro ao buscar conteúdo: ${response.status}, ${response.statusText}`);
+    throw new Error(`Erro ao buscar conteúdo: ${response.status} - ${response.statusText}`);
   }
 
   return response.json();
