@@ -20,7 +20,7 @@ export const Header = () => {
           />
         </Link>
         <Link
-          href="/materials"
+          href="/materiais"
           className={styles.header__button}
         >
           Acessar materiais
@@ -30,7 +30,7 @@ export const Header = () => {
       <div className={styles.header__nav_container}>
         <Navbar />
         <Link
-          href="/materials"
+          href="/materiais"
           className={styles.header__button}
         >
           Acessar materiais
