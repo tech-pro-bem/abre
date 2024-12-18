@@ -13,8 +13,9 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "Abre",
+  description:
+    "Apoiamos pessoas com esquizofrenia, seus familiares e amigos para uma jornada de inclusão e compreensão.",
 };
 
 export default function RootLayout({

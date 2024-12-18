@@ -29,7 +29,7 @@ export const Materials = () => {
           ))}
         </div>
         <LinkButton
-          href="/"
+          href="/materiais"
           target="_blank"
           rel="noopener noreferrer"
           variant="primary"
