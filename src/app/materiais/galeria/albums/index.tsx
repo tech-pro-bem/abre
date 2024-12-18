@@ -7,7 +7,7 @@ import FilterButton from "./filter-button";
 import { useState } from "react";
 import Pagination from "@/components/pagination";
 
-interface Album {
+export interface Album {
   quantity: string;
   image: string;
   title: string;
