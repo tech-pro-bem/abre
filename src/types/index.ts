@@ -6,4 +6,4 @@ export type IconSvgProps = SVGProps<SVGSVGElement> & {
   isActive?: boolean;
 };
 
-export type ProjectButton = (typeof mock_projects_buttons)[0]["icon"];
+export type ProjectButton = (typeof mock_projects_buttons)[number]["icon"];
