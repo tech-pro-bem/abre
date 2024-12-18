@@ -22,7 +22,7 @@
   box-shadow: 0px 1px 0px 0px var(--color-primary-transparent-dark);
 }
 
-.header__nav_container > button,
+.header__nav_container > a,
 .header__nav_container > ul:last-child {
   display: none;
 }
@@ -66,11 +66,11 @@
     padding: 0;
   }
 
-  .header__logo_container > button {
+  .header__logo_container > a:nth-child(2) {
     display: none;
   }
 
-  .header__nav_container > button {
+  .header__nav_container > a {
     display: block;
   }
 
