@@ -1,13 +1,13 @@
 .album_container {
   display: flex;
   flex-direction: column;
-  margin-inline: 1.5rem;
+  padding-inline: 1.5rem;
 }
 .album_content {
   max-width: 75rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem 0.93rem;
+  gap: 2rem 1rem;
   padding-block: 48px 32px;
 }
 
@@ -72,7 +72,7 @@
 .page {
   font-weight: var(--fw-regular);
   line-height: var(--line-height-2);
-  font-size: var(--font-size-5);
+  font-size: var(--heading-3);
   color: var(--color-neutral-dark);
 }
 .pagination_buttons {

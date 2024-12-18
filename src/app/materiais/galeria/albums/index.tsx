@@ -149,14 +149,14 @@ export const Album = () => {
             onClick={prevPage}
             disabled={currentPage === 1}
           >
-            <BiChevronLeft size={16} />
+            <BiChevronLeft size={25} />
           </button>
           <button
             className={styles.button_arrow}
             onClick={nextPage}
             disabled={currentPage === totalPages}
           >
-            <BiChevronRight size={16} />
+            <BiChevronRight size={25} />
           </button>
         </div>
       </div>
