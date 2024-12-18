@@ -5,9 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 import FilterButton from "./filter-button";
 import { useState } from "react";
-import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
+import Pagination from "@/components/pagination";
 
-const Albums = [
+interface Album {
+  quantity: string;
+  image: string;
+  title: string;
+  subtitle: string;
+}
+const Albums: Album[] = [
   {
     quantity: "6 imagens",
     image: "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
@@ -96,18 +102,7 @@ const Albums = [
 const ITEMS_PER_PAGE = 7;
 
 export const Album = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const totalPages = Math.ceil(Albums.length / ITEMS_PER_PAGE);
-
-  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE + 1;
-  const endIndex = Math.min(currentPage * ITEMS_PER_PAGE, Albums.length);
-
-  const currentAlbums = Albums.slice(startIndex - 1, endIndex);
-
-  const nextPage = () => setCurrentPage((prev) => Math.min(prev + 1, totalPages));
-  const prevPage = () => setCurrentPage((prev) => Math.max(prev - 1, 1));
-
+  const [currentAlbums, setCurrentAlbums] = useState<Album[]>([]);
   return (
     <section className={styles.album_container}>
       <FilterButton />
@@ -126,12 +121,10 @@ export const Album = () => {
                   height={220}
                   className={styles.image}
                 />
-
                 <span className={styles.quantity}>{album.quantity}</span>
               </div>
               <div className={styles.title_subtitle}>
                 <h2 className={styles.title}>{album.title}</h2>
-
                 <p className={styles.subtitle}>{album.subtitle}</p>
               </div>
             </Link>
@@ -139,27 +132,11 @@ export const Album = () => {
         ))}
       </div>
 
-      <div className={styles.album_pagination}>
-        <span className={styles.page}>
-          {startIndex} - {endIndex} de {Albums.length}
-        </span>
-        <div className={styles.pagination_buttons}>
-          <button
-            className={styles.button_arrow}
-            onClick={prevPage}
-            disabled={currentPage === 1}
-          >
-            <BiChevronLeft size={25} />
-          </button>
-          <button
-            className={styles.button_arrow}
-            onClick={nextPage}
-            disabled={currentPage === totalPages}
-          >
-            <BiChevronRight size={25} />
-          </button>
-        </div>
-      </div>
+      <Pagination
+        items={Albums}
+        itemsPerPage={ITEMS_PER_PAGE}
+        pageChange={setCurrentAlbums}
+      />
     </section>
   );
 };
