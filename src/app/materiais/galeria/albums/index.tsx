@@ -13,7 +13,7 @@ export interface Album {
   title: string;
   subtitle: string;
 }
-const Albums: Album[] = [
+const Albums = [
   {
     quantity: "6 imagens",
     image: "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
