@@ -1,3 +1,4 @@
+"use client";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import styles from "./styles.module.css";
 import { useEffect, useState } from "react";
