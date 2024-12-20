@@ -7,7 +7,7 @@
 .page {
   font-weight: var(--fw-regular);
   line-height: var(--line-height-2);
-  font-size: var(--heading-3);
+  font-size: var(--font-size-5);
   color: var(--color-neutral-dark);
 }
 .pagination_buttons {
