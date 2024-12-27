@@ -106,12 +106,12 @@
   }
 }
 .left {
-  left: 6%;
+  left: 20px;
   transform: translate(-50%);
 }
 
 .right {
-  right: 6%;
+  right: 20px;
   transform: translate(50%);
 }
 
@@ -141,7 +141,6 @@
 
   .card_header {
     line-height: var(--line-height-1);
-    max-width: 24rem;
     padding: 2.5rem 2.2rem;
     margin-bottom: 0;
   }
@@ -162,10 +161,6 @@
 
   .card_header_quote {
     text-align: start;
-  }
-
-  .card_content_author {
-    margin-top: 2.5rem;
   }
 
   .left {
