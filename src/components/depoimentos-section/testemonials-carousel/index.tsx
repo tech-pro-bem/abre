@@ -51,17 +51,6 @@ export const ProjectsCarousel = () => {
     },
   };
 
-  const Pagination = () => {
-    return mock_depoimentos_datas.map((_, index) => (
-      <button
-        key={index}
-        className={`${styles.dot} ${index === activeProjectIndex ? styles.activeDot : ""}`}
-        onClick={() => setActiveProjectIndex(index)}
-        aria-label={`Ir para o slide ${index + 1}`}
-      />
-    ));
-  };
-
   return (
     <div
       role="region"
@@ -116,7 +105,16 @@ export const ProjectsCarousel = () => {
             size={26}
           />
         </button>
-        <div className={styles.pagination}>{Pagination()}</div>
+        <div className={styles.pagination}>
+          {mock_depoimentos_datas.map((_, index) => (
+            <button
+              key={index}
+              className={`${styles.dot} ${index === activeProjectIndex ? styles.activeDot : ""}`}
+              onClick={() => setActiveProjectIndex(index)}
+              aria-label={`Ir para o slide ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
