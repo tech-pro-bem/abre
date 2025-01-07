@@ -20,7 +20,6 @@
 
 .card_header {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
@@ -59,7 +58,10 @@
 }
 
 .card_content {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
 }
 
 .card_content > p {
@@ -67,7 +69,6 @@
   font-weight: var(--fw-regular);
   color: var(--color-neutral-darkest);
   font-style: italic;
-  margin-bottom: 1rem;
 }
 
 .card_content_author {
@@ -136,13 +137,16 @@
   .slide {
     display: flex;
     gap: 2.5rem;
-    padding: 4.2rem 5.8rem 3.4rem;
+    padding: 4rem 5rem;
+  }
+  .card_content {
+    width: 150%;
   }
 
   .card_header {
     line-height: var(--line-height-1);
-    padding: 2.5rem 2.2rem;
     margin-bottom: 0;
+    padding: 2.5rem;
   }
 
   .card_header::after {
