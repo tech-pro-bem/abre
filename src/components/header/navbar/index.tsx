@@ -4,19 +4,19 @@ import styles from "./styles.module.css";
 const navItems = [
   {
     label: "Conheça",
-    href: "/",
+    href: "#about",
   },
   {
     label: "Projetos",
-    href: "/",
+    href: "#project",
   },
   {
     label: "Contato",
-    href: "/",
+    href: "#contact",
   },
   {
     label: "Esquizofrenia",
-    href: "/",
+    href: "#faq",
   },
 ];
 
@@ -25,7 +25,10 @@ export const Navbar = () => {
     <nav className={styles.navbar}>
       <ul className={styles.navbar__list}>
         {navItems.map((item) => (
-          <li key={item.label} className={styles.navbar__item}>
+          <li
+            key={item.label}
+            className={styles.navbar__item}
+          >
             <Link
               href={item.href}
               className={styles.navbar__link}

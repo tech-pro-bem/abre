@@ -4,7 +4,10 @@ import styles from "./styles.module.css";
 
 export async function ContactSection() {
   return (
-    <section className={styles.section}>
+    <section
+      id="contact"
+      className={styles.section}
+    >
       <div className={styles.content_wrapper}>
         <h2 className={`${styles.projects_section_title} section-title`}>Converse com a gente</h2>
         <p className={styles.projects_paragraph}>
