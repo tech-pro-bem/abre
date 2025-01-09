@@ -8,8 +8,6 @@ export const footer_text = {
   Banco Itaú
   Ag: 0845-1. CC: 21860-1
   Pix: 05.469.302/0001-27`,
-  text_lgpd:
-    "A ABRE valoriza sua privacidade e segue as diretrizes da Lei Geral de Proteção de Dados Pessoais (LGPD) para proteger suas informações. Também utilizamos cookies para melhorar sua navegação em nosso site.",
 };
 const wordsInBold = [" Banco Itaú", "Ag:", "CC:", "Pix:"];
 const stylizeWords = (text: string) => {
@@ -66,7 +64,17 @@ export const Footer = () => {
           </div>
           <NavBar />
           <div className={styles.lgpd_icons_container}>
-            <p className={styles.content_text}>{footer_text.text_lgpd}</p>
+            <p className={styles.content_text}>
+              A ABRE valoriza sua privacidade e segue as{" "}
+              <a
+                href="/"
+                className={styles.underline_text}
+              >
+                diretrizes da Lei Geral de Proteção de Dados Pessoais (LGPD)
+              </a>{" "}
+              para proteger suas informações. Também utilizamos cookies para melhorar sua navegação
+              em nosso site.
+            </p>
             <FooterSocials className={styles.icons_container_mobile} />
           </div>
         </div>

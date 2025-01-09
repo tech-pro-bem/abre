@@ -51,7 +51,9 @@
 .donation_text_strong {
   font-weight: var(--fw-bold);
 }
-
+.underline_text {
+  text-decoration: underline;
+}
 .lgpd_icons_container {
   display: contents;
 }
