@@ -30,7 +30,7 @@
 
 .donation_container {
   display: flex;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 .donation_title_text {
   display: flex;
