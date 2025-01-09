@@ -9,6 +9,7 @@
 .footer_container {
   max-width: 75rem;
   margin-inline: auto;
+  gap: 5rem;
 }
 
 .logo_icons_container {
@@ -106,7 +107,9 @@
   .donation_container {
     grid-column-start: 4;
   }
-
+  .donation_title_text {
+    gap: 0.2rem;
+  }
   .lgpd_icons_container {
     grid-column-start: 3;
     grid-row: 1;
@@ -115,9 +118,8 @@
   .content_text {
     grid-row: 1;
     grid-column-start: 3;
-    max-width: 30ch;
-    text-wrap-style: balance;
-    gap: 1rem;
+    max-width: 33ch;
+    text-wrap-style: pretty;
   }
   .icons_container_mobile {
     display: none;
