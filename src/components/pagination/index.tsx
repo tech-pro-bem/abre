@@ -2,7 +2,7 @@
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import styles from "./styles.module.css";
 import { useEffect, useState } from "react";
-import { Album } from "@/app/materiais/page";
+import { Album } from "@/app/materiais/galeria/page";
 
 interface PaginationProps {
   items: Album[];
