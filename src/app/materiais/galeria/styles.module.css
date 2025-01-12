@@ -33,7 +33,7 @@
 }
 
 .quantity {
-  font-size: var(--font-size-6);
+  font-size: 0.875rem;
   font-weight: var(--fw-regular);
   line-height: var(--line-height-1);
   color: var(--color-neutral-darkest);
