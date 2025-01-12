@@ -7,17 +7,10 @@
 .button {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
   align-items: center;
   gap: 0.5rem;
   font-weight: var(--fw-regular);
   font-size: var(--heading-3);
   line-height: var(--line-height-2);
   color: var(--color-primary-darkest);
-}
-
-@media (min-width: 60em) {
-  .button {
-    padding-right: 39px;
-  }
 }

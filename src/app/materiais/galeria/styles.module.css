@@ -1,10 +1,10 @@
 .album_container {
   display: flex;
   flex-direction: column;
-  padding-inline: 1.5rem;
+  max-width: 75rem;
+  /* padding-inline: 1.5rem; */
 }
 .album_content {
-  max-width: 75rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem 1rem;
@@ -26,6 +26,7 @@
   display: inline-block;
 }
 .image {
+  min-width: 148px;
   aspect-ratio: 1/1;
   height: 100%;
   object-fit: cover;
@@ -75,7 +76,6 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 3.5rem 2rem;
     padding-block: 98px 32px;
-
     margin-inline: auto;
   }
   .quantity {

@@ -100,7 +100,7 @@ const Albums = [
   },
 ];
 const ITEMS_PER_PAGE = 7;
-export default function Galeria() {
+export default function GaleriaPage() {
   const [currentAlbums, setCurrentAlbums] = useState<Album[]>([]);
   return (
     <section className={styles.album_container}>
