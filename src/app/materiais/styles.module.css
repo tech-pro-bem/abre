@@ -1,0 +1,37 @@
+.section {
+  background: linear-gradient(180deg, #ddf8f7 0%, rgba(221, 248, 247, 0) 100%);
+  padding: 1rem;
+}
+.content_bg {
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+.hero_container {
+  text-align: center;
+  margin-inline: auto;
+  padding-top: 32px;
+  padding-bottom: 72px;
+  max-width: 36.875em;
+}
+
+.hero_title {
+  font-size: var(--font-size-1);
+  color: var(--color-primary-dark);
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.hero_subtitle {
+  color: var(--color-primary-darkest);
+}
+
+@media (min-width: 40em) {
+  .hero_container {
+    padding-top: 107px;
+    padding-bottom: 160px;
+  }
+  .hero_title {
+    font-weight: 600;
+  }
+}

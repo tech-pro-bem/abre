@@ -1,5 +1,5 @@
-import Galeria from "./galeria/page";
+import { redirect } from "next/navigation";
 
 export default function MateriaisPage() {
-  return <Galeria />;
+  redirect("/materiais/livros");
 }
