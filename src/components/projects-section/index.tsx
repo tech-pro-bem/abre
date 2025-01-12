@@ -4,7 +4,7 @@ import { ProjectsCarousel } from "./projects-carousel";
 export async function ProjectsSection() {
   return (
     <section
-      id="project"
+      id="projeto"
       className={styles.section}
     >
       <h2 className={`${styles.projects_section_title} section-title`}>Projetos</h2>

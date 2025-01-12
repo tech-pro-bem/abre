@@ -4,15 +4,15 @@ import styles from "./styles.module.css";
 const navItems = [
   {
     label: "Conheça",
-    href: "#about",
+    href: "/#conheca",
   },
   {
     label: "Projetos",
-    href: "#project",
+    href: "/#projeto",
   },
   {
     label: "Contato",
-    href: "#contact",
+    href: "/#contato",
   },
   {
     label: "Esquizofrenia",

@@ -5,7 +5,7 @@ import styles from "./styles.module.css";
 export async function ContactSection() {
   return (
     <section
-      id="contact"
+      id="contato"
       className={styles.section}
     >
       <div className={styles.content_wrapper}>

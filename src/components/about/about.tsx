@@ -41,7 +41,7 @@ const stylizeWords = (text: string) => {
 export const About = () => {
   return (
     <section
-      id="about"
+      id="conheca"
       className={styles.container}
     >
       <div className={styles.about_content}>
