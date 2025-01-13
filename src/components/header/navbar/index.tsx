@@ -8,7 +8,7 @@ const navItems = [
   },
   {
     label: "Projetos",
-    href: "/#projeto",
+    href: "/#projetos",
   },
   {
     label: "Contato",
