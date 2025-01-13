@@ -16,7 +16,7 @@ const navItems = [
   },
   {
     label: "Esquizofrenia",
-    href: "#faq",
+    href: "/#faq",
   },
 ];
 
