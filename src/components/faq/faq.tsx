@@ -95,7 +95,10 @@ const stylizeHiperLink = (text: string) => {
 };
 export const Faq = () => {
   return (
-    <section className={styles.questions_section}>
+    <section
+      id="faq"
+      className={styles.questions_section}
+    >
       <div className={styles.vectors}>
         <Vector className={styles.vector_top} />
         <Vector className={styles.vector_bottom} />

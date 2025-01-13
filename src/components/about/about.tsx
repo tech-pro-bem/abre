@@ -40,7 +40,10 @@ const stylizeWords = (text: string) => {
 
 export const About = () => {
   return (
-    <section className={styles.container}>
+    <section
+      id="conheca"
+      className={styles.container}
+    >
       <div className={styles.about_content}>
         <div className={styles.about_buttons}>
           <button className={styles.about_button_know}>Conheça a ABRE</button>
