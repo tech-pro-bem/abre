@@ -7,15 +7,16 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer/footer";
 
 const jost = Jost({
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
   style: ["normal", "italic"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "Abre",
+  description:
+    "Apoiamos pessoas com esquizofrenia, seus familiares e amigos para uma jornada de inclusão e compreensão.",
 };
 
 export default function RootLayout({
