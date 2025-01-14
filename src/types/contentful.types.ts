@@ -1,4 +1,4 @@
-import { EntryFields } from "contentful";
+import { EntryFields, SysQueries, TagSys } from "contentful";
 
 /*
  * Lista não exaustiva de content-types disponíveis
@@ -20,6 +20,10 @@ export const content_types = [
   "mockFaq",
 ] as const;
 
+const ordering_types = ["sys.createdAt", "-sys.createdAt"] as const;
+
+export type ORDERING_TYPES = (typeof ordering_types)[number];
+
 export type CONTENT_TYPES = (typeof content_types)[number];
 
 export type GetContentByContentTypeResponse<T> = {
@@ -29,7 +33,10 @@ export type GetContentByContentTypeResponse<T> = {
   total: number;
   skip: number;
   limit: number;
-  items: Array<{ fields: T }>;
+  items: Array<{
+    sys: TagSys;
+    fields: T;
+  }>;
 };
 
 /*
