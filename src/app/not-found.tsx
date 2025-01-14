@@ -5,10 +5,8 @@ import { NotFoundIcon } from "../components/icons/not-found";
 export default function NotFound() {
   return (
     <section className={styles.section}>
-      <div className={styles.content_wrapper}>
-        <div>
-          <NotFoundIcon className={styles.not_found__icon} />
-        </div>
+      <article className={styles.content_wrapper}>
+        <NotFoundIcon className={styles.not_found__icon} />
         <div className={styles.not_found__content}>
           <h1 className={styles.not_found__title}>Encontramos um problema</h1>
           <p className={styles.not_found__subtitle}>
@@ -24,7 +22,7 @@ export default function NotFound() {
             </LinkButton>
           </div>
         </div>
-      </div>
+      </article>
     </section>
   );
 }
