@@ -5,13 +5,6 @@
 .content_wrapper {
   padding-block: 3.25rem 1.5rem;
   padding-inline: 1.5rem;
-  @media (min-width: 40em) {
-    display: flex;
-    justify-content: center;
-    gap: 2.5rem;
-    padding-block: 12.5rem;
-    padding-inline: 0;
-  }
 }
 
 .not_found__content {
@@ -20,10 +13,6 @@
   justify-content: space-between;
   gap: 1.5rem;
   padding-top: 1.5rem;
-  @media (min-width: 40em) {
-    gap: 2rem;
-    padding-top: 0;
-  }
 }
 
 .not_found__title {
@@ -38,21 +27,31 @@
   font-weight: var(--fw-regular);
   color: var(--color-primary-darkest);
   padding-bottom: 0;
-  @media (min-width: 40em) {
-    padding-bottom: 1.5rem;
-  }
-}
-
-.not_found__icon {
-  @media (min-width: 40em) {
-    width: 9.5rem;
-    height: 14rem;
-  }
 }
 
 .not_found__button {
   padding: 0.594rem 8.625rem;
-  @media (min-width: 40em) {
+}
+
+@media (min-width: 40em) {
+  .content_wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    padding-block: 12.5rem;
+  }
+  .not_found__content {
+    gap: 2rem;
+    padding-top: 0;
+  }
+  .not_found__subtitle {
+    padding-bottom: 1.5rem;
+  }
+  .not_found__icon {
+    width: 9.5rem;
+    height: 14rem;
+  }
+  .not_found__button {
     padding: 0.594rem 9.125rem;
   }
 }
