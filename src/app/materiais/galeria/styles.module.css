@@ -33,7 +33,7 @@
 }
 
 .quantity {
-  font-size: 0.875rem;
+  font-size: var(--font-size-6);
   font-weight: var(--fw-regular);
   line-height: var(--line-height-1);
   color: var(--color-neutral-darkest);
@@ -54,7 +54,7 @@
   text-wrap: wrap;
   font-weight: var(--fw-bold);
   line-height: var(--line-height-2);
-  font-size: var(--font-size-5);
+  font-size: 0.875rem;
   color: var(--color-primary-darkest);
 }
 .subtitle {
@@ -83,6 +83,6 @@
   }
   .title {
     font-weight: var(--fw-medium);
-    font-size: var(--font-size-4);
+    font-size: 1.5rem;
   }
 }
