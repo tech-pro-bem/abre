@@ -1,4 +1,4 @@
-import { EntryFields, SysQueries, TagSys } from "contentful";
+import type { EntryFields, TagSys } from "contentful";
 
 /*
  * Lista não exaustiva de content-types disponíveis
