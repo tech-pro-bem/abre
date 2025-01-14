@@ -24,7 +24,7 @@ export async function getContentByContentType<T>({
 }: GetContentByContentTypeParams): Promise<GetContentByContentTypeResponse<T>> {
   if (!contentType) throw new Error("Missing Content Type");
 
-  let url = new URL(`${BASE_URL}/spaces/${SPACE_ID}/environments/${ENVIRONMENT}/entries/`);
+  const url = new URL(`${BASE_URL}/spaces/${SPACE_ID}/environments/${ENVIRONMENT}/entries/`);
 
   const params = {
     select: "sys,fields",

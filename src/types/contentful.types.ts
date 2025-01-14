@@ -7,24 +7,19 @@ import type { EntryFields, TagSys } from "contentful";
  * na tipagem da função getContentByContentType em "@/lib/contentful.ts"
  */
 
-export const content_types = [
-  "album",
-  "books",
-  "contacts",
-  "gallery",
-  "pix",
-  "projects",
-  "reports",
-  "testimonials",
-  "mockTestimonials",
-  "mockFaq",
-] as const;
+export type ORDERING_TYPES = "sys.createdAt" | "-sys.createdAt";
 
-const ordering_types = ["sys.createdAt", "-sys.createdAt"] as const;
-
-export type ORDERING_TYPES = (typeof ordering_types)[number];
-
-export type CONTENT_TYPES = (typeof content_types)[number];
+export type CONTENT_TYPES =
+  | "album"
+  | "books"
+  | "contacts"
+  | "gallery"
+  | "pix"
+  | "projects"
+  | "reports"
+  | "testimonials"
+  | "mockTestimonials"
+  | "mockFaq";
 
 export type GetContentByContentTypeResponse<T> = {
   sys: {
