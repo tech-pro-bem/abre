@@ -39,7 +39,7 @@
   padding: 0.6rem 1.25rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 40em) {
   .header__nav_container {
     display: flex;
     justify-content: flex-end;

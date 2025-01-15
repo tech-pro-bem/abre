@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import styles from "./styles.module.css";
@@ -138,4 +139,8 @@ export default function GaleriaPage() {
       />
     </section>
   );
+=======
+export default function GaleriaPage() {
+  return <h1>Galeria</h1>;
+>>>>>>> 7bea2c59485296e9b6c64546a0aaa898cdc822e9
 }

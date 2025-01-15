@@ -1,6 +1,10 @@
 .section {
   background: linear-gradient(180deg, #ddf8f7 0%, rgba(221, 248, 247, 0) 100%);
+<<<<<<< HEAD
   padding: 1rem;
+=======
+  padding: 2rem;
+>>>>>>> 7bea2c59485296e9b6c64546a0aaa898cdc822e9
 }
 .content_bg {
   max-width: 1280px;
