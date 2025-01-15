@@ -107,11 +107,11 @@ export default function GaleriaPage() {
       <FilterButton />
       <div className={styles.album_content}>
         {currentAlbums.map((album, index) => (
-          <div
-            key={index}
-            className={styles.album_items}
-          >
-            <Link href="/">
+          <div key={index}>
+            <Link
+              className={styles.album_items}
+              href="/"
+            >
               <div className={styles.image_quantity}>
                 <Image
                   src={album.image}

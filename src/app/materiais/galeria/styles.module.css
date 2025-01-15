@@ -53,7 +53,7 @@
 .title {
   text-wrap: wrap;
   font-weight: var(--fw-bold);
-  line-height: var(--line-height-2);
+  line-height: var(--line-height-1);
   font-size: 0.875rem;
   color: var(--color-primary-darkest);
 }
@@ -77,6 +77,9 @@
     gap: 3.5rem 2rem;
     padding-block: 98px 32px;
     margin-inline: auto;
+  }
+  .album_items {
+    gap: 2rem;
   }
   .quantity {
     padding: 4px 8px;
