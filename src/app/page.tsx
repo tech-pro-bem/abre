@@ -16,8 +16,8 @@ export default function Home() {
         <About />
       </div>
       <ProjectsSection />
-      <Materials />
       <ContactSection />
+      <Materials />
       <Faq />
       <Testimonials />
       <AcolhimentoSection />

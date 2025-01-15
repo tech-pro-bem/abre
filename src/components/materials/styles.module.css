@@ -1,11 +1,11 @@
 .content {
   width: 86.7%;
   margin-inline: auto;
-  max-width: 76rem;
+  max-width: 74rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 2.5rem;
-  padding-block: 3.5rem;
+  padding-block: 5rem;
 }
 .title {
   font-weight: var(--fw-medium);
@@ -33,6 +33,7 @@
 }
 .container_image_mandala {
   position: relative;
+  max-width: 592px;
   aspect-ratio: 592/444;
 }
 .image_mandala {
@@ -43,9 +44,6 @@
   .content {
     display: grid;
     grid-template-columns: 1fr 40ch;
-    padding-right: 5.45vw;
-    padding-top: 5rem;
-    padding-bottom: 1rem;
     gap: 7vw;
   }
   .title_text {

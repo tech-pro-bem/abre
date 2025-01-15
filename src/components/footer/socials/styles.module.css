@@ -1,0 +1,7 @@
+.icon {
+  color: var(--color-neutral-lightest);
+}
+
+.icon:hover {
+  color: var(--color-primary-medium);
+}
