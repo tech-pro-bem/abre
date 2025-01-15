@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   max-width: 75rem;
-  /* padding-inline: 1.5rem; */
+  margin-inline: auto;
 }
 .album_content {
   display: grid;
@@ -26,8 +26,7 @@
   display: inline-block;
 }
 .image {
-  min-width: 148px;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1.5/1;
   height: 100%;
   object-fit: cover;
 }
@@ -76,7 +75,6 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 3.5rem 2rem;
     padding-block: 98px 32px;
-    margin-inline: auto;
   }
   .album_items {
     gap: 2rem;
