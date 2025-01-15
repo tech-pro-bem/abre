@@ -46,7 +46,7 @@
 .donation_text {
   font-size: 0.875rem;
   line-height: var(--line-height-2);
-  font-size: var(--font-size-5);
+  font-size: 0.875rem;
   font-weight: var(--fw-regular);
 }
 .donation_text_strong {
@@ -107,9 +107,7 @@
   .donation_container {
     grid-column-start: 4;
   }
-  .donation_title_text {
-    gap: 0.2rem;
-  }
+
   .lgpd_icons_container {
     grid-column-start: 3;
     grid-row: 1;
