@@ -2,12 +2,12 @@
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import styles from "./styles.module.css";
 import { useEffect, useState } from "react";
-import { Album } from "@/app/materiais/galeria/page";
+import { Albums } from "../../mock-data/galeria";
 
 interface PaginationProps {
-  items: Album[];
+  items: typeof Albums;
   itemsPerPage: number;
-  pageChange: (data: Album[]) => void;
+  pageChange: (data: typeof Albums) => void;
 }
 
 const Pagination = ({ items, itemsPerPage, pageChange }: PaginationProps) => {
