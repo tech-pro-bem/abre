@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 
 import styles from "./styles.module.css";
@@ -7,102 +6,12 @@ import Link from "next/link";
 import { useState } from "react";
 import Pagination from "@/components/pagination";
 import FilterButton from "@/components/filter-button";
+import { Albums } from "@/mock-data/galeria";
 
-export interface Album {
-  quantity: string;
-  image: string;
-  title: string;
-  subtitle: string;
-}
-const Albums = [
-  {
-    quantity: "6 imagens",
-    image: "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
-    title: "Congress On Brain 2023",
-    subtitle: "Local, data e resumo do evento",
-  },
-  {
-    quantity: "5 imagens",
-    image: "/img-album/Cópia-de-Encontro_Catarinense_2023-3.webp",
-    title: "Encontro Catarinense 2023",
-    subtitle: "Local, data e resumo do evento",
-  },
-  {
-    quantity: "3 imagens",
-    image: "/img-album/Cópia-de-Dia_Nacional_Esquizofrenia_2023-1.webp",
-    title: "Dia Nacional Esquizofrenia 2023",
-    subtitle: "Local, data e resumo do evento",
-  },
-  {
-    quantity: "3 imagens",
-    image: "/img-album/Cópia-de-Mandala-produção-oficina-artes-2021-1.webp",
-    title: "Oficinas de Arte 2021",
-    subtitle: "Local, data e resumo do evento",
-  },
-  {
-    quantity: "34 imagens",
-    image: "/img-album/Cópia-de-Festa_15_anos_ABRE-2017-1.webp",
-    title: "Festa de 15 anos ABRE 2017",
-    subtitle: "Local, data e resumo do evento",
-  },
-  {
-    quantity: "4 imagens",
-    image: "/img-album/Cópia-de-LIvro_Entre_Razão_Ilusão_2023-3.webp",
-    title: "Congress On Brain 2023",
-    subtitle: "Livro entre a Razão e a Ilusão",
-  },
-  {
-    quantity: "3 imagens",
-    image: "/img-album/Cópia-de-Jorge-Assis-Palestra-sobre-esquizofrenia-2021-2.webp",
-    title: "Encontros/Palestras",
-    subtitle: "Local, data e resumo do evento",
-  },
-  {
-    quantity: "6 imagens",
-    image: "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
-    title: "Congress On Brain 2023",
-    subtitle: "Local, data e resumo do evento",
-  },
-  {
-    quantity: "5 imagens",
-    image: "/img-album/Cópia-de-Encontro_Catarinense_2023-3.webp",
-    title: "Encontro Catarinense 2023",
-    subtitle: "Local, data e resumo do evento",
-  },
-  {
-    quantity: "3 imagens",
-    image: "/img-album/Cópia-de-Dia_Nacional_Esquizofrenia_2023-1.webp",
-    title: "Dia Nacional Esquizofrenia 2023",
-    subtitle: "Local, data e resumo do evento",
-  },
-  {
-    quantity: "3 imagens",
-    image: "/img-album/Cópia-de-Mandala-produção-oficina-artes-2021-1.webp",
-    title: "Oficinas de Arte 2021",
-    subtitle: "Local, data e resumo do evento",
-  },
-  {
-    quantity: "34 imagens",
-    image: "/img-album/Cópia-de-Festa_15_anos_ABRE-2017-1.webp",
-    title: "Festa de 15 anos ABRE 2017",
-    subtitle: "Local, data e resumo do evento",
-  },
-  {
-    quantity: "4 imagens",
-    image: "/img-album/Cópia-de-LIvro_Entre_Razão_Ilusão_2023-3.webp",
-    title: "Congress On Brain 2023",
-    subtitle: "Livro entre a Razão e a Ilusão",
-  },
-  {
-    quantity: "3 imagens",
-    image: "/img-album/Cópia-de-Jorge-Assis-Palestra-sobre-esquizofrenia-2021-2.webp",
-    title: "Encontros/Palestras",
-    subtitle: "Local, data e resumo do evento",
-  },
-];
-const ITEMS_PER_PAGE = 7;
 export default function GaleriaPage() {
-  const [currentAlbums, setCurrentAlbums] = useState<Album[]>([]);
+  const [currentAlbums, setCurrentAlbums] = useState<typeof Albums>([]);
+  const ITEMS_PER_PAGE = 7;
+
   return (
     <section className={styles.album_container}>
       <FilterButton />
@@ -139,8 +48,4 @@ export default function GaleriaPage() {
       />
     </section>
   );
-=======
-export default function GaleriaPage() {
-  return <h1>Galeria</h1>;
->>>>>>> 7bea2c59485296e9b6c64546a0aaa898cdc822e9
 }
