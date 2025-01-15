@@ -19,13 +19,6 @@
   gap: 2rem;
 }
 
-.image {
-  @media (min-width: 40em) {
-    width: 176px;
-    height: 264px;
-  }
-}
-
 .title_container {
   display: flex;
   flex-direction: column;
@@ -71,4 +64,24 @@
   font-size: var(--font-size-5);
   font-weight: var(--fw-light);
   color: var(--color-primary-darkest);
+}
+
+@media (min-width: 40em) {
+  .section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5.5rem 3rem;
+  }
+
+  .image {
+    width: 176px;
+    height: 264px;
+  }
+}
+
+@media (min-width: 65em) {
+  .section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

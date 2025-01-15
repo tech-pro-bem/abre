@@ -38,7 +38,6 @@ export const mock_livros_datas = [
   {
     image: "/books/guia_prático_sobre_psicoses.webp",
     title: "Guia prático sobre psicoses para profissionais da Atenção Básica",
-    subtitle: "",
     url: "https://abre.org/materiais/",
   },
 ];
