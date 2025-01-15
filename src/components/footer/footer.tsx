@@ -25,6 +25,7 @@ const stylizeWords = (text: string) => {
     )
   );
 };
+
 export const Footer = () => {
   return (
     <footer className={styles.footer}>

@@ -9,7 +9,7 @@
 .footer_container {
   max-width: 75rem;
   margin-inline: auto;
-  gap: 5rem;
+  gap: 3rem;
 }
 
 .logo_icons_container {
@@ -81,7 +81,7 @@
 @media (min-width: 60em) {
   .footer_container {
     display: grid;
-    grid-template-columns: repeat(4, minmax(max-content, 1fr));
+    grid-template-columns: repeat(4, auto);
   }
 
   .logo_icons_container {
