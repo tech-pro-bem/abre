@@ -1,10 +1,11 @@
 import styles from "./styles.module.css";
 import { Options } from "./options";
+import { AlignmentContainer } from "../section-container";
 
 export function AcolhimentoSection() {
   return (
     <section className={styles.section}>
-      <div className={styles.wrapper}>
+      <AlignmentContainer size="md">
         <h2 className={`section-title ${styles.title}`}>Outras formas de acolhimento</h2>
         <p className={styles.subtitle}>
           Familiares e amigos podem conferir páginas de instituições que discutem sobre
@@ -12,7 +13,7 @@ export function AcolhimentoSection() {
           lista de CAPS para encontrar o mais próximo da residência dessa pessoa.
         </p>
         <Options />
-      </div>
+      </AlignmentContainer>
     </section>
   );
 }

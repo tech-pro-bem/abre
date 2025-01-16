@@ -4,13 +4,6 @@
     var(--color-primary-lightest) 0%,
     rgba(221, 248, 247, 0) 100%
   );
-  padding-inline: 1.5rem;
-  padding-block: 5rem;
-}
-
-.wrapper {
-  margin-inline: auto;
-  max-width: 63rem;
   text-align: left;
 
   @media (min-width: 40em) {
