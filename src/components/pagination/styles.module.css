@@ -1,0 +1,33 @@
+.album_pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.page {
+  font-weight: var(--fw-regular);
+  line-height: var(--line-height-2);
+  font-size: var(--font-size-5);
+  color: var(--color-neutral-dark);
+}
+.pagination_buttons {
+  display: flex;
+  gap: 0.25rem;
+}
+.button_arrow {
+  color: var(--color-primary-medium);
+  cursor: pointer;
+}
+.button_arrow:disabled {
+  color: var(--color-neutral-medium);
+  cursor: default;
+}
+
+@media (min-width: 60em) {
+  .album_pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
