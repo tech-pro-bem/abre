@@ -1,0 +1,37 @@
+.donation_container {
+  display: flex;
+  gap: 1rem;
+}
+
+.qr_code {
+  cursor: pointer;
+}
+
+.donation_title_text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.donation_title {
+  line-height: var(--line-height-1);
+  font-size: 1.5rem;
+  font-weight: var(--fw-medium);
+}
+
+.donation_text {
+  font-size: 0.875rem;
+  line-height: var(--line-height-2);
+  font-size: 0.875rem;
+  font-weight: var(--fw-regular);
+}
+
+.pix_key {
+  cursor: pointer;
+}
+
+@media (min-width: 60em) {
+  .donation_container {
+    grid-column-start: 4;
+  }
+}

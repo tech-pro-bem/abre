@@ -14,7 +14,6 @@ export type CONTENT_TYPES =
   | "books"
   | "contacts"
   | "gallery"
-  | "pix"
   | "projects"
   | "reports"
   | "testimonials"
