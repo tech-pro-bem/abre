@@ -19,7 +19,8 @@ export type CONTENT_TYPES =
   | "reports"
   | "testimonials"
   | "mockTestimonials"
-  | "mockFaq";
+  | "mockFaq"
+  | "donationPix";
 
 export type GetContentByContentTypeResponse<T> = {
   sys: {
@@ -50,4 +51,14 @@ export type Testimonials = {
 export type FAQ = {
   title: EntryFields.Symbol;
   text: EntryFields.RichText;
+};
+
+export type DONATION = {
+  chavePixDetalhada: EntryFields.Symbol;
+  chavePix: EntryFields.Symbol;
+  nome: EntryFields.Symbol;
+  cidade: EntryFields.Symbol;
+  banco: EntryFields.Symbol;
+  agencia: EntryFields.Symbol;
+  contaCorrente: EntryFields.Symbol;
 };
