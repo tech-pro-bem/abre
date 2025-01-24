@@ -59,7 +59,7 @@
 
   .wrapper {
     grid-template-columns: repeat(2, auto);
-    gap: 8rem;
+    gap: 3.5rem;
     padding: 1rem;
   }
 
@@ -83,5 +83,11 @@
   .header__logo > img {
     min-width: 176px;
     min-height: 41px;
+  }
+}
+
+@media (min-width: 65em) {
+  .wrapper {
+    gap: 8rem;
   }
 }
