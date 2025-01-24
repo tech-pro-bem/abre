@@ -7,35 +7,37 @@ import Link from "next/link";
 export const Header = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.header__logo_container}>
-        <Link
-          href={"/"}
-          className={styles.header__logo}
-        >
-          <Image
-            src="/logo/logo.svg"
-            alt="logo"
-            width={148}
-            height={34}
-          />
-        </Link>
-        <Link
-          href="/materiais"
-          className={styles.header__button}
-        >
-          Acessar materiais
-        </Link>
-      </div>
+      <div className={styles.wrapper}>
+        <div className={styles.header__logo_container}>
+          <Link
+            href={"/"}
+            className={styles.header__logo}
+          >
+            <Image
+              src="/logo/logo.svg"
+              alt="logo"
+              width={148}
+              height={34}
+            />
+          </Link>
+          <Link
+            href="/materiais"
+            className={styles.header__button}
+          >
+            Acessar materiais
+          </Link>
+        </div>
 
-      <div className={styles.header__nav_container}>
-        <Navbar />
-        <Link
-          href="/materiais"
-          className={styles.header__button}
-        >
-          Acessar materiais
-        </Link>
-        <SocialMedias />
+        <div className={styles.header__nav_container}>
+          <Navbar />
+          <Link
+            href="/materiais"
+            className={styles.header__button}
+          >
+            Acessar materiais
+          </Link>
+          <SocialMedias />
+        </div>
       </div>
     </header>
   );
