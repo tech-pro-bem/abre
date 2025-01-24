@@ -30,6 +30,12 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <div
+          className="copy-toast"
+          id="copy-text-toast"
+        >
+          <span>✅</span> Texto copiado para a área de transferência.
+        </div>
       </body>
     </html>
   );
