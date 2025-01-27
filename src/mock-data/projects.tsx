@@ -53,7 +53,25 @@ export const mock_projects_data = [
         <p>
           Se você é uma pessoa com esquizofrenia e busca por acolhimento,{" "}
           <span style={{ fontWeight: 700 }}>entre em contato com a gente</span> enviando uma
-          mensagem no Facebook ou Instagram da ABRE.
+          mensagem no{" "}
+          <a
+            href="https://www.facebook.com/abre.esquizofrenia/"
+            rel="noopener noreferrer"
+            target="_blank"
+            style={{ textDecoration: "underline" }}
+          >
+            Facebook
+          </a>{" "}
+          ou{" "}
+          <a
+            href="https://www.instagram.com/abreesquizofrenia/"
+            rel="noopener noreferrer"
+            target="_blank"
+            style={{ textDecoration: "underline" }}
+          >
+            Instagram
+          </a>{" "}
+          da ABRE.
         </p>
       </>
     ),
@@ -79,7 +97,7 @@ export const mock_projects_data = [
         </p>
         <p>
           Se você é um familiar ou tem amizade com uma pessoa diagnosticada com esquizofrenia,{" "}
-          <span style={{ fontWeight: 700 }}>entre em contato com a gente</span>
+          <span style={{ fontWeight: 700 }}>entre em contato com a gente </span>
           enviando uma mensagem no{" "}
           <a
             href="https://www.facebook.com/abre.esquizofrenia/"
@@ -105,7 +123,7 @@ export const mock_projects_data = [
     icon: <FamiliaresIcon />,
   },
   {
-    title: "LACCA",
+    title: "LACCA (Laboratório de Criação Casa Azul)",
     description: (
       <>
         <p>

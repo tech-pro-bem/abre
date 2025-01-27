@@ -1,6 +1,9 @@
 .social_medias__list {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.icon {
+  color: var(--color-primary-dark);
 }

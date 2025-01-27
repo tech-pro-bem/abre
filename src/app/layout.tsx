@@ -4,6 +4,7 @@ import "./styles/reset.css";
 import "./styles/globals.css";
 import "./styles/theme.css";
 import { Header } from "@/components/header";
+import { Footer } from "@/components/footer/footer";
 
 const jost = Jost({
   weight: ["300", "400", "500", "600", "700"],
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body className={jost.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

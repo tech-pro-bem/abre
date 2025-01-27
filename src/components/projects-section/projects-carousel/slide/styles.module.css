@@ -31,6 +31,7 @@
 
   .card_header_title {
     font-size: var(--heading-3);
+    font-weight: 600;
     color: var(--color-primary-darkest);
   }
 

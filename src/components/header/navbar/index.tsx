@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 const navItems = [
   {
     label: "Conheça",
-    href: "/#conheca",
+    href: "/#conheca_a_abre",
   },
   {
     label: "Projetos",
@@ -16,7 +16,7 @@ const navItems = [
   },
   {
     label: "Esquizofrenia",
-    href: "/#faq",
+    href: "/#perguntas_sobre_esquizofrenia",
   },
 ];
 
