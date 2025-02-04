@@ -11,7 +11,7 @@ type GetContentByContentTypeParams = {
   skip?: number;
 };
 
-const SPACE_ID = process.env.CONTENTFUL_SPACE_ID;
+
 const ENVIRONMENT = process.env.CONTENTFUL_ENVIRONMENT;
 const TOKEN = process.env.CONTENTFUL_ACCESS_TOKEN;
 const BASE_URL = "https://cdn.contentful.com";
@@ -24,7 +24,7 @@ export async function getContentByContentType<T>({
 }: GetContentByContentTypeParams): Promise<GetContentByContentTypeResponse<T>> {
   if (!contentType) throw new Error("Missing Content Type");
 
-  const url = new URL(`${BASE_URL}/spaces/${SPACE_ID}/environments/${ENVIRONMENT}/entries/`);
+  const url = new URL(`${BASE_URL}/spaces/y8iety9r124h/environments/${ENVIRONMENT}/entries/`);
 
   const params = {
     select: "sys,fields",
