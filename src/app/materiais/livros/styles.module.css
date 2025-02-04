@@ -3,8 +3,6 @@
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
-  padding: 1.5rem;
-  margin: -2rem;
 }
 
 .books_container {
@@ -64,6 +62,9 @@
   font-size: var(--font-size-5);
   font-weight: var(--fw-light);
   color: var(--color-primary-darkest);
+  &:hover {
+    color: var(--color-primary-medium);
+  }
 }
 
 @media (min-width: 45em) {
