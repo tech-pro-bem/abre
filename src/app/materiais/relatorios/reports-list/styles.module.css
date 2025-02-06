@@ -12,6 +12,7 @@
 
 .report {
   display: flex;
+  align-items: center;
   gap: 1.5rem;
   font-size: var(--heading-3);
   color: var(--color-primary-darkest);
