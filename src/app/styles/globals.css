@@ -17,7 +17,7 @@ a:focus-visible {
   outline-offset: 2px;
 }
 
-.copy-toast {
+.toast {
   position: fixed;
   bottom: 2rem;
   left: 50%;
@@ -38,11 +38,11 @@ a:focus-visible {
   }
 }
 
-#copy-text-toast {
+#toast-text {
   visibility: hidden;
 }
 
-#copy-text-toast.show {
+#toast-text.show {
   visibility: visible;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }

@@ -31,8 +31,8 @@ export default function RootLayout({
         {children}
         <Footer />
         <div
-          className="copy-toast"
-          id="copy-text-toast"
+          className="toast"
+          id="toast-text"
         >
           <span>✅</span> Texto copiado para a área de transferência.
         </div>
