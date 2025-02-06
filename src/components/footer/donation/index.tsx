@@ -25,13 +25,14 @@ export function Donation({
         onClick={async () => await copyToClipboard(pixString, "Pix")}
         src={qrCode}
         alt="qrcode - Abre"
-        width={123}
-        height={123}
+        width={130}
+        height={130}
       />
       <div className={styles.donation_title_text}>
         <h2 className={styles.donation_title}>Faça uma doação</h2>
         <div className={styles.donation_text}>
-          <p>Basta escanear o QR code.</p>
+          <p>Basta escanear o QR code <br /> ou clicar na chave Pix para copiar.</p>
+          
           <p>
             <strong>{banco}</strong>
           </p>
