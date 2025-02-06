@@ -1,5 +1,5 @@
 export async function copyToClipboard(text: string, field: string) {
-  const toastDiv = document.getElementById("copy-text-toast");
+  const toastDiv = document.getElementById("toast-text");
 
   try {
     await navigator.clipboard.writeText(text);

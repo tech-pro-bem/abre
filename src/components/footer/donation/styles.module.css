@@ -3,8 +3,27 @@
   gap: 1rem;
 }
 
-.qr_code {
+.qr_code_wrapper {
+  position: relative;
   cursor: pointer;
+  text-align: center;
+  &:hover > .qr_code {
+    filter: brightness(60%) blur(3px);
+    transition: filter 0.3s ease;
+  }
+  &:hover > .qr_code_overlay {
+    opacity: 1;
+  }
+}
+
+.qr_code_overlay {
+  align-self: center;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  color: var(--color-primary-light);
+  line-height: var(--line-height-1);
+  font-weight: 500;
 }
 
 .donation_title_text {
