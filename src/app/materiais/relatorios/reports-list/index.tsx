@@ -30,12 +30,13 @@ export function ReportsList({ reports }: ReportsListProps) {
         >
           <span>{title}</span>{" "}
           <div className={styles.buttons}>
-            <a
+            {/* TODO: find way to actually download file. Currently opens in new tab */}
+            {/* <a
               href={`https://${file.fields.file?.url}`}
               download={`${formatFileName(title)}.pdf`}
             >
               <DownloadIcon />
-            </a>
+            </a> */}
             <a
               href={`https://${file.fields.file?.url}`}
               target="_blank"
