@@ -1,4 +1,4 @@
-import type { EntryFields, TagSys } from "contentful";
+import type { Asset, EntryFields, TagSys } from "contentful";
 
 /*
  * Lista não exaustiva de content-types disponíveis
@@ -19,7 +19,8 @@ export type CONTENT_TYPES =
   | "reports"
   | "testimonials"
   | "mockTestimonials"
-  | "mockFaq";
+  | "mockFaq"
+  | "materiaisRelatoriosDeAtividades";
 
 export type GetContentByContentTypeResponse<T> = {
   sys: {
@@ -32,6 +33,9 @@ export type GetContentByContentTypeResponse<T> = {
     sys: TagSys;
     fields: T;
   }>;
+  includes?: {
+    Asset: Asset[];
+  };
 };
 
 /*
@@ -51,3 +55,10 @@ export type FAQ = {
   title: EntryFields.Symbol;
   text: EntryFields.RichText;
 };
+
+export type MaterialsReports = {
+  title: EntryFields.Symbol;
+  file: EntryFields.AssetLink;
+};
+
+export type ResolvedMaterialsReports = GetContentByContentTypeResponse<MaterialsReports>["items"];

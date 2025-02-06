@@ -11,7 +11,6 @@ type GetContentByContentTypeParams = {
   skip?: number;
 };
 
-
 const ENVIRONMENT = process.env.CONTENTFUL_ENVIRONMENT;
 const TOKEN = process.env.CONTENTFUL_ACCESS_TOKEN;
 const BASE_URL = "https://cdn.contentful.com";
