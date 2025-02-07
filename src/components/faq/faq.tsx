@@ -85,7 +85,7 @@ export const Faq = async () => {
     contentType: "faq",
     order: "sys.createdAt",
   });
-  console.log(data.items);
+
   const questions = data?.items || [];
 
   return (
