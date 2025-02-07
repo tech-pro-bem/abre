@@ -1,7 +1,9 @@
 "use client";
-import { DownloadIcon, OpenNewArrowIcon } from "@/components/icons";
+import {
+  // DownloadIcon,
+  OpenNewArrowIcon } from "@/components/icons";
 import { ResolvedMaterialsReports } from "@/types/contentful.types";
-import { formatFileName } from "@/utils/format-file-name";
+// import { formatFileName } from "@/utils/format-file-name";
 import { useState } from "react";
 import styles from "./styles.module.css";
 

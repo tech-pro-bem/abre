@@ -19,7 +19,7 @@ export type CONTENT_TYPES =
   | "testimonials"
   | "mockTestimonials"
   | "mockFaq"
-  | "donationPix";
+  | "donationPix"
   | "materiaisRelatoriosDeAtividades";
 
 export type GetContentByContentTypeResponse<T> = {
