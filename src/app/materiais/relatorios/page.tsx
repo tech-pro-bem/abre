@@ -4,6 +4,12 @@ import { MaterialsReports, ResolvedMaterialsReports } from "@/types/contentful.t
 import resolveResponse from "contentful-resolve-response";
 import { ReportsList } from "./reports-list";
 import styles from "./styles.module.css";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Relatórios",
+  description: "Consulte nossos relatórios anuais.",
+};
 
 export default async function RelatoriosPage() {
   const data = await getContentByContentType<MaterialsReports>({
