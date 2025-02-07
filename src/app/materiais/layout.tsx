@@ -1,13 +1,6 @@
-import type { Metadata } from "next";
 import { Breadcrumbs } from "./components/breadcrumbs";
 import { MateriaisTabs } from "./components/materiais-tabs.tsx";
 import styles from "./styles.module.css";
-
-export const metadata: Metadata = {
-  title: "Materiais | Abre",
-  description:
-    "Apoiamos pessoas com esquizofrenia, seus familiares e amigos para uma jornada de inclusão e compreensão.",
-};
 
 export default function MateriaisLayout({
   children,

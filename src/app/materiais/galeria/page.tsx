@@ -9,6 +9,14 @@ import FilterButton from "@/components/filter-button";
 import { Albums } from "@/mock-data/galeria";
 import FotosComponent from "../components/fotos/fotos";
 
+// import { Metadata } from "next";
+
+// export const metadata: Metadata = {
+//   title: "Galeria",
+//   description: "Acompanhe nossos eventos",
+// };
+
+
 export default function GaleriaPage() {
   const [currentAlbums, setCurrentAlbums] = useState<typeof Albums>([]);
   const ITEMS_PER_PAGE = 7;
