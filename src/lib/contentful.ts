@@ -5,7 +5,7 @@ import type {
 } from "@/types/contentful.types";
 
 type GetContentByContentTypeParams = {
-  contentType: CONTENT_TYPES | string;
+  contentType: CONTENT_TYPES;
   order?: ORDERING_TYPES;
   limit?: number;
   skip?: number;
@@ -43,7 +43,9 @@ export async function getContentByContentType<T>({
   });
 
   if (!response.ok) {
-    throw new Error(`Erro ao buscar conteúdo: ${response.status} - ${response.statusText}`);
+    throw new Error(
+      `Erro ao buscar conteúdo do tipo ${contentType}: ${response.status} - ${response.statusText}`
+    );
   }
 
   return response.json();

@@ -14,12 +14,12 @@ export type CONTENT_TYPES =
   | "books"
   | "contacts"
   | "gallery"
-  | "pix"
   | "projects"
   | "reports"
   | "testimonials"
   | "mockTestimonials"
   | "mockFaq"
+  | "donationPix"
   | "materiaisRelatoriosDeAtividades";
 
 export type GetContentByContentTypeResponse<T> = {
@@ -54,6 +54,16 @@ export type Testimonials = {
 export type FAQ = {
   title: EntryFields.Symbol;
   text: EntryFields.RichText;
+};
+
+export type DONATION = {
+  chavePixDetalhada: EntryFields.Symbol;
+  chavePix: EntryFields.Symbol;
+  nome: EntryFields.Symbol;
+  cidade: EntryFields.Symbol;
+  banco: EntryFields.Symbol;
+  agencia: EntryFields.Symbol;
+  contaCorrente: EntryFields.Symbol;
 };
 
 export type MaterialsReports = {
