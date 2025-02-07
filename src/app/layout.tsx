@@ -14,9 +14,30 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: "Abre",
+  title: {
+    template: "Abre | %s",
+    default: "Abre – Associação Brasileira de Familiares, Amigos e Portadores de Esquizofrenia",
+  },
   description:
-    "Apoiamos pessoas com esquizofrenia, seus familiares e amigos para uma jornada de inclusão e compreensão.",
+  "Apoiamos pessoas com esquizofrenia, seus familiares e amigos para uma jornada de inclusão e compreensão.",
+  applicationName: "Abre",
+  keywords: [
+    "Abre",
+    "Ezquizofrenia",
+    "Saúde Mental",
+    "Acolhimento",
+    "Associação Brasileira de Familiares, Amigos e Portadores de Esquizofrenia",
+  ],
+  authors: [{ name: "Tech Pro Bem", url: "https://www.techprobem.com.br/" }],
+  creator: "Tech Pro Bem",
+  openGraph: {
+    title: "Abre",
+    description:
+      "Apoiamos pessoas com esquizofrenia, seus familiares e amigos para uma jornada de inclusão e compreensão.",
+    siteName: "Abre",
+    url: "https://abrebrasil.org.br/",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
