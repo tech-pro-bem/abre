@@ -21,7 +21,10 @@ export const SocialMedias = () => {
   return (
     <ul className={styles.social_medias__list}>
       {socialMedias.map(({ icon: Icon, href }) => (
-        <li key={href}>
+        <li
+          className={styles.list_item_icon}
+          key={href}
+        >
           <a
             className={styles.icon}
             href={href}

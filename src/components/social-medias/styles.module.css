@@ -4,6 +4,15 @@
   align-items: center;
   gap: 0.5rem;
 }
+
+.list_item_icon {
+  display: flex;
+  flex-shrink: 0;
+}
+
 .icon {
   color: var(--color-primary-dark);
+  & :hover {
+    color: var(--color-primary-medium);
+  }
 }
