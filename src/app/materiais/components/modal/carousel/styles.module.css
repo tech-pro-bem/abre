@@ -6,16 +6,15 @@
   justify-content: center;
   container-name: projects-carousel;
   container-type: inline-size;
-  gap: 0.19rem;
 }
 
 .carousel_images_container {
   position: relative;
 }
+
 .carousel_image {
   object-fit: contain;
-  width: fit-content;
-  height: fit-content;
+  width: 100%;
 }
 
 .carousel_info {
@@ -72,15 +71,11 @@
 }
 
 @media (min-width: 40em) {
-  .carousel {
-    gap: 1.56rem;
-  }
-  /* .carousel_image {
-    height: 70vh;
-  } */
-
   .carousel_images_container {
     position: relative;
     max-width: 70%;
+  }
+  .carousel_image {
+    height: 40rem;
   }
 }
