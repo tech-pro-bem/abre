@@ -82,11 +82,10 @@ export const perguntas = [
 
 export const Faq = async () => {
   const data = await getContentByContentType<FAQ>({
-    contentType: "mockFaq",
-    limit: 20,
-    skip: 2,
+    contentType: "faq",
     order: "sys.createdAt",
   });
+  console.log(data.items);
   const questions = data?.items || [];
 
   return (
