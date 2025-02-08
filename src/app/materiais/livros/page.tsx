@@ -13,9 +13,10 @@ interface Books {
 
 export default function LivrosPage() {
   return (
-    <section className={styles.section}>
+    <section>
+      <ul className={styles.section}>
       {mock_livros_datas.map(({ image, title, subtitle, url }: Books) => (
-        <article
+        <li
           key={title}
           className={styles.books_container}
         >
@@ -25,6 +26,7 @@ export default function LivrosPage() {
             width={148}
             height={222}
             className={styles.image}
+            priority
           />
           <div className={styles.books_content}>
             <div className={styles.title_container}>
@@ -47,8 +49,9 @@ export default function LivrosPage() {
               </div>
             </div>
           </div>
-        </article>
+        </li>
       ))}
+      </ul>  
     </section>
   );
 }

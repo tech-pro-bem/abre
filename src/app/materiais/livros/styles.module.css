@@ -1,4 +1,4 @@
-.section {
+.list_books {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,29 +42,36 @@
   gap: 0.5rem;
 }
 
+.open_link, .download_link {
+  width: fit-content;
+}
+
 .download_link > a,
 .open_link > a {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  & > svg {
-    width: 1.25rem;
-    height: 1.25rem;
-    color: var(--color-primary-medium);
-    &:hover {
-      color: var(--color-primary-dark);
-    }
-  }
 }
 
-.download_link,
+.download_link > a > svg,
+.open_link > a > svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--color-primary-darkest);
+}
+
+.download_link > a > p,
 .open_link > a > p {
   font-size: var(--font-size-5);
   font-weight: var(--fw-light);
   color: var(--color-primary-darkest);
-  &:hover {
-    color: var(--color-primary-medium);
-  }
+}
+
+.open_link:hover svg, 
+.open_link:hover p,
+.download_link:hover svg, 
+.download_link:hover p {
+  color: var(--color-primary-medium);
 }
 
 @media (min-width: 45em) {
@@ -73,7 +80,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 5.5rem 3rem;
   }
-
+  
   .image {
     width: 176px;
     height: 264px;
