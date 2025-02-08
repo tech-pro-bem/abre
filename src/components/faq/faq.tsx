@@ -81,13 +81,13 @@ export const perguntas = [
 ];
 
 export const Faq = async () => {
-  const data = await getContentByContentType<FAQ>({
-    contentType: "mockFaq",
-    limit: 20,
-    skip: 2,
-    order: "sys.createdAt",
-  });
-  const questions = data?.items || [];
+  // const data = await getContentByContentType<FAQ>({
+  //   contentType: "mockFaq",
+  //   limit: 20,
+  //   skip: 2,
+  //   order: "sys.createdAt",
+  // });
+  // const questions = data?.items || [];
 
   return (
     <section
@@ -101,7 +101,7 @@ export const Faq = async () => {
       <div className={styles.questions_content}>
         <h2 className={styles.questions_title}>Perguntas sobre esquizofrenia</h2>
         <div className={styles.faq_list}>
-          {questions.map((question, index) => (
+          {/* {questions.map((question, index) => (
             <details
               key={index}
               className={styles.faq_item}
@@ -115,7 +115,7 @@ export const Faq = async () => {
                 {documentToReactComponents(question.fields.text)}
               </div>
             </details>
-          ))}
+          ))} */}
         </div>
       </div>
     </section>
