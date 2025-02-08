@@ -1,5 +1,3 @@
-import { mock_fotos_data } from "./fotos";
-
 export const Albums = [
   {
     id: "congress-on-brain-2023",
