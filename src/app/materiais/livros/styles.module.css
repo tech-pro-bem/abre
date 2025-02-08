@@ -1,8 +1,9 @@
-.list_books {
+.section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
+  padding-block: 3rem;
 }
 
 .books_container {
@@ -79,6 +80,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5.5rem 3rem;
+    padding-block: 4.5rem;
+    
   }
   
   .image {

@@ -1,28 +1,36 @@
+"use client"
+
+import { useState } from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
 import { mock_livros_datas } from "@/mock-data/books";
 import DownloadLink from "../components/icon-links/download-link";
 import OpenLink from "../components/icon-links/open-link";
+import FilterButton from "@/components/filter-button";
+import Pagination from "@/components/pagination";
 
-interface Books {
+// import { Metadata } from "next";
+
+// export const metadata: Metadata = {
+  // title: "Livros",
+  // description: "Consulte as nossas publicações",
+// };
+
+type Book = {
   image: string;
   title: string;
   subtitle?: string;
   url: string;
-}
-
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Livros",
-  description: "Consulte as nossas publicações",
 };
 
 export default function LivrosPage() {
+  const [currentBooks, setCurrentBooks] = useState<Book[]>([]);
+ 
   return (
     <section>
+        <FilterButton />
       <ul className={styles.section}>
-      {mock_livros_datas.map(({ image, title, subtitle, url }: Books) => (
+      {currentBooks.map(({ image, title, subtitle, url }) => (
         <li
           key={title}
           className={styles.books_container}
@@ -58,7 +66,12 @@ export default function LivrosPage() {
           </div>
         </li>
       ))}
-      </ul>  
+      </ul>
+      <Pagination<Book>
+        items={mock_livros_datas}
+        itemsPerPage={7}
+        pageChange={setCurrentBooks}
+      />
     </section>
   );
 }
