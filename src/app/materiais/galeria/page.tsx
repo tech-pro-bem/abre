@@ -9,13 +9,13 @@ import FilterButton from "@/components/filter-button";
 import { Albums } from "@/mock-data/galeria";
 import FotosComponent from "../components/fotos/fotos";
 
+import { generateSlug } from "@/utils/generate-slug";
 // import { Metadata } from "next";
 
 // export const metadata: Metadata = {
 //   title: "Galeria",
 //   description: "Acompanhe nossos eventos",
 // };
-
 
 export default function GaleriaPage() {
   const [currentAlbums, setCurrentAlbums] = useState<typeof Albums>([]);
@@ -29,7 +29,7 @@ export default function GaleriaPage() {
           <div key={index}>
             <Link
               className={styles.album_items}
-              href="/"
+              href={`/materiais/galeria/${generateSlug(album.title)}`}
             >
               <div className={styles.image_quantity}>
                 <Image
