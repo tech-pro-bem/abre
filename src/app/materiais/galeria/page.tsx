@@ -7,7 +7,6 @@ import { useState } from "react";
 import Pagination from "@/components/pagination";
 import FilterButton from "@/components/filter-button";
 import { Albums } from "@/mock-data/galeria";
-import FotosComponent from "../components/fotos/fotos";
 
 import { generateSlug } from "@/utils/generate-slug";
 // import { Metadata } from "next";
@@ -55,7 +54,6 @@ export default function GaleriaPage() {
         itemsPerPage={ITEMS_PER_PAGE}
         pageChange={setCurrentAlbums}
       />
-      <FotosComponent />
     </section>
   );
 }
