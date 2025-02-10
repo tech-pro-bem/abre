@@ -71,4 +71,11 @@ export type MaterialsReports = {
   file: EntryFields.AssetLink;
 };
 
+export type gallery = {
+  photo: EntryFields.AssetLink;
+  title: EntryFields.Symbol;
+  description: EntryFields.Symbol;
+};
+
 export type ResolvedMaterialsReports = GetContentByContentTypeResponse<MaterialsReports>["items"];
+export type Resolvedgallery = GetContentByContentTypeResponse<gallery>["items"];
