@@ -2,15 +2,15 @@
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import styles from "./styles.module.css";
 import { useEffect, useState } from "react";
-import { Albums } from "../../mock-data/galeria";
 
-interface PaginationProps {
-  items: typeof Albums;
+
+interface PaginationProps<T> {
+  items: T[];
   itemsPerPage: number;
-  pageChange: (data: typeof Albums) => void;
+  pageChange: (data: T[]) => void;
 }
 
-const Pagination = ({ items, itemsPerPage, pageChange }: PaginationProps) => {
+const Pagination = <T,>({ items, itemsPerPage, pageChange }: PaginationProps<T>) => {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(items.length / itemsPerPage);
 
