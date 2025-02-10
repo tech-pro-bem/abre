@@ -17,12 +17,11 @@ export default async function GaleriaPage() {
     contentType: "gallery",
     order: "sys.createdAt",
   });
-  console.log("console log: ", JSON.stringify(data, null, 2));
-  const reports: Resolvedgallery = resolveResponse(data) || [];
+  const albums: Resolvedgallery = resolveResponse(data) || [];
 
   return (
     <section className={styles.album_container}>
-      <GaleriaClient albums={reports} />
+      <GaleriaClient albums={albums} />
     </section>
   );
 }
