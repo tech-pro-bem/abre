@@ -7,6 +7,7 @@ import { useState } from "react";
 import Pagination from "@/components/pagination";
 import FilterButton from "@/components/filter-button";
 import { Albums } from "@/mock-data/galeria";
+import { generateSlug } from "@/utils/generate-slug";
 // import { Metadata } from "next";
 
 // export const metadata: Metadata = {
@@ -26,7 +27,7 @@ export default function GaleriaPage() {
           <div key={index}>
             <Link
               className={styles.album_items}
-              href="/"
+              href={`/materiais/galeria/${generateSlug(album.title)}`}
             >
               <div className={styles.image_quantity}>
                 <Image
