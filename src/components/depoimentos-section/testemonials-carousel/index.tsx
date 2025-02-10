@@ -1,30 +1,34 @@
 "use client";
 import styles from "./styles.module.css";
 import { AnimatePresence, motion, MotionConfig } from "framer-motion";
-import { mock_depoimentos_datas } from "@/mock-data/depoimentos";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { ResolvedTestimonials } from "@/types/contentful.types";
 import { Slide } from "./slide/slide";
 import { useState } from "react";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
-export const ProjectsCarousel = () => {
+interface ProjectsCarouselProps {
+  testimonials: ResolvedTestimonials;
+}
+
+export const ProjectsCarousel = ({ testimonials }: ProjectsCarouselProps) => {
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
   const [direction, setDirection] = useState<"left" | "right">("right");
 
   const handlePreviousSlide = () => {
     setDirection("left");
-    if (activeProjectIndex === 0) return setActiveProjectIndex(mock_depoimentos_datas.length - 1);
-
+    if (activeProjectIndex === 0) return setActiveProjectIndex(testimonials.length - 1);
     return setActiveProjectIndex((prev) => prev - 1);
   };
 
   const handleNextSlide = () => {
     setDirection("right");
-    if (activeProjectIndex === mock_depoimentos_datas.length - 1) {
+    if (activeProjectIndex === testimonials.length - 1) {
       return setActiveProjectIndex(0);
     }
-
     return setActiveProjectIndex((prev) => prev + 1);
   };
+
   const motionInitial = direction === "right" ? "hiddenRight" : "hiddenLeft";
   const slideVariants = {
     hiddenRight: {
@@ -71,11 +75,11 @@ export const ProjectsCarousel = () => {
             >
               <Slide
                 aria-roledescription={`Slide ${activeProjectIndex + 1} de ${
-                  mock_depoimentos_datas.length
+                  testimonials.length
                 } de depoimentos da abre`}
-                quote={mock_depoimentos_datas[activeProjectIndex].quote}
-                content={mock_depoimentos_datas[activeProjectIndex].description}
-                author={mock_depoimentos_datas[activeProjectIndex].author}
+                quote={documentToReactComponents(testimonials[activeProjectIndex].fields.quote)}
+                content={documentToReactComponents(testimonials[activeProjectIndex].fields.text)}
+                author={documentToReactComponents(testimonials[activeProjectIndex].fields.author)}
               />
             </motion.ul>
           </AnimatePresence>
@@ -106,7 +110,7 @@ export const ProjectsCarousel = () => {
           />
         </button>
         <div className={styles.pagination}>
-          {mock_depoimentos_datas.map((_, index) => (
+          {testimonials.map((_, index) => (
             <button
               key={index}
               className={`${styles.dot} ${index === activeProjectIndex ? styles.activeDot : ""}`}

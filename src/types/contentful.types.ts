@@ -17,7 +17,6 @@ export type CONTENT_TYPES =
   | "projects"
   | "reports"
   | "testimonials"
-  | "mockTestimonials"
   | "mockFaq"
   | "donationPix"
   | "materiaisRelatoriosDeAtividades";
@@ -72,3 +71,4 @@ export type MaterialsReports = {
 };
 
 export type ResolvedMaterialsReports = GetContentByContentTypeResponse<MaterialsReports>["items"];
+export type ResolvedTestimonials = GetContentByContentTypeResponse<Testimonials>["items"];
