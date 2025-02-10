@@ -19,7 +19,7 @@ export function MateriaisTabs() {
           key={slug}
           className={`${styles.tab} ${isActiveTab(slug) ? styles.active : ""}`}
         >
-          <Link href={`${slug}`}>{title}</Link>
+          <Link href={`/materiais/${slug}`}>{title}</Link>
         </li>
       ))}
     </ul>
