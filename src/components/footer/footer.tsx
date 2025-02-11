@@ -36,9 +36,9 @@ export async function Footer() {
   const dataLgpd = await getContentByContentType<textoLgpd>({
     contentType: "textoLgpd",
     limit: 1,
+    order: "sys.createdAt",
   });
   const lgpdText = dataLgpd.items[0].fields;
-
   return (
     <footer className={styles.footer}>
       <div className={styles.footer_container}>
