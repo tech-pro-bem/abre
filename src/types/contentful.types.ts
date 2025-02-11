@@ -46,7 +46,7 @@ export type GetContentByContentTypeResponse<T> = {
 export type Testimonials = {
   title: EntryFields.Symbol;
   quote: EntryFields.RichText;
-  text: EntryFields.RichText;
+  content: EntryFields.RichText;
   author: EntryFields.RichText;
 };
 
@@ -71,4 +71,3 @@ export type MaterialsReports = {
 };
 
 export type ResolvedMaterialsReports = GetContentByContentTypeResponse<MaterialsReports>["items"];
-export type ResolvedTestimonials = GetContentByContentTypeResponse<Testimonials>["items"];
