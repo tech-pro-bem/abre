@@ -1,0 +1,98 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding-block: 3rem;
+}
+
+.books_container {
+  display: flex;
+  gap: 1rem;
+}
+
+.books_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.title_container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title {
+  font-size: var(--heading-3);
+  font-weight: var(--fw-bold);
+  color: var(--color-primary-darkest);
+  line-height: var(--line-height-1);
+}
+
+.subtitle {
+  font-size: var(--font-size-5);
+  font-weight: var(--fw-regular);
+  color: var(--color-neutral-dark);
+}
+
+.container_buttons {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.open_link, .download_link {
+  width: fit-content;
+}
+
+.download_link > a,
+.open_link > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.download_link > a > svg,
+.open_link > a > svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--color-primary-darkest);
+}
+
+.download_link > a > p,
+.open_link > a > p {
+  font-size: var(--font-size-5);
+  font-weight: var(--fw-light);
+  color: var(--color-primary-darkest);
+}
+
+.open_link:hover svg, 
+.open_link:hover p,
+.download_link:hover svg, 
+.download_link:hover p {
+  color: var(--color-primary-medium);
+}
+
+@media (min-width: 45em) {
+  .section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5.5rem 3rem;
+    padding-block: 4.5rem;
+    
+  }
+  
+  .image {
+    width: 176px;
+    height: 264px;
+  }
+}
+
+@media (min-width: 65em) {
+  .section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
