@@ -18,7 +18,7 @@ export type CONTENT_TYPES =
   | "reports"
   | "testimonials"
   | "mockTestimonials"
-  | "mockFaq"
+  | "faq"
   | "donationPix"
   | "materiaisRelatoriosDeAtividades"
   | "textoLgpd";
