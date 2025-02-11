@@ -35,9 +35,9 @@ export async function Footer() {
 
   const dataLgpd = await getContentByContentType<textoLgpd>({
     contentType: "textoLgpd",
-    limit: 400,
+    limit: 1,
   });
-  const lgpdText = dataLgpd.items || [];
+  const lgpdText = dataLgpd.items[0].fields;
 
   return (
     <footer className={styles.footer}>
@@ -63,14 +63,8 @@ export async function Footer() {
           />
           <NavBar />
           <div className={styles.lgpd_icons_container}>
-            {lgpdText.map((lgpd, index) => (
-              <div
-                key={index}
-                className={styles.content_text}
-              >
-                {documentToReactComponents(lgpd.fields.text)}
-              </div>
-            ))}
+            <div className={styles.content_text}>{documentToReactComponents(lgpdText.text)}</div>
+
             <FooterSocials className={styles.icons_container_mobile} />
           </div>
         </div>
