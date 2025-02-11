@@ -1,8 +1,7 @@
-import type { ResolvedTestimonials, Testimonials } from "@/types/contentful.types";
+import type { Testimonials } from "@/types/contentful.types";
 import styles from "./styles.module.css";
 import { ProjectsCarousel } from "./testemonials-carousel";
 import { getContentByContentType } from "@/lib/contentful";
-import resolveResponse from "contentful-resolve-response";
 
 export async function Testimonials() {
   const data = await getContentByContentType<Testimonials>({
@@ -10,7 +9,7 @@ export async function Testimonials() {
     order: "sys.createdAt",
   });
 
-  const testimonials: ResolvedTestimonials = resolveResponse(data) || [];
+  const testimonials = data.items.map(item => item.fields) || [];
 
   return (
     <section className={styles.section_testemonials}>

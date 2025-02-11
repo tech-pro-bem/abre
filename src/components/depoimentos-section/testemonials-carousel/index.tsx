@@ -2,13 +2,13 @@
 import styles from "./styles.module.css";
 import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
-import { ResolvedTestimonials } from "@/types/contentful.types";
 import { Slide } from "./slide/slide";
 import { useState } from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { Testimonials } from "@/types/contentful.types";
 
 interface ProjectsCarouselProps {
-  testimonials: ResolvedTestimonials;
+  testimonials: Testimonials[];
 }
 
 export const ProjectsCarousel = ({ testimonials }: ProjectsCarouselProps) => {
@@ -77,9 +77,9 @@ export const ProjectsCarousel = ({ testimonials }: ProjectsCarouselProps) => {
                 aria-roledescription={`Slide ${activeProjectIndex + 1} de ${
                   testimonials.length
                 } de depoimentos da abre`}
-                quote={documentToReactComponents(testimonials[activeProjectIndex].fields.quote)}
-                content={documentToReactComponents(testimonials[activeProjectIndex].fields.text)}
-                author={documentToReactComponents(testimonials[activeProjectIndex].fields.author)}
+                quote={documentToReactComponents(testimonials[activeProjectIndex].quote)}
+                content={documentToReactComponents(testimonials[activeProjectIndex].content)}
+                author={documentToReactComponents(testimonials[activeProjectIndex].author)}
               />
             </motion.ul>
           </AnimatePresence>
