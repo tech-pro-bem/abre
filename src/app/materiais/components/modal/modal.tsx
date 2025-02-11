@@ -13,30 +13,23 @@ type ModalProps = {
 
 export const Modal = ({ isOpen, onClose, photos, initialIndex }: ModalProps) => {
   const modalRef = useRef<HTMLDialogElement | null>(null);
-
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        onClose();
-      }
-    };
+    const modal = modalRef.current;
+    if (!modal) return;
 
     if (isOpen) {
-      window.addEventListener("keydown", handleKeyDown);
+      modal.showModal();
+    } else {
+      modal.close();
     }
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [isOpen, onClose]);
-
+  }, [isOpen]);
   if (!isOpen) return null;
 
   return (
     <dialog
       ref={modalRef}
       className={styles.dialog}
-      open
+      onCancel={onClose}
     >
       <div className={styles.dialog_content}>
         <div className={styles.button_container}>
