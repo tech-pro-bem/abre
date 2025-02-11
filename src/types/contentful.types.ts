@@ -21,7 +21,7 @@ export type CONTENT_TYPES =
   | "faq"
   | "donationPix"
   | "materiaisRelatoriosDeAtividades"
-  | "conhecaAbre";
+  | "about";
 export type GetContentByContentTypeResponse<T> = {
   sys: {
     type: string;
@@ -70,9 +70,10 @@ export type MaterialsReports = {
   title: EntryFields.Symbol;
   file: EntryFields.AssetLink;
 };
-export type ConhecaAbre = {
+export type about = {
   title: EntryFields.Symbol;
   text: EntryFields.RichText;
+  urlVideo: EntryFields.RichText;
 };
 
 export type ResolvedMaterialsReports = GetContentByContentTypeResponse<MaterialsReports>["items"];
