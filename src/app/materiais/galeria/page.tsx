@@ -7,6 +7,7 @@ import { useState } from "react";
 import Pagination from "@/components/pagination";
 import FilterButton from "@/components/filter-button";
 import { Albums } from "@/mock-data/galeria";
+
 import { generateSlug } from "@/utils/generate-slug";
 // import { Metadata } from "next";
 
