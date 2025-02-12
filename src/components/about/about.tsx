@@ -1,10 +1,10 @@
 import { getContentByContentType } from "@/lib/contentful";
 import styles from "./styles.module.css";
-import { about } from "@/types/contentful.types";
+import { About } from "@/types/contentful.types";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
-export const About = async () => {
-  const data = await getContentByContentType<about>({
+export const AboutAbre = async () => {
+  const data = await getContentByContentType<About>({
     contentType: "about",
     order: "sys.createdAt",
     // TODO:no momento esta limitado com 100 para depois revisarmos, pois sem o limit não esta funcionando.

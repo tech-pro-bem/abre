@@ -70,7 +70,7 @@ export type MaterialsReports = {
   title: EntryFields.Symbol;
   file: EntryFields.AssetLink;
 };
-export type about = {
+export type About = {
   title: EntryFields.Symbol;
   text: EntryFields.RichText;
   urlVideo: EntryFields.RichText;
