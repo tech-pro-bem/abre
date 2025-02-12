@@ -20,8 +20,8 @@ export type CONTENT_TYPES =
   | "mockTestimonials"
   | "faq"
   | "donationPix"
-  | "materiaisRelatoriosDeAtividades";
-
+  | "materiaisRelatoriosDeAtividades"
+  | "about";
 export type GetContentByContentTypeResponse<T> = {
   sys: {
     type: string;
@@ -69,6 +69,11 @@ export type DONATION = {
 export type MaterialsReports = {
   title: EntryFields.Symbol;
   file: EntryFields.AssetLink;
+};
+export type About = {
+  title: EntryFields.Symbol;
+  text: EntryFields.RichText;
+  urlVideo: EntryFields.RichText;
 };
 
 export type Gallery = {
