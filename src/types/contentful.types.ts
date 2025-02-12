@@ -71,7 +71,7 @@ export type MaterialsReports = {
   title: EntryFields.Symbol;
   file: EntryFields.AssetLink;
 };
-export type textLgpd = {
+export type LgpdText = {
   text: EntryFields.RichText;
 };
 

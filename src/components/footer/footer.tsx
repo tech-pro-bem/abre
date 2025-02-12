@@ -1,5 +1,5 @@
 import { getContentByContentType } from "@/lib/contentful";
-import { DonationShape, textLgpd } from "@/types/contentful.types";
+import { DonationShape, LgpdText } from "@/types/contentful.types";
 import { generatePixQrCode } from "@/utils/generate-pix-qrcode";
 import Image from "next/image";
 import { Donation } from "./donation";
@@ -33,7 +33,7 @@ export async function Footer() {
     name: nome,
   });
 
-  const dataLgpd = await getContentByContentType<textLgpd>({
+  const dataLgpd = await getContentByContentType<LgpdText>({
     contentType: "textoLgpd",
     limit: 1,
     order: "sys.createdAt",
