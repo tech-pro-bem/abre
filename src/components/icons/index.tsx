@@ -13,3 +13,4 @@ export { OpenNewArrowIcon } from "./open-new-arrow";
 export { RecoveryIcon } from "./recovery";
 export { ReportsGraphism } from "./relatorios-grafismo";
 export { YoutubeIcon } from "./youtube";
+export { CloseIcon } from "./close";
