@@ -1,12 +1,12 @@
+.section_testemonials {
+  max-width: 65.5rem;
+  margin-inline: auto;
+  padding-block: 2rem;
+  padding-inline: 1rem;
+}
+
 .testimonials__title {
   color: var(--color-primary-darkest);
   text-align: center;
   margin-block-start: 3.5rem;
-}
-
-.section_testemonials {
-  margin-inline: auto;
-  max-width: 65.5rem;
-  /* temporary paddings before layout adjustments */
-  padding-block: 2rem;
 }
