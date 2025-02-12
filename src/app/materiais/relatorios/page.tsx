@@ -2,9 +2,9 @@ import { ReportsGraphism } from "@/components/icons";
 import { getContentByContentType } from "@/lib/contentful";
 import { MaterialsReports, ResolvedMaterialsReports } from "@/types/contentful.types";
 import resolveResponse from "contentful-resolve-response";
+import { Metadata } from "next";
 import { ReportsList } from "./reports-list";
 import styles from "./styles.module.css";
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Relatórios",

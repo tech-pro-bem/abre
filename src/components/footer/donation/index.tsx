@@ -21,7 +21,7 @@ export function Donation({
 }: DonationProps) {
   const copyTextToClipboard = useCallback(async () => {
     await copyToClipboard(pixString, "Pix");
-  }, []);
+  }, [pixString]);
 
   return (
     <div className={styles.donation_container}>
