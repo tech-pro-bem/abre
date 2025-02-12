@@ -39,14 +39,11 @@ export const Materials = () => {
           Acessar materiais
         </LinkButton>
       </div>
-      <div className={styles.container_image_mandala}>
-        <Image
-          className={styles.image_mandala}
-          src={mandala}
-          alt="Foto mandala"
-          fill
-        />
-      </div>
+      <Image
+        className={styles.image_mandala}
+        src={mandala}
+        alt="Foto mandala"
+      />
     </section>
   );
 };
