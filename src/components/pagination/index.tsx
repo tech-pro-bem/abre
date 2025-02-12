@@ -1,4 +1,3 @@
-"use client";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import styles from "./styles.module.css";
 
@@ -15,7 +14,9 @@ const Pagination = ({ currentPage, totalItems, itemsPerPage, onPageChange }: Pag
   return (
     <div className={styles.album_pagination}>
       <span className={styles.page}>
-        {currentPage} - {Math.min(currentPage * itemsPerPage, totalItems)} de {totalItems}
+        {totalPages === currentPage
+          ? `${totalItems} de ${totalItems}`
+          : `${currentPage} - ${Math.min(currentPage * itemsPerPage, totalItems)} de ${totalItems}`}
       </span>
       <div className={styles.pagination_buttons}>
         <button
