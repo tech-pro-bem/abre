@@ -97,6 +97,7 @@
   padding-top: 8px;
   padding-bottom: 32px;
   font-weight: var(--fw-regular);
+  cursor: default;
 }
 .faq_hiperLink_materials {
   font-weight: var(--fw-bold);
