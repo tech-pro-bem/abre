@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 type CarouselProps = {
-  photos: { image: string; subtitle: string }[];
+  photos: { url: string; description: string }[];
   initialIndex?: number;
 };
 
@@ -56,8 +56,8 @@ export const ProjectsCarousel = ({ photos, initialIndex = 0 }: CarouselProps) =>
               sizes="100vw"
               width={500}
               height={300}
-              src={photos[activeIndex].image}
-              alt={photos[activeIndex].subtitle}
+              src={`https://${photos[activeIndex].url}`}
+              alt={photos[activeIndex].description}
               className={styles.carousel_image}
             />
           </motion.div>
@@ -68,7 +68,7 @@ export const ProjectsCarousel = ({ photos, initialIndex = 0 }: CarouselProps) =>
         <span className={styles.pagination}>
           {activeIndex + 1} de {photos.length} imagens -{" "}
         </span>
-        {photos[activeIndex].subtitle}
+        {photos[activeIndex].description}
       </p>
 
       <div className={styles.carousel_nav}>
