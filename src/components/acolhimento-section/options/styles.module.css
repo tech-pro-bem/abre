@@ -18,7 +18,7 @@
     padding-block: 0.5rem;
     border-top: 2px solid transparent;
     border-bottom: 2px solid transparent;
-    transition: font-weight 150ms ease-in-out, border-color 150ms ease-in-out;
+    transition: font-weight 150ms ease, border-color 150ms ease;
     &:hover {
       font-weight: 500;
       border-bottom-color: var(--color-primary-darkest);

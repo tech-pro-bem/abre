@@ -34,7 +34,10 @@ export function PhotosList({ albumData }: PhotosListProps) {
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.container_title}>
-          <Link href="/materiais/galeria">
+          <Link
+            href="/materiais/galeria"
+            className={styles.arrow_back_container}
+          >
             <ArrowLeftIcon />
           </Link>
           <h2 className={styles.title}>{albumData.fields.title}</h2>
@@ -50,6 +53,7 @@ export function PhotosList({ albumData }: PhotosListProps) {
         {photos.map((photo, index) => (
           <button
             key={index}
+            className={styles.image_container}
             onClick={() => openModal(index)}
           >
             <Image
