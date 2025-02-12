@@ -20,20 +20,22 @@ export function Donation({
 }: DonationProps) {
   return (
     <div className={styles.donation_container}>
-      <div
-        onClick={async () => await copyToClipboard(pixString, "Pix")}
-        className={styles.qr_code_wrapper}
-      >
-        <Image
-          className={styles.qr_code}
-          src={qrCode}
-          alt="qrcode - Abre"
-          width={130}
-          height={130}
-        />
-        <span className={styles.qr_code_overlay}>
-          Clique <br /> para copiar
-        </span>
+      <div className={styles.qr_code_wrapper}>
+        <div
+          className={styles.qr_code_overlay}
+          onClick={async () => await copyToClipboard(pixString, "Pix")}
+        >
+          <Image
+            className={styles.qr_code}
+            src={qrCode}
+            alt="qrcode - Abre"
+            width={130}
+            height={130}
+          />
+          <span className={styles.qr_code_overlay_text}>
+            Clique <br /> para copiar
+          </span>
+        </div>
       </div>
 
       <div className={styles.donation_title_text}>

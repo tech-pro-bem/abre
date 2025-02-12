@@ -3,20 +3,25 @@
   gap: 1rem;
 }
 
-.qr_code_wrapper {
+.qr_code_overlay {
   position: relative;
+  height: fit-content;
   cursor: pointer;
   text-align: center;
   &:hover > .qr_code {
     filter: brightness(60%) blur(3px);
     transition: filter 0.3s ease;
   }
-  &:hover > .qr_code_overlay {
+  &:hover > .qr_code_overlay_text {
     opacity: 1;
   }
 }
 
-.qr_code_overlay {
+.qr_code {
+  object-fit: contain;
+}
+
+.qr_code_overlay_text {
   align-self: center;
   position: absolute;
   inset: 0;
