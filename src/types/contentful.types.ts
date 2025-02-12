@@ -57,7 +57,7 @@ export type FAQ = {
   text: EntryFields.RichText;
 };
 
-export type DONATION = {
+export type DonationShape = {
   chavePixDetalhada: EntryFields.Symbol;
   chavePix: EntryFields.Symbol;
   nome: EntryFields.Symbol;
@@ -71,7 +71,7 @@ export type MaterialsReports = {
   title: EntryFields.Symbol;
   file: EntryFields.AssetLink;
 };
-export type textoLgpd = {
+export type textLgpd = {
   text: EntryFields.RichText;
 };
 

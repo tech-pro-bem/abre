@@ -1,5 +1,5 @@
 import { getContentByContentType } from "@/lib/contentful";
-import { DONATION, textoLgpd } from "@/types/contentful.types";
+import { DonationShape, textLgpd } from "@/types/contentful.types";
 import { generatePixQrCode } from "@/utils/generate-pix-qrcode";
 import Image from "next/image";
 import { Donation } from "./donation";
@@ -19,7 +19,7 @@ const fallbackPixData = {
 };
 
 export async function Footer() {
-  const data = await getContentByContentType<DONATION>({
+  const data = await getContentByContentType<DonationShape>({
     contentType: "donationPix",
     limit: 1,
   });
@@ -33,7 +33,7 @@ export async function Footer() {
     name: nome,
   });
 
-  const dataLgpd = await getContentByContentType<textoLgpd>({
+  const dataLgpd = await getContentByContentType<textLgpd>({
     contentType: "textoLgpd",
     limit: 1,
     order: "sys.createdAt",
