@@ -4,6 +4,7 @@ import styles from "./styles.module.css";
 import { copyToClipboard } from "@/utils/copy-to-clipboard";
 import Image from "next/image";
 import { DONATION } from "@/types/contentful.types";
+import { useCallback } from "react";
 
 type DonationProps = {
   qrCode: string;
@@ -18,12 +19,16 @@ export function Donation({
   pixString,
   qrCode,
 }: DonationProps) {
+  const copyTextToClipboard = useCallback(async () => {
+    await copyToClipboard(pixString, "Pix");
+  }, []);
+
   return (
     <div className={styles.donation_container}>
       <div className={styles.qr_code_wrapper}>
-        <div
+        <button
           className={styles.qr_code_overlay}
-          onClick={async () => await copyToClipboard(pixString, "Pix")}
+          onClick={copyTextToClipboard}
         >
           <Image
             className={styles.qr_code}
@@ -35,7 +40,7 @@ export function Donation({
           <span className={styles.qr_code_overlay_text}>
             Clique <br /> para copiar
           </span>
-        </div>
+        </button>
       </div>
 
       <div className={styles.donation_title_text}>
@@ -51,12 +56,12 @@ export function Donation({
           <p>
             <strong>Ag:</strong> {agencia} | <strong>CC:</strong> {contaCorrente}
           </p>
-          <p
+          <button
             className={styles.pix_key}
-            onClick={async () => await copyToClipboard(pixString, "Pix")}
+            onClick={copyTextToClipboard}
           >
             <strong>Pix:</strong> {chavePixDetalhada}
-          </p>
+          </button>
         </div>
       </div>
     </div>
