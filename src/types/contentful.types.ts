@@ -17,7 +17,6 @@ export type CONTENT_TYPES =
   | "projects"
   | "reports"
   | "testimonials"
-  | "mockTestimonials"
   | "faq"
   | "donationPix"
   | "materiaisRelatoriosDeAtividades"
@@ -47,7 +46,7 @@ export type GetContentByContentTypeResponse<T> = {
 export type Testimonials = {
   title: EntryFields.Symbol;
   quote: EntryFields.RichText;
-  text: EntryFields.RichText;
+  content: EntryFields.RichText;
   author: EntryFields.RichText;
 };
 
