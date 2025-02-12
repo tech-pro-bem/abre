@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 
 import { getContentByContentType } from "@/lib/contentful";
-import { gallery, Resolvedgallery } from "@/types/contentful.types";
+import { Gallery, ResolvedGallery } from "@/types/contentful.types";
 import resolveResponse from "contentful-resolve-response";
 import GaleriaClient from "./client";
 
@@ -13,11 +13,11 @@ import GaleriaClient from "./client";
 // };
 
 export default async function GaleriaPage() {
-  const data = await getContentByContentType<gallery>({
+  const data = await getContentByContentType<Gallery>({
     contentType: "gallery",
     order: "sys.createdAt",
   });
-  const albums: Resolvedgallery = resolveResponse(data) || [];
+  const albums: ResolvedGallery = resolveResponse(data) || [];
 
   return (
     <section className={styles.album_container}>

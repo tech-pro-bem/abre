@@ -1,17 +1,19 @@
 "use client";
 
-import FilterButton from "@/components/filter-button";
-import Pagination from "@/components/pagination";
-import { Resolvedgallery } from "@/types/contentful.types";
-import Link from "next/link";
 import { useState } from "react";
-import styles from "./styles.module.css";
+import Link from "next/link";
 import Image from "next/image";
 
-type albumsListProps = {
-  albums: Resolvedgallery;
+import FilterButton from "@/components/filter-button";
+import Pagination from "@/components/pagination";
+import { ResolvedGallery } from "@/types/contentful.types";
+
+import styles from "./styles.module.css";
+
+type AlbumsListProps = {
+  albums: ResolvedGallery;
 };
-export default function GaleriaClient({ albums }: albumsListProps) {
+export default function GaleriaClient({ albums }: AlbumsListProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const totalItems = albums.length;
 
@@ -24,9 +26,9 @@ export default function GaleriaClient({ albums }: albumsListProps) {
   return (
     <section className={styles.album_container}>
       <FilterButton />
-      <div className={styles.album_content}>
+      <ul className={styles.album_content}>
         {albumsToShow.map(({ fields: { photo, title, description } }, index) => (
-          <div key={index}>
+          <li key={index}>
             <Link
               className={styles.album_items}
               // href={`/materiais/galeria/${generateSlug(album.title)}`}
@@ -48,9 +50,9 @@ export default function GaleriaClient({ albums }: albumsListProps) {
                 <p className={styles.subtitle}>{description}</p>
               </div>
             </Link>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
 
       <Pagination
         currentPage={currentPage}
