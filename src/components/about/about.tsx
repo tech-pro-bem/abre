@@ -7,7 +7,8 @@ export const About = async () => {
   const data = await getContentByContentType<about>({
     contentType: "about",
     order: "sys.createdAt",
-    limit: 3,
+    // TODO:no momento esta limitado com 100 para depois revisarmos, pois sem o limit não esta funcionando.
+    limit: 100,
   });
   const about = data.items[0].fields;
   return (
