@@ -14,6 +14,7 @@
   }
 
   .option {
+    color: var(--color-primary-darkest);
     padding-block: 0.5rem;
     border-top: 2px solid transparent;
     border-bottom: 2px solid transparent;
