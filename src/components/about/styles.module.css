@@ -38,9 +38,7 @@
   line-height: var(--line-height-2);
   color: var(--color-neutral-darkest);
 }
-.about_inBold {
-  font-weight: var(--fw-bold);
-}
+
 .about_video {
   aspect-ratio: 696/405;
   border-radius: 8px;

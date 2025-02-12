@@ -1,13 +1,10 @@
-"use client";
-
 import styles from "./styles.module.css";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import Pagination from "@/components/pagination";
-import FilterButton from "@/components/filter-button";
-import { Albums } from "@/mock-data/galeria";
-import { generateSlug } from "@/utils/generate-slug";
+
+import { getContentByContentType } from "@/lib/contentful";
+import { Gallery, ResolvedGallery } from "@/types/contentful.types";
+import resolveResponse from "contentful-resolve-response";
+import GaleriaClient from "./client";
+
 // import { Metadata } from "next";
 
 // export const metadata: Metadata = {
@@ -15,44 +12,16 @@ import { generateSlug } from "@/utils/generate-slug";
 //   description: "Acompanhe nossos eventos",
 // };
 
-export default function GaleriaPage() {
-  const [currentAlbums, setCurrentAlbums] = useState<typeof Albums>([]);
-  const ITEMS_PER_PAGE = 7;
+export default async function GaleriaPage() {
+  const data = await getContentByContentType<Gallery>({
+    contentType: "gallery",
+    order: "sys.createdAt",
+  });
+  const albums: ResolvedGallery = resolveResponse(data) || [];
 
   return (
     <section className={styles.album_container}>
-      <FilterButton />
-      <div className={styles.album_content}>
-        {currentAlbums.map((album, index) => (
-          <div key={index}>
-            <Link
-              className={styles.album_items}
-              href={`/materiais/galeria/${generateSlug(album.title)}`}
-            >
-              <div className={styles.image_quantity}>
-                <Image
-                  src={album.image}
-                  alt={album.title}
-                  width={280}
-                  height={220}
-                  className={styles.image}
-                />
-                <span className={styles.quantity}>{album.quantity}</span>
-              </div>
-              <div className={styles.title_subtitle}>
-                <h2 className={styles.title}>{album.title}</h2>
-                <p className={styles.subtitle}>{album.subtitle}</p>
-              </div>
-            </Link>
-          </div>
-        ))}
-      </div>
-
-      <Pagination
-        items={Albums}
-        itemsPerPage={ITEMS_PER_PAGE}
-        pageChange={setCurrentAlbums}
-      />
+      <GaleriaClient albums={albums} />
     </section>
   );
 }
