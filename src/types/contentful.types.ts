@@ -20,7 +20,9 @@ export type CONTENT_TYPES =
   | "faq"
   | "donationPix"
   | "materiaisRelatoriosDeAtividades"
+  | "textoLgpd"
   | "about";
+
 export type GetContentByContentTypeResponse<T> = {
   sys: {
     type: string;
@@ -55,7 +57,7 @@ export type FAQ = {
   text: EntryFields.RichText;
 };
 
-export type DONATION = {
+export type DonationShape = {
   chavePixDetalhada: EntryFields.Symbol;
   chavePix: EntryFields.Symbol;
   nome: EntryFields.Symbol;
@@ -69,6 +71,11 @@ export type MaterialsReports = {
   title: EntryFields.Symbol;
   file: EntryFields.AssetLink;
 };
+
+export type LgpdText = {
+  text: EntryFields.RichText;
+};
+
 export type About = {
   title: EntryFields.Symbol;
   text: EntryFields.RichText;
