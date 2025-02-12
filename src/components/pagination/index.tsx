@@ -1,42 +1,34 @@
-"use client";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import styles from "./styles.module.css";
-import { useEffect, useState } from "react";
 
-
-interface PaginationProps<T> {
-  items: T[];
+interface PaginationProps {
+  currentPage: number;
+  totalItems: number;
   itemsPerPage: number;
-  pageChange: (data: T[]) => void;
+  onPageChange: (page: number) => void;
 }
 
-const Pagination = <T,>({ items, itemsPerPage, pageChange }: PaginationProps<T>) => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(items.length / itemsPerPage);
-
-  useEffect(() => {
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = currentPage * itemsPerPage;
-    const currentItems = items.slice(startIndex, endIndex);
-    pageChange(currentItems);
-  }, [currentPage, items, itemsPerPage, pageChange]);
+const Pagination = ({ currentPage, totalItems, itemsPerPage, onPageChange }: PaginationProps) => {
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
 
   return (
     <div className={styles.album_pagination}>
       <span className={styles.page}>
-        {currentPage} - {Math.min(currentPage * itemsPerPage, items.length)} de {items.length}
+        {totalPages === currentPage
+          ? `${totalItems} de ${totalItems}`
+          : `${currentPage} - ${Math.min(currentPage * itemsPerPage, totalItems)} de ${totalItems}`}
       </span>
       <div className={styles.pagination_buttons}>
         <button
           className={styles.button_arrow}
-          onClick={() => setCurrentPage(currentPage - 1)}
+          onClick={() => onPageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
           <BiChevronLeft size={25} />
         </button>
         <button
           className={styles.button_arrow}
-          onClick={() => setCurrentPage(currentPage + 1)}
+          onClick={() => onPageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
         >
           <BiChevronRight size={25} />
