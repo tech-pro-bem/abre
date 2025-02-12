@@ -18,8 +18,8 @@ const BASE_URL = "https://cdn.contentful.com";
 export async function getContentByContentType<T>({
   contentType,
   order,
-  limit = 800,
-  skip = 0,
+  limit,
+  skip,
 }: GetContentByContentTypeParams): Promise<GetContentByContentTypeResponse<T>> {
   if (!contentType) throw new Error("Missing Content Type");
 
@@ -28,8 +28,8 @@ export async function getContentByContentType<T>({
   const params = {
     select: "sys,fields",
     content_type: contentType,
-    limit,
-    skip,
+    ...(limit && { limit }),
+    ...(skip && { skip }),
     ...(order && { order }),
   };
 
