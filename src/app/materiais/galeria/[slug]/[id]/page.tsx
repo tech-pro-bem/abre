@@ -1,7 +1,7 @@
 import { getContentByContentType } from "@/lib/contentful";
 import { Gallery, ResolvedGallery } from "@/types/contentful.types";
 import resolveResponse from "contentful-resolve-response";
-import { AlbumView } from "../../components/album-view";
+import { PhotosList } from "../../components/photos-list";
 
 export default async function PhotoAlbumPage({ params }: { params: { slug: string; id: string } }) {
   const data = await getContentByContentType<Gallery>({
@@ -13,5 +13,5 @@ export default async function PhotoAlbumPage({ params }: { params: { slug: strin
 
   if (!params.id) return <div>Album não encontrado</div>;
 
-  return <AlbumView albumData={resolvedData[0]} />;
+  return <PhotosList albumData={resolvedData[0]} />;
 }
