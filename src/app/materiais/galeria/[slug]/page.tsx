@@ -1,12 +1,18 @@
+"use client"
+import { useState } from "react";
 import { Albums } from "@/mock-data/galeria";
 import styles from "./styles.module.css";
 import { ArrowLeftIcon } from "@/components/icons/arrow-left";
 import Link from "next/link";
 import Image from "next/image";
 import { generateSlug } from "@/utils/generate-slug";
+import Pagination from "@/components/pagination";
 
 export default function AlbumPage({ params }: { params: { slug: string } }) {
+
   const albums = Albums.find((album) => generateSlug(album.title) === params.slug);
+  const [currentImages, setCurrentImages] = useState<string[]>([]);
+
   if (!albums) return <div>Album não encontrado</div>;
 
   return (
@@ -26,7 +32,7 @@ export default function AlbumPage({ params }: { params: { slug: string } }) {
         <p>{albums.subtitle}</p>
       </div>
       <div className={styles.container_album}>
-        {albums.images.map((image, index) => (
+        {currentImages.map((image, index) => (
           <Image
             key={index}
             src={image}
@@ -37,6 +43,11 @@ export default function AlbumPage({ params }: { params: { slug: string } }) {
           />
         ))}
       </div>
+      <Pagination
+        items={albums.images}
+        itemsPerPage={12}
+        pageChange={setCurrentImages}
+      />
     </section>
   );
 }

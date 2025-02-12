@@ -44,7 +44,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    padding-top: 3rem;
+    padding-block: 3rem 2rem;
 }
 
 .image {

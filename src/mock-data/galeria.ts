@@ -60,6 +60,16 @@ export const Albums = [
       "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
       "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
       "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
+      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
+      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
+      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
+      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
+      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
+      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
+      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
+      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
+      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
+      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
     ]    
   },
   {
