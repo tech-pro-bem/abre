@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import styles from "./styles.module.css";
+import Pagination from "@/components/pagination";
 
 interface PhotosListProps {
   albumData: ResolvedGallery[number];
@@ -14,6 +15,12 @@ interface PhotosListProps {
 export function PhotosList({ albumData }: PhotosListProps) {
   const [isModalOpen, setModalOpen] = useState(false);
   const [carouselIndex, setCarouselIndex] = useState<number | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const ITEMS_PER_PAGE = 12;
+
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+  const albumsToShow = albumData.fields.photos.slice(startIndex, endIndex);
 
   const openModal = (index: number) => {
     setCarouselIndex(index);
@@ -25,7 +32,7 @@ export function PhotosList({ albumData }: PhotosListProps) {
     setModalOpen(false);
   };
 
-  const photos = albumData.fields.photos.map((photo) => ({
+  const photos = albumsToShow.map((photo) => ({
     url: (photo.fields.file?.url as string) || "",
     description: photo.fields.title?.toString() || "",
   }));
@@ -66,6 +73,12 @@ export function PhotosList({ albumData }: PhotosListProps) {
           </button>
         ))}
       </div>
+      <Pagination
+        currentPage={currentPage}
+        totalItems={albumData.fields.photos.length}
+        itemsPerPage={ITEMS_PER_PAGE}
+        onPageChange={(page) => setCurrentPage(page)}
+      />
       <Modal
         isOpen={isModalOpen}
         onClose={closeModal}
