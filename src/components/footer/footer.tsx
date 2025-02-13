@@ -46,6 +46,7 @@ export async function Footer() {
           <Image
             className={styles.logo_abre}
             src="/logo/logo.svg"
+            loading="eager"
             width={180}
             height={45}
             alt="Logo - Abre"

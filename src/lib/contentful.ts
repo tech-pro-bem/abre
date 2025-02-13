@@ -9,6 +9,7 @@ type GetContentByContentTypeParams = {
   order?: ORDERING_TYPES;
   limit?: number;
   skip?: number;
+  id?: string;
 };
 
 const ENVIRONMENT = process.env.CONTENTFUL_ENVIRONMENT;
@@ -20,6 +21,7 @@ export async function getContentByContentType<T>({
   order,
   limit,
   skip,
+  id,
 }: GetContentByContentTypeParams): Promise<GetContentByContentTypeResponse<T>> {
   if (!contentType) throw new Error("Missing Content Type");
 
@@ -28,6 +30,7 @@ export async function getContentByContentType<T>({
   const params = {
     select: "sys,fields",
     content_type: contentType,
+    ...(id && { "sys.id": id }),
     ...(limit && { limit }),
     ...(skip && { skip }),
     ...(order && { order }),

@@ -83,7 +83,8 @@ export type About = {
 };
 
 export type Gallery = {
-  photo: EntryFields.AssetLink;
+  coverImage: EntryFields.AssetLink;
+  photos: EntryFields.AssetLink[];
   title: EntryFields.Symbol;
   description: EntryFields.Symbol;
 };

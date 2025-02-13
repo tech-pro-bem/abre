@@ -15,6 +15,7 @@
 .about_button_know {
   border-bottom: 4px solid;
   color: var(--color-primary-darkest);
+  font-size: var(--heading-3);
 }
 .about_title_text_video {
   display: flex;
@@ -23,7 +24,7 @@
 }
 .about_title {
   margin-bottom: 0.67em;
-  font-size: var(--font-size-2);
+  font-size: var(--heading-2);
   font-weight: var(--fw-medium);
   line-height: var(--line-height-1);
   color: var(--color-secondary-dark);
@@ -47,9 +48,6 @@
 }
 
 @media (min-width: 75em) {
-  .about_button_know {
-    font-size: var(--font-size-4);
-  }
   .about_title_text_video {
     flex-direction: row;
     gap: 2rem;
@@ -60,10 +58,6 @@
   }
   .about_title {
     font-weight: var(--fw-semi-bold);
-    font-size: var(--font-size-2);
-  }
-  .about_text {
-    font-size: var(--font-size-5);
   }
   .about_video {
     width: 71%;

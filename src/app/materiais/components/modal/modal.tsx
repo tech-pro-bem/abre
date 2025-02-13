@@ -7,7 +7,7 @@ import { ProjectsCarousel } from "./carousel";
 type ModalProps = {
   isOpen: boolean;
   onClose: () => void;
-  photos: Array<{ image: string; subtitle: string }>;
+  photos: Array<{ url: string; description: string }>;
   initialIndex: number;
 };
 

@@ -3,20 +3,26 @@
   gap: 1rem;
 }
 
-.qr_code_wrapper {
+.qr_code_overlay {
   position: relative;
-  cursor: pointer;
+  height: fit-content;
   text-align: center;
+  will-change: filter;
   &:hover > .qr_code {
     filter: brightness(60%) blur(3px);
     transition: filter 0.3s ease;
   }
-  &:hover > .qr_code_overlay {
+  &:hover > .qr_code_overlay_text {
     opacity: 1;
+    transition: opacity 0.3s ease;
   }
 }
 
-.qr_code_overlay {
+.qr_code {
+  object-fit: contain;
+}
+
+.qr_code_overlay_text {
   align-self: center;
   position: absolute;
   inset: 0;
@@ -46,8 +52,8 @@
 }
 
 .pix_key {
-  cursor: pointer;
   transition: color 0.2s ease;
+  color: var(--color-neutral-lightest);
   &:hover {
     color: var(--color-primary-medium);
   }
