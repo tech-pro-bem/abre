@@ -1,5 +1,6 @@
 export const Albums = [
   {
+    id: "congress-on-brain-2023",
     quantity: "6 imagens",
     image: "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
     title: "Congress On Brain 2023",
@@ -11,10 +12,12 @@ export const Albums = [
       "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
       "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
       "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
-    ]
+    ],
   },
   {
+    id: "encontro-catarinense-2023",
     quantity: "5 imagens",
+
     image: "/img-album/Cópia-de-Encontro_Catarinense_2023-3.webp",
     title: "Encontro Catarinense 2023",
     subtitle: "Local, data e resumo do evento",
@@ -24,7 +27,7 @@ export const Albums = [
       "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
       "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
       "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
-    ]
+    ],
   },
   {
     quantity: "3 imagens",
@@ -32,10 +35,10 @@ export const Albums = [
     title: "Dia Nacional Esquizofrenia 2023",
     subtitle: "Local, data e resumo do evento",
     images: [
-    "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
-    "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
-    "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
-    ]
+      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
+      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
+      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
+    ],
   },
   {
     quantity: "3 imagens",
@@ -46,8 +49,7 @@ export const Albums = [
       "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
       "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
       "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
-    
-    ]    
+    ],
   },
   {
     quantity: "34 imagens",
@@ -60,17 +62,7 @@ export const Albums = [
       "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
       "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
       "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
-      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
-      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
-      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
-      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
-      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
-      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
-      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
-      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
-      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
-      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
-    ]    
+    ],
   },
   {
     quantity: "4 imagens",
@@ -82,7 +74,7 @@ export const Albums = [
       "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
       "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
       "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
-    ]
+    ],
   },
   {
     quantity: "3 imagens",
@@ -92,7 +84,7 @@ export const Albums = [
     images: [
       "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
       "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
-      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",   
-    ]    
+      "/img-album/Cópia-de-Congress-On-Brain-2023-1.webp",
+    ],
   },
 ];
