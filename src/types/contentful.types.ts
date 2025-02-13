@@ -17,10 +17,11 @@ export type CONTENT_TYPES =
   | "projects"
   | "reports"
   | "testimonials"
-  | "mockTestimonials"
   | "faq"
   | "donationPix"
-  | "materiaisRelatoriosDeAtividades";
+  | "materiaisRelatoriosDeAtividades"
+  | "textoLgpd"
+  | "about";
 
 export type GetContentByContentTypeResponse<T> = {
   sys: {
@@ -47,7 +48,7 @@ export type GetContentByContentTypeResponse<T> = {
 export type Testimonials = {
   title: EntryFields.Symbol;
   quote: EntryFields.RichText;
-  text: EntryFields.RichText;
+  content: EntryFields.RichText;
   author: EntryFields.RichText;
 };
 
@@ -56,7 +57,7 @@ export type FAQ = {
   text: EntryFields.RichText;
 };
 
-export type DONATION = {
+export type DonationShape = {
   chavePixDetalhada: EntryFields.Symbol;
   chavePix: EntryFields.Symbol;
   nome: EntryFields.Symbol;
@@ -71,4 +72,21 @@ export type MaterialsReports = {
   file: EntryFields.AssetLink;
 };
 
+export type LgpdText = {
+  text: EntryFields.RichText;
+};
+
+export type About = {
+  title: EntryFields.Symbol;
+  text: EntryFields.RichText;
+  urlVideo: EntryFields.RichText;
+};
+
+export type Gallery = {
+  photo: EntryFields.AssetLink;
+  title: EntryFields.Symbol;
+  description: EntryFields.Symbol;
+};
+
 export type ResolvedMaterialsReports = GetContentByContentTypeResponse<MaterialsReports>["items"];
+export type ResolvedGallery = GetContentByContentTypeResponse<Gallery>["items"];

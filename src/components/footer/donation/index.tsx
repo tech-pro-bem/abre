@@ -3,12 +3,12 @@
 import styles from "./styles.module.css";
 import { copyToClipboard } from "@/utils/copy-to-clipboard";
 import Image from "next/image";
-import { DONATION } from "@/types/contentful.types";
+import { DonationShape } from "@/types/contentful.types";
 
 type DonationProps = {
   qrCode: string;
   pixString: string;
-} & Omit<DONATION, "chavePix" | "nome" | "cidade">;
+} & Omit<DonationShape, "chavePix" | "nome" | "cidade">;
 
 export function Donation({
   agencia,

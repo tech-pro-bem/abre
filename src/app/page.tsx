@@ -1,5 +1,5 @@
 import { Hero } from "@/components/hero";
-import { About } from "@/components/about/about";
+import { AboutAbre } from "@/components/about/about";
 import { ProjectsSection } from "@/components/projects-section";
 import { Materials } from "@/components/materials/materials";
 import { ContactSection } from "@/components/contact-section";
@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <div className={styles.gradient_background}>
         <Hero />
-        <About />
+        <AboutAbre />
       </div>
       <ProjectsSection />
       <ContactSection />

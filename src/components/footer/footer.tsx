@@ -1,11 +1,12 @@
 import { getContentByContentType } from "@/lib/contentful";
-import { DONATION } from "@/types/contentful.types";
+import { DonationShape, LgpdText } from "@/types/contentful.types";
 import { generatePixQrCode } from "@/utils/generate-pix-qrcode";
 import Image from "next/image";
 import { Donation } from "./donation";
 import { NavBar } from "./navbar/navbar";
 import { FooterSocials } from "./socials";
 import styles from "./styles.module.css";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 const fallbackPixData = {
   chavePixDetalhada: "05.469.302/0001-27",
@@ -18,7 +19,7 @@ const fallbackPixData = {
 };
 
 export async function Footer() {
-  const data = await getContentByContentType<DONATION>({
+  const data = await getContentByContentType<DonationShape>({
     contentType: "donationPix",
     limit: 1,
   });
@@ -32,6 +33,12 @@ export async function Footer() {
     name: nome,
   });
 
+  const dataLgpd = await getContentByContentType<LgpdText>({
+    contentType: "textoLgpd",
+    limit: 1,
+    order: "sys.createdAt",
+  });
+  const lgpdText = dataLgpd.items[0].fields;
   return (
     <footer className={styles.footer}>
       <div className={styles.footer_container}>
@@ -56,17 +63,8 @@ export async function Footer() {
           />
           <NavBar />
           <div className={styles.lgpd_icons_container}>
-            <p className={styles.content_text}>
-              A ABRE valoriza sua privacidade e segue as{" "}
-              <a
-                href="/"
-                className={styles.underline_text}
-              >
-                diretrizes da Lei Geral de Proteção de Dados Pessoais (LGPD)
-              </a>{" "}
-              para proteger suas informações. Também utilizamos cookies para melhorar sua navegação
-              em nosso site.
-            </p>
+            <div className={styles.content_text}>{documentToReactComponents(lgpdText.text)}</div>
+
             <FooterSocials className={styles.icons_container_mobile} />
           </div>
         </div>

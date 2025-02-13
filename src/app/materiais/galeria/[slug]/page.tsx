@@ -1,4 +1,5 @@
 "use client"
+
 import { useState } from "react";
 import { Albums } from "@/mock-data/galeria";
 import styles from "./styles.module.css";
@@ -9,6 +10,22 @@ import { generateSlug } from "@/utils/generate-slug";
 import Pagination from "@/components/pagination";
 
 export default function AlbumPage({ params }: { params: { slug: string } }) {
+import { useState } from "react";
+import { Modal } from "../../components/modal/modal";
+
+export default function AlbumPage({ params }: { params: { slug: string } }) {
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [carouselIndex, setCarouselIndex] = useState<number | null>(null);
+
+  const openModal = (index: number) => {
+    setCarouselIndex(index);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setCarouselIndex(null);
+    setModalOpen(false);
+  };
 
   const albums = Albums.find((album) => generateSlug(album.title) === params.slug);
   const [currentImages, setCurrentImages] = useState<string[]>([]);
@@ -32,21 +49,35 @@ export default function AlbumPage({ params }: { params: { slug: string } }) {
         <p>{albums.subtitle}</p>
       </div>
       <div className={styles.container_album}>
-        {currentImages.map((image, index) => (
-          <Image
+        {albums.images.map((image, index) => (
+          <button
             key={index}
-            src={image}
-            alt={albums.title}
-            width={148}
-            height={117}
-            className={styles.image}
-          />
+            onClick={() => openModal(index)}
+          >
+            <Image
+              key={index}
+              src={image}
+              alt={albums.title}
+              width={148}
+              height={117}
+              className={styles.image}
+            />
+          </button>
         ))}
       </div>
       <Pagination
         items={albums.images}
         itemsPerPage={12}
         pageChange={setCurrentImages}
+
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        photos={albums.images.map((img) => ({
+          image: img,
+          subtitle: albums.subtitle,
+        }))}
+        initialIndex={carouselIndex ?? 0}
       />
     </section>
   );

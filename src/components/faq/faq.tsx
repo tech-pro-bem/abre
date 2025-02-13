@@ -1,9 +1,9 @@
 import { getContentByContentType } from "@/lib/contentful";
-import { FAQ } from "@/types/contentful.types";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Arrow_icon from "./arrow_icon";
 import styles from "./styles.module.css";
 import Vector from "./vector";
+import { FAQ } from "@/types/contentful.types";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 export const Faq = async () => {
   const data = await getContentByContentType<FAQ>({
