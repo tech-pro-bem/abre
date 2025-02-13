@@ -7,6 +7,7 @@ import Image from "next/image";
 import OpenLink from "../../components/icon-links/open-link";
 import Pagination from "@/components/pagination";
 import { ResolvedMaterialsBooks } from "@/types/contentful.types";
+import FilterButton from "@/components/filter-button";
 
 type BookListProps = {
   books: ResolvedMaterialsBooks; 
@@ -14,15 +15,27 @@ type BookListProps = {
 
 export default function LivrosPage({ books }: BookListProps) {
   const [currentPage, setCurrentPage] = useState(1);
+  const [sortOrder, setSortOrder] = useState<"recent" | "old">("old");
+
+
+  const sortedBooks = useMemo(() => {
+    return [...books].sort((a, b) => {
+      const dateA = new Date(a.fields.dataDePublicacao || 0).getTime();
+      const dateB = new Date(b.fields.dataDePublicacao || 0).getTime();
+  
+      return (dateA - dateB) * (sortOrder === "recent" ? -1 : 1);
+    });
+  }, [sortOrder, books]);
 
   const currentBooks = useMemo(() => {
     const startIndex = (currentPage - 1) * 7;
     const endIndex = startIndex + 7;
-    return books.slice(startIndex, endIndex);
-    }, [currentPage, books]);
+    return sortedBooks.slice(startIndex, endIndex);
+  }, [currentPage, sortedBooks]);
 
   return (
     <section>
+      <FilterButton onToggle={setSortOrder} sortOrder={sortOrder} />
       <ul className={styles.section}>
         {currentBooks.map(({ fields: { image, title, subtitle, file } }) => {       
           return (
@@ -63,7 +76,7 @@ export default function LivrosPage({ books }: BookListProps) {
       </ul>
       <Pagination
         currentPage={currentPage}
-        totalItems={books.length}
+        totalItems={sortedBooks.length}
         itemsPerPage={7}
         onPageChange={setCurrentPage}
       />

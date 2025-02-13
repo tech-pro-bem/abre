@@ -1,4 +1,3 @@
-import FilterButton from "@/components/filter-button";
 import { ResolvedMaterialsBooks, MaterialsBooks } from "@/types/contentful.types";
 import resolveResponse from "contentful-resolve-response";
 import { getContentByContentType } from "@/lib/contentful";
@@ -20,7 +19,6 @@ export default async function Livros() {
 
   return (
     <>
-      <FilterButton />
       <LivrosPage books={books} />
     </>   
   );

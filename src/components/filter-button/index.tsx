@@ -1,23 +1,23 @@
-"use client";
-
-import { useState } from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
+import { useCallback } from "react";
 
-export default function FilterButton() {
-  const [activebutton, setActiveButton] = useState("recent");
+interface FilterButtonProps {
+  onToggle: (value: "recent" | "old") => void;
+  sortOrder: "recent" | "old";
+}
 
-  const toggleButton = () => {
-    setActiveButton((prev) => (prev === "recent" ? "old" : "recent"));
-  };
+export default function FilterButton({ onToggle, sortOrder }: FilterButtonProps) {
+
+  const toggleButton = useCallback(() => {
+    const newValue = sortOrder === "recent" ? "old" : "recent";
+    onToggle(newValue);
+  }, [onToggle, sortOrder]);
 
   return (
     <div className={styles.button_container}>
-      {activebutton === "recent" ? (
-        <button
-          className={styles.button}
-          onClick={toggleButton}
-        >
+      {sortOrder === "recent" ? (
+        <button className={styles.button} onClick={toggleButton}>
           Mais recentes
           <Image
             className={styles.seta_recentes}
@@ -28,10 +28,7 @@ export default function FilterButton() {
           />
         </button>
       ) : (
-        <button
-          className={styles.button}
-          onClick={toggleButton}
-        >
+        <button className={styles.button} onClick={toggleButton}>
           Mais antigos
           <Image
             className={styles.seta_antigos}

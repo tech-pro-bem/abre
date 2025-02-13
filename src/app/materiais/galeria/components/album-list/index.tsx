@@ -5,7 +5,7 @@ import Pagination from "@/components/pagination";
 import { ResolvedGallery } from "@/types/contentful.types";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 import { generateSlug } from "@/utils/slug-formatter";
 import styles from "./styles.module.css";
@@ -15,17 +15,29 @@ type AlbumsListProps = {
 };
 export function AlbumList({ albums }: AlbumsListProps) {
   const [currentPage, setCurrentPage] = useState(1);
+  const [sortOrder, setSortOrder] = useState<"recent" | "old">("recent");
+
   const totalItems = albums.length;
 
   const ITEMS_PER_PAGE = 8;
 
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
-  const albumsToShow = albums.slice(startIndex, endIndex);
+
+  const sortedAlbums = useMemo(() => {
+    return [...albums].sort((a, b) => {
+      const dateA = new Date(a.fields.dateEvent || 0).getTime();
+      const dateB = new Date(b.fields.dateEvent || 0).getTime();
+  
+      return (dateA - dateB) * (sortOrder === "recent" ? -1 : 1);
+    });
+  }, [sortOrder, albums]);
+
+  const albumsToShow = sortedAlbums.slice(startIndex, endIndex);
 
   return (
     <section className={styles.album_container}>
-      <FilterButton />
+      <FilterButton onToggle={setSortOrder} sortOrder={sortOrder}/>
       <ul className={styles.album_content}>
         {albumsToShow.map((album, index) => (
           <li key={index}>

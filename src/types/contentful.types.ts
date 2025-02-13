@@ -87,6 +87,7 @@ export type Gallery = {
   photos: EntryFields.AssetLink[];
   title: EntryFields.Symbol;
   description: EntryFields.Symbol;
+  dateEvent: EntryFields.Date;
 };
 
 export type MaterialsBooks = {
@@ -94,6 +95,7 @@ export type MaterialsBooks = {
   title: EntryFields.Symbol;
   subtitle: EntryFields.Text;
   file: EntryFields.AssetLink;
+  dataDePublicacao: EntryFields.Date;
 }
 
 export type ResolvedMaterialsReports = GetContentByContentTypeResponse<MaterialsReports>["items"];
