@@ -27,34 +27,30 @@ export function AlbumList({ albums }: AlbumsListProps) {
     <section className={styles.album_container}>
       <FilterButton />
       <ul className={styles.album_content}>
-        {albumsToShow.map((album, index) => {
-          const coverImageUrl = `https://${album.fields.coverImage.fields.file?.url}`;
-          console.log({ coverImageUrl });
-          return (
-            <li key={index}>
-              <Link
-                className={styles.album_items}
-                href={`/materiais/galeria/${generateSlug(album.fields.title)}/${album.sys.id}`}
-              >
-                <div className={styles.image_quantity}>
-                  <Image
-                    src={coverImageUrl}
-                    alt={album.fields.title}
-                    width={280}
-                    height={220}
-                    className={styles.image}
-                  />
+        {albumsToShow.map((album, index) => (
+          <li key={index}>
+            <Link
+              className={styles.album_items}
+              href={`/materiais/galeria/${generateSlug(album.fields.title)}/${album.sys.id}`}
+            >
+              <div className={styles.image_quantity}>
+                <Image
+                  src={`https:${album.fields.coverImage.fields.file?.url}`}
+                  alt={album.fields.title}
+                  width={280}
+                  height={220}
+                  className={styles.image}
+                />
 
-                  <span className={styles.quantity}>{album.fields.photos.length} imagens</span>
-                </div>
-                <div className={styles.title_subtitle}>
-                  <h2 className={styles.title}>{album.fields.title}</h2>
-                  <p className={styles.subtitle}>{album.fields.description}</p>
-                </div>
-              </Link>
-            </li>
-          );
-        })}
+                <span className={styles.quantity}>{album.fields.photos.length} imagens</span>
+              </div>
+              <div className={styles.title_subtitle}>
+                <h2 className={styles.title}>{album.fields.title}</h2>
+                <p className={styles.subtitle}>{album.fields.description}</p>
+              </div>
+            </Link>
+          </li>
+        ))}
       </ul>
 
       <Pagination

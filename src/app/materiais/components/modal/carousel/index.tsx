@@ -56,7 +56,7 @@ export const ProjectsCarousel = ({ photos, initialIndex = 0 }: CarouselProps) =>
               sizes="100vw"
               width={500}
               height={300}
-              src={`https://${photos[activeIndex].url}`}
+              src={`https:${photos[activeIndex].url}`}
               alt={photos[activeIndex].description}
               className={styles.carousel_image}
             />

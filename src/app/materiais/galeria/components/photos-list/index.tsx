@@ -57,7 +57,7 @@ export function PhotosList({ albumData }: PhotosListProps) {
             onClick={() => openModal(index)}
           >
             <Image
-              src={`https://${photo.url}`}
+              src={`https:${photo.url}`}
               alt={photo.description}
               width={148}
               height={117}

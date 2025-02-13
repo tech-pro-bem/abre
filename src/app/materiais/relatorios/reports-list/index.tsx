@@ -1,7 +1,8 @@
 "use client";
 import {
   // DownloadIcon,
-  OpenNewArrowIcon } from "@/components/icons";
+  OpenNewArrowIcon,
+} from "@/components/icons";
 import { ResolvedMaterialsReports } from "@/types/contentful.types";
 // import { formatFileName } from "@/utils/format-file-name";
 import { useState } from "react";
@@ -34,13 +35,13 @@ export function ReportsList({ reports }: ReportsListProps) {
           <div className={styles.buttons}>
             {/* TODO: find way to actually download file. Currently opens in new tab */}
             {/* <a
-              href={`https://${file.fields.file?.url}`}
+              href={`https:${file.fields.file?.url}`}
               download={`${formatFileName(title)}.pdf`}
             >
               <DownloadIcon />
             </a> */}
             <a
-              href={`https://${file.fields.file?.url}`}
+              href={`https:${file.fields.file?.url}`}
               target="_blank"
               rel="noopener noreferrer"
             >
