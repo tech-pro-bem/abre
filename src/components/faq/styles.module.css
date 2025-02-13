@@ -50,7 +50,7 @@
 
 .faq_item {
   padding-inline: 24px;
-  padding-block: 0.25rem;
+  padding-block: 0.5rem;
   font-size: 1rem;
   line-height: var(--line-height-2);
   color: var(--color-neutral-darkest);
@@ -75,6 +75,9 @@
   align-items: center;
   gap: 1rem;
   font-weight: var(--fw-bold);
+  &::-webkit-details-marker {
+    display: none;
+  }
 }
 
 .faq_title {
@@ -94,6 +97,7 @@
   padding-top: 8px;
   padding-bottom: 32px;
   font-weight: var(--fw-regular);
+  cursor: default;
 }
 .faq_hiperLink_materials {
   font-weight: var(--fw-bold);
