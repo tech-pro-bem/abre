@@ -19,8 +19,8 @@
 .dialog_content {
   display: flex;
   flex-direction: column;
-  padding-block: 0.75rem;
-  padding-inline: 1.5rem;
+  padding: 1.5rem;
+  gap: 1rem;
   background: white;
   max-width: 76rem;
   width: 100%;
@@ -38,10 +38,7 @@
   .dialog_content {
     border-radius: 8px;
   }
-  .dialog_content {
-    padding-block: 1.18rem 2.44rem;
-    padding-inline: 1.19rem;
-  }
+
   .close {
     width: 17px;
     height: 17px;

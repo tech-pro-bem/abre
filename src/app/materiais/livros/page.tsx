@@ -27,8 +27,8 @@ export default function LivrosPage() {
   const [currentBooks, setCurrentBooks] = useState<Book[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   useEffect(() => {
-    const startIndex = (currentPage - 1) * 7;
-    const endIndex = startIndex + 7;
+    const startIndex = (currentPage - 1) * 8;
+    const endIndex = startIndex + 8;
     setCurrentBooks(mock_livros_datas.slice(startIndex, endIndex));
   }, [currentPage]);
   return (
@@ -75,7 +75,7 @@ export default function LivrosPage() {
       <Pagination
         currentPage={currentPage}
         totalItems={mock_livros_datas.length}
-        itemsPerPage={7}
+        itemsPerPage={8}
         onPageChange={setCurrentPage}
       />
     </section>
