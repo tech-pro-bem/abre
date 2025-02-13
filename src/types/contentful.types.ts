@@ -81,5 +81,13 @@ export type Gallery = {
   description: EntryFields.Symbol;
 };
 
+export type MaterialsBooks = {
+  image: EntryFields.AssetLink;
+  title: EntryFields.Symbol;
+  subtitle: EntryFields.Text;
+  file: EntryFields.AssetLink;
+}
+
 export type ResolvedMaterialsReports = GetContentByContentTypeResponse<MaterialsReports>["items"];
 export type ResolvedGallery = GetContentByContentTypeResponse<Gallery>["items"];
+export type ResolvedMaterialsBooks = GetContentByContentTypeResponse<MaterialsBooks>["items"];
