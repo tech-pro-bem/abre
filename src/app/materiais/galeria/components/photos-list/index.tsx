@@ -10,17 +10,19 @@ import Pagination from "@/components/pagination";
 
 interface PhotosListProps {
   albumData: ResolvedGallery[number];
+  currentPage: number;
+  itemsPerPage: number;
 }
 
-export function PhotosList({ albumData }: PhotosListProps) {
+export function PhotosList({ albumData, currentPage, itemsPerPage }: PhotosListProps) {
   const [isModalOpen, setModalOpen] = useState(false);
   const [carouselIndex, setCarouselIndex] = useState<number | null>(null);
-  const [currentPage, setCurrentPage] = useState(1);
-  const ITEMS_PER_PAGE = 12;
+  const [currentPageState, setCurrentPageState] = useState(currentPage);
+  const totalItems = albumData.fields.photos.length;
 
-  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const endIndex = startIndex + ITEMS_PER_PAGE;
-  const albumsToShow = albumData.fields.photos.slice(startIndex, endIndex);
+  const handlePageChange = (page: number) => {
+    setCurrentPageState(page);
+  };
 
   const openModal = (index: number) => {
     setCarouselIndex(index);
@@ -32,7 +34,7 @@ export function PhotosList({ albumData }: PhotosListProps) {
     setModalOpen(false);
   };
 
-  const photos = albumsToShow.map((photo) => ({
+  const photos = albumData.fields.photos.map((photo) => ({
     url: (photo.fields.file?.url as string) || "",
     description: photo.fields.title?.toString() || "",
   }));
@@ -74,10 +76,10 @@ export function PhotosList({ albumData }: PhotosListProps) {
         ))}
       </div>
       <Pagination
-        currentPage={currentPage}
-        totalItems={albumData.fields.photos.length}
-        itemsPerPage={ITEMS_PER_PAGE}
-        onPageChange={(page) => setCurrentPage(page)}
+        currentPage={currentPageState}
+        totalItems={totalItems}
+        itemsPerPage={itemsPerPage}
+        onPageChange={handlePageChange}
       />
       <Modal
         isOpen={isModalOpen}
