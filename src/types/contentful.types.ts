@@ -90,7 +90,7 @@ export type Gallery = {
 };
 
 export type MaterialsBooks = {
-  image: EntryFields.AssetLink;
+  coverImage: EntryFields.AssetLink;
   title: EntryFields.Symbol;
   subtitle: EntryFields.Text;
   file: EntryFields.AssetLink;
