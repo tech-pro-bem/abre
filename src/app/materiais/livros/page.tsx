@@ -2,7 +2,7 @@ import FilterButton from "@/components/filter-button";
 import { ResolvedMaterialsBooks, MaterialsBooks } from "@/types/contentful.types";
 import resolveResponse from "contentful-resolve-response";
 import { getContentByContentType } from "@/lib/contentful";
-import LivrosPage from "./books-list";
+import Livros from "./books-list";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,18 +10,24 @@ export const metadata: Metadata = {
   description: "Consulte as nossas publicações",
 };
 
-export default async function Livros() {
+export default async function LivrosPage({ params }: { params: {  page?: number } }) {
+  const ITEMS_PER_PAGE = 9
+  const currentPage = params.page || 1
+  const skip = (currentPage - 1) * ITEMS_PER_PAGE
 
   const data = await getContentByContentType<MaterialsBooks>({
     contentType: "books",
     order: "sys.createdAt",
+    limit: ITEMS_PER_PAGE,
+    skip: skip,
   });
   const books: ResolvedMaterialsBooks = resolveResponse(data) || [];
+  console.log(books)
 
   return (
     <>
       <FilterButton />
-      <LivrosPage books={books} />
+      <Livros books={books} currentPage={currentPage} />
     </>   
   );
 }

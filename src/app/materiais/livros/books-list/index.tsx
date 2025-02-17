@@ -1,6 +1,5 @@
 "use client";
-
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
 // import DownloadLink from "../../components/icon-links/download-link";
@@ -9,26 +8,27 @@ import Pagination from "@/components/pagination";
 import { ResolvedMaterialsBooks } from "@/types/contentful.types";
 
 type BookListProps = {
-  books: ResolvedMaterialsBooks; 
+  books: ResolvedMaterialsBooks;
+  currentPage: number;
 };
 
-export default function LivrosPage({ books }: BookListProps) {
-  const [currentPage, setCurrentPage] = useState(1);
+const ITEMS_PER_PAGE = 9
 
-  const currentBooks = useMemo(() => {
-    const startIndex = (currentPage - 1) * 7;
-    const endIndex = startIndex + 7;
-    return books.slice(startIndex, endIndex);
-    }, [currentPage, books]);
+export default function Livros({ books, currentPage }: BookListProps) {
+  const [currentPageState, setCurrentPageState] = useState(currentPage);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPageState(page);
+  };
 
   return (
     <section>
       <ul className={styles.section}>
-        {currentBooks.map(({ fields: { image, title, subtitle, file } }) => {       
+        {books.map(({ fields: { coverImage, title, subtitle, file } }) => {       
           return (
             <li key={title} className={styles.books_container}>
               <Image
-                src={`https:${image.fields.file?.url}`} 
+                src={`https:${coverImage.fields.file?.url}`} 
                 alt={title}
                 width={148}
                 height={222}
@@ -62,10 +62,10 @@ export default function LivrosPage({ books }: BookListProps) {
         })}
       </ul>
       <Pagination
-        currentPage={currentPage}
+        currentPage={currentPageState}
         totalItems={books.length}
-        itemsPerPage={7}
-        onPageChange={setCurrentPage}
+        itemsPerPage={ITEMS_PER_PAGE}
+        onPageChange={handlePageChange}
       />
     </section>
   );
