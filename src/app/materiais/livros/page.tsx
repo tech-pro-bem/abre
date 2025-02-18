@@ -22,12 +22,11 @@ export default async function LivrosPage({ params }: { params: {  page?: number 
     skip: skip,
   });
   const books: ResolvedMaterialsBooks = resolveResponse(data) || [];
-  console.log(books)
 
   return (
     <>
       <FilterButton />
-      <Livros books={books} currentPage={currentPage} />
+      <Livros books={books} currentPage={currentPage} itemsPerPage={ITEMS_PER_PAGE} />
     </>   
   );
 }
