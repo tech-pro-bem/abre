@@ -15,33 +15,23 @@ type BookListProps = {
 
 export default function LivrosPage({ books }: BookListProps) {
   const [currentPage, setCurrentPage] = useState(1);
-  const [sortOrder, setSortOrder] = useState<"recent" | "old">("old");
 
-
-  const sortedBooks = useMemo(() => {
-    return [...books].sort((a, b) => {
-      const dateA = new Date(a.fields.dataDePublicacao || 0).getTime();
-      const dateB = new Date(b.fields.dataDePublicacao || 0).getTime();
-  
-      return (dateA - dateB) * (sortOrder === "recent" ? -1 : 1);
-    });
-  }, [sortOrder, books]);
 
   const currentBooks = useMemo(() => {
     const startIndex = (currentPage - 1) * 7;
     const endIndex = startIndex + 7;
-    return sortedBooks.slice(startIndex, endIndex);
-  }, [currentPage, sortedBooks]);
+    return books.slice(startIndex, endIndex);
+  }, [currentPage, books]);
 
   return (
     <section>
-      <FilterButton onToggle={setSortOrder} sortOrder={sortOrder} />
+      <FilterButton />
       <ul className={styles.section}>
-        {currentBooks.map(({ fields: { image, title, subtitle, file } }) => {       
+        {currentBooks.map(({ fields: { coverImage, title, subtitle, file } }) => {       
           return (
             <li key={title} className={styles.books_container}>
               <Image
-                src={`https:${image.fields.file?.url}`} 
+                src={`https:${coverImage.fields.file?.url}`} 
                 alt={title}
                 width={148}
                 height={222}
@@ -76,7 +66,7 @@ export default function LivrosPage({ books }: BookListProps) {
       </ul>
       <Pagination
         currentPage={currentPage}
-        totalItems={sortedBooks.length}
+        totalItems={books.length}
         itemsPerPage={7}
         onPageChange={setCurrentPage}
       />

@@ -9,17 +9,16 @@ export const metadata: Metadata = {
   description: "Consulte as nossas publicações",
 };
 
-export default async function Livros() {
+export default async function Livros({searchParams}:{searchParams: {order?: string}}) {
+  const order= searchParams.order === "old" ? "fields.dateEvent" : "-fields.dateEvent"
 
   const data = await getContentByContentType<MaterialsBooks>({
     contentType: "books",
-    order: "sys.createdAt",
+    order,
   });
   const books: ResolvedMaterialsBooks = resolveResponse(data) || [];
 
   return (
-    <>
       <LivrosPage books={books} />
-    </>   
   );
 }

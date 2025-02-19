@@ -7,7 +7,7 @@ import type { Asset, EntryFields, TagSys } from "contentful";
  * na tipagem da função getContentByContentType em "@/lib/contentful.ts"
  */
 
-export type ORDERING_TYPES = "sys.createdAt" | "-sys.createdAt";
+export type ORDERING_TYPES = "sys.createdAt" | "-sys.createdAt" | "fields.dateEvent" | "-fields.dateEvent" ;
 
 export type CONTENT_TYPES =
   | "album"
@@ -91,11 +91,11 @@ export type Gallery = {
 };
 
 export type MaterialsBooks = {
-  image: EntryFields.AssetLink;
+  coverImage: EntryFields.AssetLink;
   title: EntryFields.Symbol;
   subtitle: EntryFields.Text;
   file: EntryFields.AssetLink;
-  dataDePublicacao: EntryFields.Date;
+  dateEvent: EntryFields.Date;
 }
 
 export type ResolvedMaterialsReports = GetContentByContentTypeResponse<MaterialsReports>["items"];
