@@ -12,22 +12,22 @@ import styles from "./styles.module.css";
 
 type AlbumsListProps = {
   albums: ResolvedGallery;
+  currentPage: number;
+  itemsPerPage: number;
 };
-export function AlbumList({ albums }: AlbumsListProps) {
-  const [currentPage, setCurrentPage] = useState(1);
+export function AlbumList({ albums, currentPage, itemsPerPage }: AlbumsListProps) {
+  const [currentPageState, setCurrentPageState] = useState(currentPage);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPageState(page);
+  };
   const totalItems = albums.length;
-
-  const ITEMS_PER_PAGE = 8;
-
-  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const endIndex = startIndex + ITEMS_PER_PAGE;
-  const albumsToShow = albums.slice(startIndex, endIndex);
 
   return (
     <section className={styles.album_container}>
       <FilterButton />
       <ul className={styles.album_content}>
-        {albumsToShow.map((album, index) => (
+        {albums.map((album, index) => (
           <li key={index}>
             <Link
               className={styles.album_items}
@@ -54,10 +54,10 @@ export function AlbumList({ albums }: AlbumsListProps) {
       </ul>
 
       <Pagination
-        currentPage={currentPage}
+        currentPage={currentPageState}
         totalItems={totalItems}
-        itemsPerPage={ITEMS_PER_PAGE}
-        onPageChange={setCurrentPage}
+        itemsPerPage={itemsPerPage}
+        onPageChange={handlePageChange}
       />
     </section>
   );
