@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   description: "Consulte as nossas publicações",
 };
 
-export default async function LivrosPage({ params }: { params: {  page?: number } }) {
+export default async function LivrosPage({ searchParams }: { searchParams: {  page?: number } }) {
   const ITEMS_PER_PAGE = 9
-  const currentPage = params.page || 1
+  const currentPage = searchParams.page || 1
   const skip = (currentPage - 1) * ITEMS_PER_PAGE
 
   const data = await getContentByContentType<MaterialsBooks>({
