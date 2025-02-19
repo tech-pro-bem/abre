@@ -1,24 +1,26 @@
+import { useSearchParams, useRouter } from "next/navigation";
 import styles from "./styles.module.css";
 import Image from "next/image";
-import { useCallback } from "react";
 
-interface FilterButtonProps {
-  onToggle: (value: "recent" | "old") => void;
-  sortOrder: "recent" | "old";
-}
 
-export default function FilterButton({ onToggle, sortOrder }: FilterButtonProps) {
+export default function FilterButton() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
 
-  const toggleButton = useCallback(() => {
+  const sortOrder = searchParams.get("order") === "old" ? "old" : "recent";
+
+  const toggleOrder = () => {
     const newValue = sortOrder === "recent" ? "old" : "recent";
-    onToggle(newValue);
-  }, [onToggle, sortOrder]);
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("order", newValue)
+    router.push(`?${params.toString()}`, { scroll: false });
+  };
 
   return (
     <div className={styles.button_container}>
       {sortOrder === "recent" ? (
-        <button className={styles.button} onClick={toggleButton}>
-          Mais recentes
+        <button className={styles.button} onClick={toggleOrder}>
+          Mais recentes 
           <Image
             className={styles.seta_recentes}
             src="/recentes.svg"
@@ -28,7 +30,7 @@ export default function FilterButton({ onToggle, sortOrder }: FilterButtonProps)
           />
         </button>
       ) : (
-        <button className={styles.button} onClick={toggleButton}>
+        <button className={styles.button} onClick={toggleOrder}>
           Mais antigos
           <Image
             className={styles.seta_antigos}
