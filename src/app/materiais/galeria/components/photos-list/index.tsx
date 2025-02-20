@@ -18,7 +18,7 @@ export function PhotosList({ albumData, currentPage, itemsPerPage }: PhotosListP
   const [isModalOpen, setModalOpen] = useState(false);
   const [carouselIndex, setCarouselIndex] = useState<number | null>(null);
   const [currentPageState, setCurrentPageState] = useState(currentPage);
-  const totalItems = albumData.fields.photos.length;
+  const totalItems = albumData?.fields?.photos?.length;
 
   const handlePageChange = (page: number) => {
     setCurrentPageState(page);
@@ -34,10 +34,12 @@ export function PhotosList({ albumData, currentPage, itemsPerPage }: PhotosListP
     setModalOpen(false);
   };
 
-  const photos = albumData.fields.photos.map((photo) => ({
+  const photos = albumData?.fields?.photos?.map((photo) => ({
     url: (photo.fields.file?.url as string) || "",
     description: photo.fields.title?.toString() || "",
   }));
+
+  if (!albumData) return <p style={{ textAlign: "center" }}>Nenhuma foto encontrada</p>;
 
   return (
     <section className={styles.section}>

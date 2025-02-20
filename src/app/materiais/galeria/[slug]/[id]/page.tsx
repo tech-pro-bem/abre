@@ -3,10 +3,18 @@ import { Gallery, ResolvedGallery } from "@/types/contentful.types";
 import resolveResponse from "contentful-resolve-response";
 import { PhotosList } from "../../components/photos-list";
 
-export default async function PhotoAlbumPage({ params }: { params: { slug: string; id: string, page?: number } }) {
-  const ITEMS_PER_PAGE = 9
-  const currentPage = params.page || 1
-  const skip = (currentPage - 1) * ITEMS_PER_PAGE
+type PhotoAlbumPageParams = {
+  params: {
+    slug: string;
+    id: string;
+    page?: number;
+  };
+};
+
+export default async function PhotoAlbumPage({ params }: PhotoAlbumPageParams) {
+  const ITEMS_PER_PAGE = 9;
+  const currentPage = params.page || 1;
+  const skip = (currentPage - 1) * ITEMS_PER_PAGE;
 
   const data = await getContentByContentType<Gallery>({
     contentType: "gallery",
@@ -19,5 +27,11 @@ export default async function PhotoAlbumPage({ params }: { params: { slug: strin
 
   if (!params.id) return <div>Album não encontrado</div>;
 
-  return <PhotosList albumData={resolvedData[0]} currentPage={currentPage} itemsPerPage={ITEMS_PER_PAGE}/>;
+  return (
+    <PhotosList
+      albumData={resolvedData[0]}
+      currentPage={currentPage}
+      itemsPerPage={ITEMS_PER_PAGE}
+    />
+  );
 }
