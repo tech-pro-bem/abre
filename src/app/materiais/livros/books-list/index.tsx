@@ -13,7 +13,6 @@ type BookListProps = {
   itemsPerPage: number;
 };
 
-
 export default function Livros({ books, currentPage, itemsPerPage }: BookListProps) {
   const [currentPageState, setCurrentPageState] = useState(currentPage);
 
@@ -24,11 +23,14 @@ export default function Livros({ books, currentPage, itemsPerPage }: BookListPro
   return (
     <section>
       <ul className={styles.section}>
-        {books.map(({ fields: { coverImage, title, subtitle, file } }) => {       
+        {books.map(({ fields: { coverImage, title, subtitle, file } }) => {
           return (
-            <li key={title} className={styles.books_container}>
+            <li
+              key={title}
+              className={styles.books_container}
+            >
               <Image
-                src={`https:${coverImage.fields.file?.url}`} 
+                src={`https:${coverImage.fields.file?.url}`}
                 alt={title}
                 width={148}
                 height={222}
@@ -38,21 +40,19 @@ export default function Livros({ books, currentPage, itemsPerPage }: BookListPro
               <div className={styles.books_content}>
                 <div className={styles.title_container}>
                   <h3 className={styles.title}>{title}</h3>
-                  <p className={styles.subtitle}>
-                    {subtitle}
-                  </p>
+                  <p className={styles.subtitle}>{subtitle}</p>
                 </div>
                 <div className={styles.container_buttons}>
                   <div className={styles.download_link}>
-                    { /* <DownloadLink  
+                    {/* <DownloadLink  
                     url={file.fields.file?.url} 
                     label="Baixar o arquivo" /> 
-                    */ }
+                    */}
                   </div>
                   <div className={styles.open_link}>
-                    <OpenLink 
-                      url={`https:${file.fields.file?.url}`} 
-                      label="Abrir no navegador" 
+                    <OpenLink
+                      url={`https:${file.fields.file?.url}`}
+                      label="Abrir no navegador"
                     />
                   </div>
                 </div>
