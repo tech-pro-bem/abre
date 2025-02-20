@@ -24,7 +24,7 @@ export default function LivrosPage({ books }: BookListProps) {
 
   return (
     <section>
-      <FilterButton />
+      <FilterButton defaultOrder="asc" />
       <ul className={styles.section}>
         {currentBooks.map(({ fields: { coverImage, title, subtitle, file } }) => {
           return (

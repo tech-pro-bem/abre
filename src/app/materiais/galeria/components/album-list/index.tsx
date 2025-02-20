@@ -16,7 +16,6 @@ type AlbumsListProps = {
 export function AlbumList({ albums }: AlbumsListProps) {
   const [currentPage, setCurrentPage] = useState(1);
 
-
   const totalItems = albums.length;
 
   const ITEMS_PER_PAGE = 8;
@@ -28,7 +27,7 @@ export function AlbumList({ albums }: AlbumsListProps) {
 
   return (
     <section className={styles.album_container}>
-      <FilterButton />
+      <FilterButton defaultOrder="desc" />
       <ul className={styles.album_content}>
         {albumsToShow.map((album, index) => (
           <li key={index}>

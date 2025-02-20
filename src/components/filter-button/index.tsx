@@ -2,11 +2,15 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { OrderAscendingIcon, OrderDescendingIcon } from "../icons";
 import styles from "./styles.module.css";
 
-export default function FilterButton() {
+type FilterButtonProps = {
+  defaultOrder?: "asc" | "desc";
+};
+
+export default function FilterButton({ defaultOrder = "desc" }: FilterButtonProps) {
   const searchParams = useSearchParams();
   const router = useRouter();
 
-  const sortOrder = searchParams.get("order") ?? "asc";
+  const sortOrder = searchParams.get("order") ?? defaultOrder;
 
   const toggleOrder = () => {
     const newValue = sortOrder === "desc" ? "asc" : "desc";
@@ -23,11 +27,11 @@ export default function FilterButton() {
       >
         {sortOrder === "asc" ? (
           <>
-            <OrderAscendingIcon /> Data de publicação: mais antigos primeiro{" "}
+            <OrderAscendingIcon /> Data: mais antigos primeiro{" "}
           </>
         ) : (
           <>
-            <OrderDescendingIcon /> Data de publicação: mais recentes primeiro
+            <OrderDescendingIcon /> Data: mais recentes primeiro
           </>
         )}
       </button>
