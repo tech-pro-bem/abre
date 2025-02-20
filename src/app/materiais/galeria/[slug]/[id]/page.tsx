@@ -7,13 +7,15 @@ type PhotoAlbumPageParams = {
   params: {
     slug: string;
     id: string;
+  };
+  searchParams: {
     page?: number;
   };
 };
 
-export default async function PhotoAlbumPage({ params }: PhotoAlbumPageParams) {
-  const ITEMS_PER_PAGE = 9;
-  const currentPage = params.page || 1;
+export default async function PhotoAlbumPage({ params, searchParams }: PhotoAlbumPageParams) {
+  const ITEMS_PER_PAGE = 3;
+  const currentPage = searchParams.page || 1;
   const skip = (currentPage - 1) * ITEMS_PER_PAGE;
 
   const data = await getContentByContentType<Gallery>({
