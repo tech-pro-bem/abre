@@ -11,10 +11,13 @@ export const metadata: Metadata = {
   description: "Acompanhe nossos eventos",
 };
 
-export default async function GaleriaPage() {
+export default async function GaleriaPage({ searchParams }: { searchParams: { order?: string } }) {
+  // ascendente -> mais antiga pra mais nova
+  // descendente -> mais nova pra mais antiga
+  const order = searchParams.order === "asc" ? "fields.dateEvent" : "-fields.dateEvent";
   const data = await getContentByContentType<Gallery>({
     contentType: "gallery",
-    order: "sys.createdAt",
+    order,
   });
 
   const albums: ResolvedGallery = resolveResponse(data) || [];

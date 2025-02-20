@@ -25,7 +25,7 @@ export function PhotosList({ albumData }: PhotosListProps) {
     setModalOpen(false);
   };
 
-  const photos = albumData.fields.photos.map((photo) => ({
+  const photos = albumData?.fields?.photos?.map((photo) => ({
     url: (photo.fields.file?.url as string) || "",
     description: photo.fields.title?.toString() || "",
   }));
@@ -40,14 +40,14 @@ export function PhotosList({ albumData }: PhotosListProps) {
           >
             <ArrowLeftIcon />
           </Link>
-          <h2 className={styles.title}>{albumData.fields.title}</h2>
+          <h2 className={styles.title}>{albumData?.fields?.title}</h2>
         </div>
         <div>
-          <span className={styles.quantity}>{albumData.fields.photos.length} imagens</span>
+          <span className={styles.quantity}>{albumData?.fields?.photos?.length} imagens</span>
         </div>
       </div>
       <div className={styles.container_subtitle}>
-        <p>{albumData.fields.description}</p>
+        <p>{albumData?.fields?.description}</p>
       </div>
       <div className={styles.container_album}>
         {photos.map((photo, index) => (
