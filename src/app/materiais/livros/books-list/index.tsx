@@ -9,11 +9,12 @@ import { ResolvedMaterialsBooks } from "@/types/contentful.types";
 
 type BookListProps = {
   books: ResolvedMaterialsBooks;
+  totalBooks: number;
   currentPage: number;
   itemsPerPage: number;
 };
 
-export default function Livros({ books, currentPage, itemsPerPage }: BookListProps) {
+export default function Livros({ books, totalBooks, currentPage, itemsPerPage }: BookListProps) {
   const [currentPageState, setCurrentPageState] = useState(currentPage);
 
   const handlePageChange = (page: number) => {
@@ -63,7 +64,7 @@ export default function Livros({ books, currentPage, itemsPerPage }: BookListPro
       </ul>
       <Pagination
         currentPage={currentPageState}
-        totalItems={books.length}
+        totalItems={totalBooks}
         itemsPerPage={itemsPerPage}
         onPageChange={handlePageChange}
       />

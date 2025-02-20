@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default async function LivrosPage({ searchParams }: { searchParams: { page?: number } }) {
   const ITEMS_PER_PAGE = 9;
-  const currentPage = searchParams.page || 1;
+  const currentPage = Number(searchParams.page) || 1;
   const skip = (currentPage - 1) * ITEMS_PER_PAGE;
 
   const data = await getContentByContentType<MaterialsBooks>({
@@ -28,6 +28,7 @@ export default async function LivrosPage({ searchParams }: { searchParams: { pag
       <FilterButton />
       <Livros
         books={books}
+        totalBooks={data.total}
         currentPage={currentPage}
         itemsPerPage={ITEMS_PER_PAGE}
       />
