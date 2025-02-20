@@ -2,8 +2,8 @@ import { IconSvgProps } from "@/types";
 
 export const OrderAscendingIcon = ({ size, width = 17, height = 13, ...props }: IconSvgProps) => (
   <svg
-    width="17"
-    height="13"
+    width={size || width}
+    height={size || height}
     viewBox="0 0 17 13"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
