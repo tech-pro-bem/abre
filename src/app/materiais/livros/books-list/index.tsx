@@ -10,12 +10,12 @@ import FilterButton from "@/components/filter-button";
 
 type BookListProps = {
   books: ResolvedMaterialsBooks;
+  totalBooks: number;
   currentPage: number;
   itemsPerPage: number;
 };
 
-
-export default function Livros({ books, currentPage, itemsPerPage }: BookListProps) {
+export default function Livros({ books, totalBooks, currentPage, itemsPerPage }: BookListProps) {
   const [currentPageState, setCurrentPageState] = useState(currentPage);
 
   const handlePageChange = (page: number) => {
@@ -26,14 +26,14 @@ export default function Livros({ books, currentPage, itemsPerPage }: BookListPro
     <section>
       <FilterButton defaultOrder="asc" />
       <ul className={styles.section}>
-        {books.map(({ fields: { coverImage, title, subtitle, file } }) => {       
+        {books.map(({ fields: { coverImage, title, subtitle, file } }) => {
           return (
             <li
               key={title}
               className={styles.books_container}
             >
               <Image
-                src={`https:${coverImage.fields.file?.url}`} 
+                src={`https:${coverImage.fields.file?.url}`}
                 alt={title}
                 width={148}
                 height={222}
@@ -66,7 +66,7 @@ export default function Livros({ books, currentPage, itemsPerPage }: BookListPro
       </ul>
       <Pagination
         currentPage={currentPageState}
-        totalItems={books.length}
+        totalItems={totalBooks}
         itemsPerPage={itemsPerPage}
         onPageChange={handlePageChange}
       />

@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   description: "Consulte as nossas publicações",
 };
 
-export default async function LivrosPage({ searchParams }: { searchParams: {  page?: number } }) {
-  const ITEMS_PER_PAGE = 9
-  const currentPage = searchParams.page || 1
-  const skip = (currentPage - 1) * ITEMS_PER_PAGE
+export default async function LivrosPage({ searchParams }: { searchParams: { page?: number } }) {
+  const ITEMS_PER_PAGE = 9;
+  const currentPage = Number(searchParams.page) || 1;
+  const skip = (currentPage - 1) * ITEMS_PER_PAGE;
 
   const data = await getContentByContentType<MaterialsBooks>({
     contentType: "books",
@@ -24,6 +24,11 @@ export default async function LivrosPage({ searchParams }: { searchParams: {  pa
   const books: ResolvedMaterialsBooks = resolveResponse(data) || [];
 
   return (
-      <Livros books={books} currentPage={currentPage} itemsPerPage={ITEMS_PER_PAGE} />
+      <Livros
+        books={books}
+        totalBooks={data.total}
+        currentPage={currentPage}
+        itemsPerPage={ITEMS_PER_PAGE}
+      />
   );
 }
