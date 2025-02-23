@@ -1,9 +1,9 @@
-import FilterButton from "@/components/filter-button";
-import { ResolvedMaterialsBooks, MaterialsBooks } from "@/types/contentful.types";
-import resolveResponse from "contentful-resolve-response";
 import { getContentByContentType } from "@/lib/contentful";
 import Livros from "./books-list";
 import { Metadata } from "next";
+import { MaterialsBooks, ResolvedMaterialsBooks } from "@/types/contentful.types";
+import resolveResponse from "contentful-resolve-response";
+
 
 export const metadata: Metadata = {
   title: "Livros",
@@ -24,9 +24,6 @@ export default async function LivrosPage({ searchParams }: { searchParams: {  pa
   const books: ResolvedMaterialsBooks = resolveResponse(data) || [];
 
   return (
-    <>
-      <FilterButton />
       <Livros books={books} currentPage={currentPage} itemsPerPage={ITEMS_PER_PAGE} />
-    </>   
   );
 }

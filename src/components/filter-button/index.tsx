@@ -1,47 +1,40 @@
-"use client";
-
-import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { OrderAscendingIcon, OrderDescendingIcon } from "../icons";
 import styles from "./styles.module.css";
-import Image from "next/image";
 
-export default function FilterButton() {
-  const [activebutton, setActiveButton] = useState("recent");
+type FilterButtonProps = {
+  defaultOrder?: "asc" | "desc";
+};
 
-  const toggleButton = () => {
-    setActiveButton((prev) => (prev === "recent" ? "old" : "recent"));
+export default function FilterButton({ defaultOrder = "desc" }: FilterButtonProps) {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+
+  const sortOrder = searchParams.get("order") ?? defaultOrder;
+
+  const toggleOrder = () => {
+    const newValue = sortOrder === "desc" ? "asc" : "desc";
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("order", newValue);
+    router.push(`?${params.toString()}`, { scroll: false });
   };
 
   return (
     <div className={styles.button_container}>
-      {activebutton === "recent" ? (
-        <button
-          className={styles.button}
-          onClick={toggleButton}
-        >
-          Mais recentes
-          <Image
-            className={styles.seta_recentes}
-            src="/recentes.svg"
-            width={19}
-            height={18}
-            alt="seta-recentes"
-          />
-        </button>
-      ) : (
-        <button
-          className={styles.button}
-          onClick={toggleButton}
-        >
-          Mais antigos
-          <Image
-            className={styles.seta_antigos}
-            src="/antigos.svg"
-            width={19}
-            height={18}
-            alt="seta-antigos"
-          />
-        </button>
-      )}
+      <button
+        className={styles.button}
+        onClick={toggleOrder}
+      >
+        {sortOrder === "asc" ? (
+          <>
+            <OrderAscendingIcon /> Data: mais antigos primeiro{" "}
+          </>
+        ) : (
+          <>
+            <OrderDescendingIcon /> Data: mais recentes primeiro
+          </>
+        )}
+      </button>
     </div>
   );
 }

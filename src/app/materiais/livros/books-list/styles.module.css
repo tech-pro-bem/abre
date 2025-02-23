@@ -64,7 +64,7 @@
 .download_link > a > p,
 .open_link > a > p {
   font-size: var(--font-size-5);
-  font-weight: var(--fw-light);
+  font-weight: var(--fw-regular);
   color: var(--color-primary-darkest);
 }
 

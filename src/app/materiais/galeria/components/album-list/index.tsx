@@ -25,7 +25,7 @@ export function AlbumList({ albums, currentPage, itemsPerPage }: AlbumsListProps
 
   return (
     <section className={styles.album_container}>
-      <FilterButton />
+      <FilterButton defaultOrder="desc" />
       <ul className={styles.album_content}>
         {albums.map((album, index) => (
           <li key={index}>

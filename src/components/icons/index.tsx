@@ -1,6 +1,7 @@
 export { AcolhimentoIcon } from "./acolhimento";
-export { ComunidadeDeFalaIcon } from "./comunidade-de-fala";
 export { ChevronRightIcon } from "./chevron-right";
+export { CloseIcon } from "./close";
+export { ComunidadeDeFalaIcon } from "./comunidade-de-fala";
 export { DownloadIcon } from "./download";
 export { FacebookIcon } from "./facebook";
 export { FamiliaresIcon } from "./familiares";
@@ -10,7 +11,8 @@ export { HouseIcon } from "./house";
 export { InstagramIcon } from "./instagram";
 export { LaccaIcon } from "./lacca";
 export { OpenNewArrowIcon } from "./open-new-arrow";
+export { OrderAscendingIcon } from "./order-ascending";
+export { OrderDescendingIcon } from "./order-descending";
 export { RecoveryIcon } from "./recovery";
 export { ReportsGraphism } from "./relatorios-grafismo";
 export { YoutubeIcon } from "./youtube";
-export { CloseIcon } from "./close";
