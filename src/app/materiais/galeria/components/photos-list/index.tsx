@@ -6,14 +6,28 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import styles from "./styles.module.css";
+import Pagination from "@/components/pagination";
+import { useRouter, useSearchParams } from "next/navigation";
 
 interface PhotosListProps {
   albumData: ResolvedGallery[number];
+  currentPage: number;
+  itemsPerPage: number;
+  totalPhotos: number;
 }
 
-export function PhotosList({ albumData }: PhotosListProps) {
+export function PhotosList({ albumData, currentPage, itemsPerPage, totalPhotos }: PhotosListProps) {
   const [isModalOpen, setModalOpen] = useState(false);
   const [carouselIndex, setCarouselIndex] = useState<number | null>(null);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+
+  const handlePageChange = (page: number) => {
+    const currentParams = new URLSearchParams(searchParams?.toString() || "");
+    currentParams.set("page", page.toString());
+    router.push(`?${currentParams.toString()}`, { scroll: false });
+  };
 
   const openModal = (index: number) => {
     setCarouselIndex(index);
@@ -29,6 +43,8 @@ export function PhotosList({ albumData }: PhotosListProps) {
     url: (photo.fields.file?.url as string) || "",
     description: photo.fields.title?.toString() || "",
   }));
+  
+  if (!albumData) return <p style={{ textAlign: "center" }}>Nenhuma foto encontrada</p>;
 
   return (
     <section className={styles.section}>
@@ -66,6 +82,12 @@ export function PhotosList({ albumData }: PhotosListProps) {
           </button>
         ))}
       </div>
+      <Pagination
+        currentPage={currentPage}
+        totalItems={totalPhotos}
+        itemsPerPage={itemsPerPage}
+        onPageChange={handlePageChange}
+      />
       <Modal
         isOpen={isModalOpen}
         onClose={closeModal}
