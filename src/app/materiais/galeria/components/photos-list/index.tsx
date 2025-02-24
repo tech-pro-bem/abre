@@ -39,12 +39,20 @@ export function PhotosList({ albumData, currentPage, itemsPerPage, totalPhotos }
     setModalOpen(false);
   };
 
+  if (totalPhotos === 0) {
+    return <p style={{ textAlign: "center" }}>Este álbum não possui fotos.</p>;
+  }
+
   const photos = albumData.fields.photos.map((photo) => ({
     url: (photo.fields.file?.url as string) || "",
     description: photo.fields.title?.toString() || "",
   }));
-  
+
   if (!albumData) return <p style={{ textAlign: "center" }}>Nenhuma foto encontrada</p>;
+
+  if (!photos || photos.length === 0) {
+    return <p style={{ textAlign: "center" }}>Nenhuma foto encontrada</p>;
+  }
 
   return (
     <section className={styles.section}>
