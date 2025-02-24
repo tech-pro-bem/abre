@@ -1,6 +1,5 @@
 "use client";
-
-import { useMemo, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import styles from "./styles.module.css";
 import Image from "next/image";
 // import DownloadLink from "../../components/icon-links/download-link";
@@ -11,22 +10,33 @@ import FilterButton from "@/components/filter-button";
 
 type BookListProps = {
   books: ResolvedMaterialsBooks;
+  totalBooks: number;
+  currentPage: number;
+  itemsPerPage: number;
 };
 
-export default function LivrosPage({ books }: BookListProps) {
-  const [currentPage, setCurrentPage] = useState(1);
+export default function Livros({ books, totalBooks, currentPage, itemsPerPage }: BookListProps) {
 
-  const currentBooks = useMemo(() => {
-    const startIndex = (currentPage - 1) * 7;
-    const endIndex = startIndex + 7;
-    return books.slice(startIndex, endIndex);
-  }, [currentPage, books]);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const handlePageChange = (page: number) => {
+    const totalPages = (totalBooks / itemsPerPage);
+    if (page < 1) page = 1;
+    if (page > totalPages) page = totalPages;
+    
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("page", page.toString());
+    router.push(`?${params.toString()}`, { scroll: false });
+  };
+
+  if (!books) return <p style={{ textAlign: "center" }}>Nenhum livro encontrado</p>;
 
   return (
     <section>
       <FilterButton defaultOrder="asc" />
       <ul className={styles.section}>
-        {currentBooks.map(({ fields: { coverImage, title, subtitle, file } }) => {
+        {books.map(({ fields: { coverImage, title, subtitle, file } }) => {
           return (
             <li
               key={title}
@@ -66,9 +76,9 @@ export default function LivrosPage({ books }: BookListProps) {
       </ul>
       <Pagination
         currentPage={currentPage}
-        totalItems={books.length}
-        itemsPerPage={7}
-        onPageChange={setCurrentPage}
+        totalItems={totalBooks}
+        itemsPerPage={itemsPerPage}
+        onPageChange={handlePageChange}
       />
     </section>
   );
