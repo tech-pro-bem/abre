@@ -2,7 +2,6 @@
   background-color: var(--color-primary-darkest);
   color: var(--color-neutral-lightest);
   padding-top: 48px;
-  padding-bottom: 56px;
   padding-inline: 1.125rem;
   display: grid;
 }
