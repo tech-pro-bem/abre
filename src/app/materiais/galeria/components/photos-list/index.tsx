@@ -7,21 +7,26 @@ import Link from "next/link";
 import { useState } from "react";
 import styles from "./styles.module.css";
 import Pagination from "@/components/pagination";
+import { useRouter, useSearchParams } from "next/navigation";
 
 interface PhotosListProps {
   albumData: ResolvedGallery[number];
   currentPage: number;
   itemsPerPage: number;
+  totalPhotos: number;
 }
 
-export function PhotosList({ albumData, currentPage, itemsPerPage }: PhotosListProps) {
+export function PhotosList({ albumData, currentPage, itemsPerPage, totalPhotos }: PhotosListProps) {
   const [isModalOpen, setModalOpen] = useState(false);
   const [carouselIndex, setCarouselIndex] = useState<number | null>(null);
-  const [currentPageState, setCurrentPageState] = useState(currentPage);
-  const totalItems = albumData?.fields?.photos?.length;
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
 
   const handlePageChange = (page: number) => {
-    setCurrentPageState(page);
+    const currentParams = new URLSearchParams(searchParams?.toString() || "");
+    currentParams.set("page", page.toString());
+    router.push(`?${currentParams.toString()}`, { scroll: false });
   };
 
   const openModal = (index: number) => {
@@ -34,11 +39,11 @@ export function PhotosList({ albumData, currentPage, itemsPerPage }: PhotosListP
     setModalOpen(false);
   };
 
-  const photos = albumData?.fields?.photos?.map((photo) => ({
+  const photos = albumData.fields.photos.map((photo) => ({
     url: (photo.fields.file?.url as string) || "",
     description: photo.fields.title?.toString() || "",
   }));
-
+  
   if (!albumData) return <p style={{ textAlign: "center" }}>Nenhuma foto encontrada</p>;
 
   return (
@@ -78,8 +83,8 @@ export function PhotosList({ albumData, currentPage, itemsPerPage }: PhotosListP
         ))}
       </div>
       <Pagination
-        currentPage={currentPageState}
-        totalItems={totalItems}
+        currentPage={currentPage}
+        totalItems={totalPhotos}
         itemsPerPage={itemsPerPage}
         onPageChange={handlePageChange}
       />
