@@ -11,13 +11,16 @@ export const metadata: Metadata = {
   description: "Acompanhe nossos eventos",
 };
 
-export default async function GaleriaPage({ searchParams }: { searchParams: {  page?: number } }) {
+export default async function GaleriaPage({ searchParams }: { searchParams: {  page?: number, order?: string } }) {
   const ITEMS_PER_PAGE = 8
   const currentPage = searchParams.page || 1
   const skip = (currentPage - 1) * ITEMS_PER_PAGE
+
+  const order = searchParams.order === "asc" ? "fields.dateEvent" : "-fields.dateEvent";
+
   const data = await getContentByContentType<Gallery>({
     contentType: "gallery",
-    order: "sys.createdAt",
+    order: order,
     skip: skip,
   });
 

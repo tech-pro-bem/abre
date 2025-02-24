@@ -27,11 +27,13 @@ export default function FilterButton({ defaultOrder = "desc" }: FilterButtonProp
       >
         {sortOrder === "asc" ? (
           <>
-            <OrderAscendingIcon /> Data: mais antigos primeiro{" "}
+            Mais antigos
+            <OrderAscendingIcon />
           </>
         ) : (
           <>
-            <OrderDescendingIcon /> Data: mais recentes primeiro
+            Mais recentes
+            <OrderDescendingIcon />
           </>
         )}
       </button>

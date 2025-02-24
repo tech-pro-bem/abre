@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import styles from "./styles.module.css";
 import Image from "next/image";
 // import DownloadLink from "../../components/icon-links/download-link";
@@ -16,11 +16,21 @@ type BookListProps = {
 };
 
 export default function Livros({ books, totalBooks, currentPage, itemsPerPage }: BookListProps) {
-  const [currentPageState, setCurrentPageState] = useState(currentPage);
+
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
   const handlePageChange = (page: number) => {
-    setCurrentPageState(page);
+    const totalPages = (totalBooks / itemsPerPage);
+    if (page < 1) page = 1;
+    if (page > totalPages) page = totalPages;
+    
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("page", page.toString());
+    router.push(`?${params.toString()}`, { scroll: false });
   };
+
+  if (!books) return <p style={{ textAlign: "center" }}>Nenhum livro encontrado</p>;
 
   return (
     <section>
@@ -65,7 +75,7 @@ export default function Livros({ books, totalBooks, currentPage, itemsPerPage }:
         })}
       </ul>
       <Pagination
-        currentPage={currentPageState}
+        currentPage={currentPage}
         totalItems={totalBooks}
         itemsPerPage={itemsPerPage}
         onPageChange={handlePageChange}
