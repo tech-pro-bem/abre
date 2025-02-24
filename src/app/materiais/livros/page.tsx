@@ -18,7 +18,7 @@ export default async function LivrosPage({
   const currentPage = Number(searchParams.page) || 1;
   const skip = (currentPage - 1) * ITEMS_PER_PAGE;
 
-  const order = searchParams.order === "desc" ? "-fields.dateEvent" : "fields.dateEvent";
+  const order = searchParams.order === "asc" ? "fields.dateEvent" : "-fields.dateEvent";
 
   const data = await getContentByContentType<MaterialsBooks>({
     contentType: "books",

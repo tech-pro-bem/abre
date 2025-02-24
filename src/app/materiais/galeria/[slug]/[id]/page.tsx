@@ -41,5 +41,3 @@ export default async function PhotoAlbumPage({ params, searchParams }: PhotoAlbu
     />
   );
 }
-
-
