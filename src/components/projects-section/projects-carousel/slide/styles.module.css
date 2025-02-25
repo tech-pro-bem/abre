@@ -7,6 +7,7 @@
   padding: 2.5rem 2rem;
   outline: 2px solid var(--color-secondary-light);
   border-radius: 1rem;
+  min-height: 56ch;
 
   .card_header {
     display: flex;
@@ -43,6 +44,7 @@
 @container projects-slide (min-width: 40em) {
   .slide {
     padding: 56px 104px 64px;
+    min-height: 432px;
   }
 
   .icon_circle {
