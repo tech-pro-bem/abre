@@ -1,6 +1,7 @@
 .reports_section {
   display: grid;
   gap: 4rem;
+  padding-block: 2rem 4rem;
 
   .graphism_container {
     display: none;

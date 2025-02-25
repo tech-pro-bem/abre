@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default async function RelatoriosPage() {
   const data = await getContentByContentType<MaterialsReports>({
     contentType: "materiaisRelatoriosDeAtividades",
-    order: "sys.createdAt",
+    order: "-sys.createdAt",
   });
   const reports: ResolvedMaterialsReports = resolveResponse(data) || [];
 
