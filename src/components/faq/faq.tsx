@@ -8,7 +8,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 export const Faq = async () => {
   const data = await getContentByContentType<FAQ>({
     contentType: "faq",
-    order: "sys.createdAt",
+    order: "fields.order",
   });
 
   const questions = data?.items || [];
@@ -32,11 +32,11 @@ export const Faq = async () => {
               name="reqs"
             >
               <summary className={styles.faq_summary}>
-                <div className={styles.faq_title}>{question.fields.title}</div>
+                <div className={styles.faq_title}>{question.fields.question}</div>
                 <Arrow_icon className={styles.arrow_icon} />
               </summary>
               <div className={styles.faq_text}>
-                {documentToReactComponents(question.fields.text)}
+                {documentToReactComponents(question.fields.answer)}
               </div>
             </details>
           ))}
