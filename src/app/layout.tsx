@@ -5,6 +5,7 @@ import "./styles/globals.css";
 import "./styles/theme.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer/footer";
+import { FooterTechProBem } from "@/components/footer-tech-pro-bem";
 
 const jost = Jost({
   weight: ["300", "400", "500", "600", "700"],
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     default: "Abre – Associação Brasileira de Familiares, Amigos e Portadores de Esquizofrenia",
   },
   description:
-  "Apoiamos pessoas com esquizofrenia, seus familiares e amigos para uma jornada de inclusão e compreensão.",
+    "Apoiamos pessoas com esquizofrenia, seus familiares e amigos para uma jornada de inclusão e compreensão.",
   applicationName: "Abre",
   keywords: [
     "Abre",
@@ -51,6 +52,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <FooterTechProBem />
         <div
           className="toast"
           id="toast-text"

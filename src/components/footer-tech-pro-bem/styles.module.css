@@ -1,0 +1,22 @@
+.footer_tech {
+  text-align: center;
+  font-size: var(--font-size-6);
+  background-color: var(--color-primary-darkest);
+  color: var(--color-neutral-lightest);
+  padding-block: 1.5rem;
+  @media (min-width: 40em) {
+    padding-block: 1rem 1.5rem;
+  }
+}
+
+.footer_tech_link {
+  color: var(--color-neutral-lightest);
+  text-decoration: underline;
+  text-underline-offset: 0.125rem;
+  text-decoration-color: var(--color-neutral-lightest);
+
+  &:hover {
+    color: var(--color-primary-light);
+    text-decoration-color: var(--color-primary-light);
+  }
+}

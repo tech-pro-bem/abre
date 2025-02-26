@@ -16,15 +16,14 @@ type BookListProps = {
 };
 
 export default function Livros({ books, totalBooks, currentPage, itemsPerPage }: BookListProps) {
-
   const router = useRouter();
   const searchParams = useSearchParams();
 
   const handlePageChange = (page: number) => {
-    const totalPages = (totalBooks / itemsPerPage);
+    const totalPages = totalBooks / itemsPerPage;
     if (page < 1) page = 1;
     if (page > totalPages) page = totalPages;
-    
+
     const params = new URLSearchParams(searchParams.toString());
     params.set("page", page.toString());
     router.push(`?${params.toString()}`, { scroll: false });
@@ -34,7 +33,7 @@ export default function Livros({ books, totalBooks, currentPage, itemsPerPage }:
 
   return (
     <section>
-      <FilterButton defaultOrder="asc" />
+      <FilterButton defaultOrder="desc" />
       <ul className={styles.section}>
         {books.map(({ fields: { coverImage, title, subtitle, file } }) => {
           return (

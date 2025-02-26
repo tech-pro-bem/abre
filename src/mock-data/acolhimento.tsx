@@ -20,6 +20,6 @@ export const mock_acolhimento_data = [
       "Centros de Atenção Psicossocial (CAPS) são lugares onde a comnunidade consegue atendimento focado em saúde mental, seja para situações difíceis ou reabilitação psicossocial.",
     button_text: "Conferir CAPS",
     button_href:
-      "https://frenteestamiradecaps.org/2024/03/14/saiu-o-cadastro-atualizado-de-novembro-de-202[…]os-de-usuarios-e-ou-familiares-do-campo-da-saude-mental/",
+      "https://frenteestamiradecaps.org/2024/03/14/saiu-o-cadastro-atualizado-de-novembro-de-2023-cadastro-nacional-de-associacoes-e-coletivos-de-usuarios-e-ou-familiares-do-campo-da-saude-mental/",
   },
 ];
